@@ -1,2 +1,2 @@
-# woo-customizer
+Woo Customizer
 Plugin to help customise WooCommerce.
