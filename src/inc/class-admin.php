@@ -168,9 +168,8 @@ class Admin {
 		header( 'Content-Type: application/json' );
 		echo json_encode( $response );
 
-		// Exit
-		// For AJAX functions
-		exit();
+		// Exit for AJAX functions
+		exit;
 	}
 
 
