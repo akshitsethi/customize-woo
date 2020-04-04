@@ -1,18 +1,18 @@
 <?php
 /**
- * Plugin Name: Classic Coming Soon & Maintenance Mode
- * Description: Simply awesome coming soon & maintenance mode plugin for your WordPress blog. Try it to know why there is no other plugin like this one.
+ * Plugin Name: Woo Customizer
+ * Description: Plugin to help customise WooCommerce with the help of actions and filters.
  * Version: 1.0.0
  * Runtime: 5.6+
  * Author: akshitsethi
- * Text Domain: classic-coming-soon-maintenance-mode
+ * Text Domain: woo-customizer
  * Domain Path: i18n
  * Author URI: https://akshitsethi.com
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  */
 
-namespace AkshitSethi\Plugins\MaintenanceMode;
+namespace AkshitSethi\Plugins\WooCustomizer;
 
 // Stop execution if the file is called directly
 defined( 'ABSPATH' ) || exit;
@@ -24,10 +24,10 @@ require_once __DIR__ . '/vendor/autoload.php';
  * Plugin class where all the action happens.
  *
  * @category    Plugins
- * @package     AkshitSethi\Plugins\MaintenanceMode
+ * @package     AkshitSethi\Plugins\WooCustomizer
  * @since       1.0.0
  */
-class MaintenanceMode {
+class WooCustomizer {
 
 	/**
 	 * Class Constructor.
@@ -84,17 +84,17 @@ class MaintenanceMode {
 	 */
 	public function deactivate() {
 		/**
-		 * @todo Decide whether to delete the transient on deactivation or not.
+		 * @todo Nothing to be done here for now.
 		 */
 	}
 
 }
 
 // Initialize plugin
-$maintenance_mode = new MaintenanceMode();
+$woo_customizer = new WooCustomizer();
 
 /**
  * Hooks for plugin activation & deactivation.
  */
-register_activation_hook( __FILE__, array( $maintenance_mode, 'activate' ) );
-register_deactivation_hook( __FILE__, array( $maintenance_mode, 'deactivate' ) );
+register_activation_hook( __FILE__, array( $woo_customizer, 'activate' ) );
+register_deactivation_hook( __FILE__, array( $woo_customizer, 'deactivate' ) );
