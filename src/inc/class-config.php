@@ -51,9 +51,7 @@ class Config {
 	 * @since 1.0.0
 	 */
 	public function default_options() {
-		self::$default_options = array(
-
-		);
+		self::$default_options = array();
 	}
 
 }
