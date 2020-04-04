@@ -1,0 +1,1037 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Classic Coming Soon & Maintenance Mode\n"
+"POT-Creation-Date: 2020-04-01 16:40+0530\n"
+"PO-Revision-Date: 2020-04-01 16:39+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: classic-coming-soon-maintenance-mode.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: assets/admin/js/ace-editor/worker-coffee.js:1
+msgid "arguments"
+msgstr ""
+
+#: assets/admin/js/ace-editor/worker-coffee.js:1
+msgid "RegExp"
+msgstr ""
+
+#: assets/admin/js/ace-editor/worker-coffee.js:1
+msgid "Math"
+msgstr ""
+
+#: inc/admin/views/header.php:14
+msgid "Widgets Bundle"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: inc/admin/views/header.php:16 inc/class-admin.php:41 inc/class-admin.php:42
+msgid "Classic Coming Soon & Maintenance Mode"
+msgstr ""
+
+#: inc/admin/views/header.php:17
+msgid "by"
+msgstr ""
+
+#: inc/admin/views/header.php:17
+msgid "Akshit Sethi"
+msgstr ""
+
+#: inc/admin/views/header.php:21 inc/class-admin.php:69
+msgid "Save Changes"
+msgstr ""
+
+#: inc/admin/views/settings-about.php:14
+msgid "ABOUT"
+msgstr ""
+
+#: inc/admin/views/settings-about.php:15
+msgid ""
+"Hola! I'm Akshit Sethi, Designer + Developer by profession & Entrepreneur by "
+"passion. In love with WWW and Spanish. Travel is life. When I am not coding, "
+"I am reading anything worth reading. I create premium WordPress themes & "
+"plugins."
+msgstr ""
+
+#: inc/admin/views/settings-about.php:18
+msgid "Show me some love and connect with me via social channels."
+msgstr ""
+
+#: inc/admin/views/settings-about.php:20 inc/class-admin.php:104
+msgid "Twitter"
+msgstr ""
+
+#: inc/admin/views/settings-about.php:24 inc/class-admin.php:103
+msgid "Facebook"
+msgstr ""
+
+#: inc/admin/views/settings-advanced.php:14
+msgid "ADVANCED"
+msgstr ""
+
+#: inc/admin/views/settings-advanced.php:15
+msgid ""
+"You can add custom HTML & CSS in this section. Making wrong changes over "
+"here will affect the working of the plugin."
+msgstr ""
+
+#: inc/admin/views/settings-advanced.php:19
+msgid "Use Custom HTML only"
+msgstr ""
+
+#: inc/admin/views/settings-advanced.php:22
+msgid ""
+"If you enable this option, the plugin will ignore everything except the HTML "
+"you provide."
+msgstr ""
+
+#: inc/admin/views/settings-advanced.php:23
+msgid ""
+"Basically, you will have a blank template which you can fill with your "
+"provided html content. Only basic css gets added by the plugin which does "
+"the task of browser styling reset. You should style your html content either "
+"inline or by inserting styling in the custom css section. In short, use this "
+"option only if you know what you are doing."
+msgstr ""
+
+#: inc/admin/views/settings-advanced.php:27
+#: inc/admin/views/settings-basic.php:101
+msgid "Custom HTML"
+msgstr ""
+
+#: inc/admin/views/settings-advanced.php:29
+msgid "Custom HTML for the plugin"
+msgstr ""
+
+#: inc/admin/views/settings-advanced.php:31
+#, php-format
+msgid ""
+"Custom HTML for the plugin goes over here. Please note that %1$s[html], "
+"[head], [title], [meta], [body], and similar tags%2$s are not required. Only "
+"provide content HTML for the page."
+msgstr ""
+
+#: inc/admin/views/settings-advanced.php:32
+#, php-format
+msgid ""
+"To insert subscription form anywhere in the html, simply use the placeholder "
+"%1$s and you are done."
+msgstr ""
+
+#: inc/admin/views/settings-advanced.php:36
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/admin/views/settings-advanced.php:38
+msgid "Custom CSS for the plugin"
+msgstr ""
+
+#: inc/admin/views/settings-advanced.php:40
+msgid "Custom CSS for the plugin goes over here."
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:16
+msgid "BASIC"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:17
+msgid ""
+"Configure the core settings. Make sure you configure these options carefully "
+"as they are important for the working of the plugin."
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:22
+msgid "Enable Maintenance Mode?"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:25
+msgid ""
+"Set the plugin status. Do you want to enable Maintenance Mode for your "
+"website?"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:29
+msgid "Page Title"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:30
+msgid "Please provide a Page Title"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:32
+msgid "Provide title for the maintenance page."
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:38
+msgid "Header Text"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:39
+msgid "Header text for the maintenance page"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:41
+msgid ""
+"Provide header text for the maintenance page. It is not recommended to leave "
+"this blank."
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:45
+msgid "Secondary Text"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:46
+msgid "Secondary text for the maintenance page"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:48
+msgid ""
+"Provide secondary text for the maintenance page. It is not recommended to "
+"leave this blank."
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:54
+msgid "Anti Spam Text"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:55
+msgid "Please provide a Anti-spam Text"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:57
+msgid "Provide anti-spam text for the maintenance page."
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:61 inc/admin/views/settings-basic.php:62
+msgid "Custom login URL"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:64
+msgid ""
+"In case you are using any plugin for custom login, provide your custom login "
+"URL over here. This plugin should be able to detect your custom login "
+"automatically in most of the situations. In case it fails to do so, you can "
+"provide the custom login URL over here."
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:70
+msgid "Show normal website to logged in users?"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:73
+msgid ""
+"Enable this option if you want logged in users to view the website normally "
+"while visitors see the maintenance page."
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:77
+msgid "Exclude Search Engines?"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:80
+msgid ""
+"Do you want to exclude search engines from viewing maintenance page? This "
+"will enable search engines to view your regular website and not the "
+"Maintenance Mode page even if the plugin is enabled."
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:84
+msgid "Arrange Elements"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:85
+msgid ""
+"Select the order in which you would like to display the sections on the "
+"maintenance page. To change the order, simply drag the items and arrange as "
+"per your preference."
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:114
+msgid "Analytics Code"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:115
+msgid "Analytics code for the maintenance page"
+msgstr ""
+
+#: inc/admin/views/settings-basic.php:117
+#, php-format
+msgid ""
+"Provide analytics code for the maintenance page. Please provide code without "
+"the %1$s tag."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:14
+msgid "DESIGN"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:15
+msgid ""
+"Design settings for the plugin. You have the option to modify every aspect "
+"of the maintenance page design as per your requirements."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:21
+msgid "Logo"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:26
+#: inc/admin/views/settings-design.php:49
+#: inc/admin/views/settings-design.php:72 inc/class-admin.php:72
+msgid "Select or upload via WP native uploader"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:32
+#: inc/admin/views/settings-design.php:55
+#: inc/admin/views/settings-design.php:78
+msgid "Select"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:35
+#: inc/admin/views/settings-design.php:58
+#: inc/admin/views/settings-design.php:81 inc/class-admin.php:73
+msgid "Remove"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:44
+msgid "Favicon"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:67
+msgid "Background Cover Image"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:91
+msgid "Content Overlay"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:94
+msgid ""
+"If enabled, applies transparent background to the content section of the "
+"maintenance page."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:98
+msgid "Content Overlay Opacity"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:113
+msgid "Background opacity for the content overlay."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:119
+msgid "Content Overlay Background Color"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:120
+msgid "Background color for the content overlay"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:122
+msgid "Select background color for the content overlay."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:126
+msgid "Content Border Color"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:127
+msgid "Border color for the content overlay"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:129
+msgid "Select border color for the content section."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:135
+msgid "Content Border Width"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:141
+#: inc/admin/views/settings-design.php:157
+#: inc/admin/views/settings-design.php:265
+#: inc/admin/views/settings-design.php:281
+#: inc/admin/views/settings-design.php:315 inc/admin/views/settings-form.php:49
+#: inc/admin/views/settings-form.php:65 inc/admin/views/settings-form.php:131
+#: inc/admin/views/settings-form.php:147
+msgid "px"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:147
+msgid "Border size for the content section."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:151
+msgid "Content Border Radius"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:163
+msgid "Border radius for the content section."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:169
+msgid "Content Width (in px)"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:170
+msgid "Set content width for the page"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:172
+msgid ""
+"Set maximum width of the content (in pixels) for the maintenance page. "
+"Provide only numeric value. Example: Entering 400 will set the width of the "
+"content to 400px. Defaults to 440px."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:176
+msgid "Background Color"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:177
+msgid "Background color for the page"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:179
+msgid ""
+"Select background color for the page. If the background cover image is set, "
+"this option will be ignored."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:185
+msgid "Content Position"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:187
+#: inc/admin/views/settings-design.php:198
+msgid "Left"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:188
+#: inc/admin/views/settings-design.php:199
+msgid "Center"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:189
+#: inc/admin/views/settings-design.php:200
+msgid "Right"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:192
+msgid ""
+"For the position of the content on the maintenance page. Does not work if "
+"the width is set to maximum which is 1170px."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:196
+msgid "Content Alignment"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:203
+msgid ""
+"For the alignment of the text on the maintenance page. Make it left, center, "
+"or right."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:209
+msgid "Header Font"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:218
+#: inc/admin/views/settings-design.php:242
+msgid "Google Fonts"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:228
+#: inc/admin/views/settings-design.php:252
+msgid "This is how this font is going to look!"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:229
+msgid "Font for the header text. Listing a total of 668 Google web fonts."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:233
+msgid "Secondary Font"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:253
+msgid "Font for the secondary text. Listing a total of 668 Google web fonts."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:259
+msgid "Header Text Size"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:271
+msgid "Font size for the header text."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:275
+msgid "Secondary Text Size"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:287
+msgid "Font size for the secondary text."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:293
+msgid "Header Text Color"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:294
+msgid "Font color for the Header text"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:296
+msgid "Select font color for the header text."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:300
+msgid "Secondary Text Color"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:301
+msgid "Font color for the Secondary text"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:303
+msgid "Select font color for the secondary text."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:309
+msgid "Antispam Text Size"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:321
+msgid "Font size for the antispam text."
+msgstr ""
+
+#: inc/admin/views/settings-design.php:325
+msgid "Antispam Text Color"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:326
+msgid "Font color for the Antispam text"
+msgstr ""
+
+#: inc/admin/views/settings-design.php:328
+msgid "Select font color for the antispam text."
+msgstr ""
+
+#: inc/admin/views/settings-email.php:15
+msgid "EMAIL"
+msgstr ""
+
+#: inc/admin/views/settings-email.php:16
+msgid ""
+"Email settings for the plugin. You can configure your MailChimp account API "
+"with this plugin to store collected emails in an list."
+msgstr ""
+
+#: inc/admin/views/settings-email.php:20 inc/admin/views/settings-email.php:21
+msgid "MailChimp API"
+msgstr ""
+
+#: inc/admin/views/settings-email.php:23
+#, php-format
+msgid ""
+"Provide your MailChimp API over here. %1$sClick here%2$s to know how to get "
+"this information. In case you don't want to enable subscription option, just "
+"leave this field blank."
+msgstr ""
+
+#: inc/admin/views/settings-email.php:27
+msgid "MailChimp List"
+msgstr ""
+
+#: inc/admin/views/settings-email.php:49 inc/admin/views/settings-email.php:78
+#: inc/class-admin.php:75
+msgid ""
+"Select your MailChimp list in which you would like to store the subscribers "
+"data."
+msgstr ""
+
+#: inc/admin/views/settings-email.php:84 inc/class-admin.php:231
+#: inc/class-admin.php:371
+msgid ""
+"It seems that there is no list created for this account. Why not create one "
+"on the MailChimp website and then try here."
+msgstr ""
+
+#: inc/admin/views/settings-email.php:94 inc/class-admin.php:74
+msgid ""
+"Provide your MailChimp API key in the above box and click on `Save Changes` "
+"option. Your lists will appear over here."
+msgstr ""
+
+#: inc/admin/views/settings-email.php:103
+msgid "Message: No Email"
+msgstr ""
+
+#: inc/admin/views/settings-email.php:104
+msgid "Message when email is not provided"
+msgstr ""
+
+#: inc/admin/views/settings-email.php:106
+msgid "Message to show if the user forgets to provide email address."
+msgstr ""
+
+#: inc/admin/views/settings-email.php:110
+msgid "Message: Invalid Request"
+msgstr ""
+
+#: inc/admin/views/settings-email.php:111
+msgid "Message when user is already subscribed"
+msgstr ""
+
+#: inc/admin/views/settings-email.php:113
+msgid ""
+"Message to show if there is an invalid request (usually an error while "
+"processing the request)."
+msgstr ""
+
+#: inc/admin/views/settings-email.php:119
+msgid "Message: General Error"
+msgstr ""
+
+#: inc/admin/views/settings-email.php:120
+msgid "Message when anything goes wrong while subscribing"
+msgstr ""
+
+#: inc/admin/views/settings-email.php:122
+msgid "Message to show if user provides an invalid email address."
+msgstr ""
+
+#: inc/admin/views/settings-email.php:126
+msgid "Message: Successfully Subscribed"
+msgstr ""
+
+#: inc/admin/views/settings-email.php:127
+msgid "Success message when the user gets subscribed"
+msgstr ""
+
+#: inc/admin/views/settings-email.php:129
+msgid "Message to show when the user gets subscribed successfully."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:14
+msgid "FORM"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:15
+msgid ""
+"Form design settings for the plugin. These settings affect the appearance of "
+"the Mail Chimp subscription form. You can customize styles for the input "
+"field and button."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:20
+msgid "Input Text"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:21
+msgid "Text for the Input field"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:23
+msgid ""
+"Enter the text which you would like to use as a placeholder text for the "
+"text input field."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:27
+msgid "Button Text"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:28
+msgid "Text for the Button"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:30
+msgid ""
+"Enter the text for the button. Usually, it will be \"Subscribe\" or "
+"something like that."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:35
+msgid "Ignore Default Form Styles?"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:38
+msgid ""
+"Enable this option if you would like to use your custom form styles. The "
+"settings below will only be applicable when this option is turned on."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:43
+msgid "Input Text Size"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:55
+msgid "Font size for the text input field."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:59
+msgid "Button Text Size"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:71
+msgid "Font size for the button text."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:77
+msgid "Input Text Color"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:78
+msgid "Font color for the Input text"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:80
+msgid "Select font color for the input text field."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:84
+msgid "Button Text Color"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:85
+msgid "Font color for the Button text"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:87
+msgid "Select font color for the button text."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:93 inc/admin/views/settings-form.php:109
+msgid "Input Background Color"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:94
+msgid "Background color for the Input field"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:96
+msgid "Select background color for the input text field."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:100 inc/admin/views/settings-form.php:116
+msgid "Button Background Color"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:101
+msgid "Background color for the Button"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:103
+msgid "Select background color for the button."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:109 inc/admin/views/settings-form.php:175
+msgid "FOCUS"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:110
+msgid "Background color for the Input field when it gets clicked"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:112
+msgid "Select background color for the input text field when it gets clicked."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:116 inc/admin/views/settings-form.php:182
+msgid "HOVER"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:117
+msgid "Background color for the Button on hover"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:119
+msgid "Select background color for the button on mouse hover."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:125
+msgid "Input Border Width"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:137
+msgid "Border size for the input field."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:141
+msgid "Button Border Width"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:153
+msgid "Border size for the button."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:159 inc/admin/views/settings-form.php:175
+msgid "Input Border Color"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:160
+msgid "Border color for the Input field"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:162
+msgid "Select border color for the input field."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:166 inc/admin/views/settings-form.php:182
+msgid "Button Border Color"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:167
+msgid "Border color for the Button"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:169
+msgid "Select border color for the button."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:176
+msgid "Border color for the Input field when it gets clicked"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:178
+msgid "Select border color for the input field when it gets clicked."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:183
+msgid "Border color for the Button on hover"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:185
+msgid "Select border color for the button on mouse hover."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:191
+msgid "Success Message Background Color"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:192
+msgid "Background color for the success message"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:194
+msgid "Select background color for the success message."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:198
+msgid "Success Message Text Color"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:199
+msgid "Text color for the success message"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:201
+msgid "Select text color for the success message."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:207
+msgid "Error Message Background Color"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:208
+msgid "Background color for the error message"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:210
+msgid "Select background color for the error message."
+msgstr ""
+
+#: inc/admin/views/settings-form.php:214
+msgid "Error Message Text Color"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:215
+msgid "Text color for the error message"
+msgstr ""
+
+#: inc/admin/views/settings-form.php:217
+msgid "Select text color for the error message."
+msgstr ""
+
+#: inc/admin/views/settings-support.php:15
+msgid "SUPPORT"
+msgstr ""
+
+#: inc/admin/views/settings-support.php:16
+msgid ""
+"Getting help is just a click away now. Report the issue you are facing with "
+"the plugin using the form below and we will get back to you at the email "
+"address provided."
+msgstr ""
+
+#: inc/admin/views/settings-support.php:20
+msgid "Email Address"
+msgstr ""
+
+#: inc/admin/views/settings-support.php:21
+msgid "Please provide your email address"
+msgstr ""
+
+#: inc/admin/views/settings-support.php:23
+msgid "You will receive support response at this email address."
+msgstr ""
+
+#: inc/admin/views/settings-support.php:27
+msgid "Issue / Feedback"
+msgstr ""
+
+#: inc/admin/views/settings-support.php:28
+#: inc/admin/views/settings-support.php:30
+msgid ""
+"Please explain the issue you are facing with the plugin. Provide as much "
+"detail as possible."
+msgstr ""
+
+#: inc/admin/views/settings.php:17
+msgid "Menu"
+msgstr ""
+
+#: inc/admin/views/settings.php:22
+msgid "Basic"
+msgstr ""
+
+#: inc/admin/views/settings.php:23
+msgid "Email"
+msgstr ""
+
+#: inc/admin/views/settings.php:24
+msgid "Design"
+msgstr ""
+
+#: inc/admin/views/settings.php:25
+msgid "Form"
+msgstr ""
+
+#: inc/admin/views/settings.php:26
+msgid "Advanced"
+msgstr ""
+
+#: inc/admin/views/settings.php:27
+msgid "Support"
+msgstr ""
+
+#: inc/admin/views/settings.php:28
+msgid "About"
+msgstr ""
+
+#: inc/class-admin.php:70
+msgid "Ask for Support"
+msgstr ""
+
+#: inc/class-admin.php:71
+msgid "Select Image"
+msgstr ""
+
+#: inc/class-admin.php:76 inc/class-admin.php:324
+msgid "Refresh List"
+msgstr ""
+
+#: inc/class-admin.php:121
+msgid "Options have been updated successfully."
+msgstr ""
+
+#: inc/class-admin.php:127 inc/class-admin.php:343
+msgid ""
+"Request does not seem to be a valid one. Try again by refreshing the page."
+msgstr ""
+
+#: inc/class-admin.php:266
+msgid "Please fill in both the fields to create your support ticket."
+msgstr ""
+
+#: inc/class-admin.php:282
+msgid "I have received your support ticket and will get back to you shortly!"
+msgstr ""
+
+#: inc/class-admin.php:288
+msgid ""
+"There was an error creating the support ticket. You can try again later or "
+"send me an email directly at akshitsethi@gmail.com"
+msgstr ""
+
+#: inc/class-admin.php:337
+msgid "Email list has been refreshed."
+msgstr ""
+
+#: inc/class-admin.php:387
+msgid "Unable to grab options from the database. Try reactivating the plugin."
+msgstr ""
+
+#: inc/class-config.php:728 inc/class-config.php:729
+msgid "Maintenance Mode"
+msgstr ""
+
+#: inc/class-config.php:730
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra eu "
+"felis quis lobortis. Proin vitae rutrum nisl, ut ullamcorper quam. Praesent "
+"faucibus ligula ac nisl varius dictum. Maecenas iaculis posuere orci, sed "
+"consectetur augue."
+msgstr ""
+
+#: inc/class-config.php:731
+msgid "And yes, we hate spam too!"
+msgstr ""
+
+#: inc/class-config.php:741 inc/views/blank.php:54 inc/views/html.php:78
+msgid "Please provide your email address."
+msgstr ""
+
+#: inc/class-config.php:742
+msgid "This looks like an invalid request. Please try again."
+msgstr ""
+
+#: inc/class-config.php:743 inc/views/blank.php:61 inc/views/html.php:85
+msgid "Please provide a valid email address."
+msgstr ""
+
+#: inc/class-config.php:744 inc/views/blank.php:77 inc/views/html.php:101
+msgid "Thank you! We'll be in touch!"
+msgstr ""
+
+#: inc/class-config.php:770 inc/views/blank.php:95 inc/views/html.php:119
+msgid "Enter your email address.."
+msgstr ""
+
+#: inc/class-config.php:771 inc/views/blank.php:96 inc/views/html.php:120
+msgid "Subscribe"
+msgstr ""
+
+#: inc/views/blank.php:17 inc/views/html.php:17
+msgid "Maintainance Mode"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Simply awesome coming soon & maintenance mode plugin for your WordPress "
+"blog. Try it to know why there is no other plugin like this one."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "akshitsethi"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://akshitsethi.com"
+msgstr ""

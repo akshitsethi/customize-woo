@@ -1,0 +1,346 @@
+/**
+ * Frontend CSS
+ *
+ * 01.. Reset
+ * 02.. Common
+ * 03.. Typography
+ * 04.. Forms
+ * 05.. Page
+ * 06.. Alerts
+ */
+
+/**
+ * 01.. Reset
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1
+}
+audio:not([controls]) {
+  display: none
+}
+[hidden] {
+  display: none
+}
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%
+}
+figure {
+  margin: 0
+}
+figcaption {
+  text-align: center
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic
+}
+ul,
+li {
+  list-style-type: none
+}
+img {
+  max-width: 100%;
+  height: auto
+}
+input {
+  -webkit-border-radius: 0;
+  border-radius: 0
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+
+/**
+ * 02.. Common
+ */
+.as-clearfix:before,
+.as-clearfix:after {
+  content: ' ';
+  display: table
+}
+.as-clearfix:after {
+  clear: both
+}
+.as-clearfix {
+  *zoom: 1
+}
+.as-hide {
+  display: none
+}
+.as-float-right {
+  float: right
+}
+.as-float-left {
+  float: left
+}
+.as-center-text {
+  text-align: center
+}
+.as-left-text {
+  text-align: left
+}
+.as-right-text {
+  text-align: right
+}
+.as-container {
+  padding-right: 1.250rem;
+  padding-left: 1.250rem;
+  margin-right: auto;
+  margin-left: auto
+}
+@media(min-width:768px) {
+  .as-container {
+    max-width: 750px
+  }
+}
+@media(min-width:992px) {
+  .as-container {
+    max-width: 970px
+  }
+}
+@media(min-width:1200px) {
+  .as-container {
+    max-width: 1170px
+  }
+}
+
+
+/**
+ * 03.. Typography
+ */
+body {
+  font-family: 'Karla', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+
+/**
+ * 04.. Forms
+ */
+input[type="text"],
+input[type="submit"] {
+  font-family: 'Karla', Arial, sans-serif;
+  background: transparent;
+  border: 2px solid #eeeeee;
+  padding: 0.500rem 0.750rem;
+  width: 100%;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+input[type="text"]:focus,
+input[type="text"]:active {
+  outline: none;
+}
+
+/* --- Buttons --- */
+input[type="submit"] {
+  background: #0f0f0f;
+  border-color: #0f0f0f;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.500rem 1.250rem;
+  margin-top: 10px;
+  width: auto;
+  cursor: pointer;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background: #0a0a0a;
+  border-color: #0a0a0a;
+}
+
+
+/**
+ * 05.. Page
+ */
+a {
+  text-decoration: none;
+}
+a:hover,
+a:active,
+a:focus {
+  outline: thin dotted;
+}
+.as-ccsmm {
+  margin: 5rem auto;
+}
+.as-content {
+  position: relative;
+  z-index: 10;
+}
+.as-logo-container {
+  line-height: 0;
+}
+.as-logo {
+  display: inline-block;
+  margin: 1rem 0;
+}
+.as-header-text {
+  font-size: 28px;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+.as-secondary-text {
+  font-size: 14px;
+  margin: 1rem 0;
+}
+.as-subscription {
+  margin: 1rem 0;
+}
+.as-anti-spam {
+  font-size: 0.875rem;
+  margin-top: 0.750rem;
+  color: #bbbbbb;
+}
+@media (max-width: 767px) {
+  .as-ccsmm {
+    margin: 1.250rem auto;
+  }
+}
+
+
+/**
+ * 06.. Alerts
+ */
+.as-alert {
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 5px 19px 5px 10px;
+  margin-bottom: 10px;
+}
+.as-alert-success {
+  background-color: #90c695;
+}
+.as-alert-error {
+  background-color: #e08283;
+}
