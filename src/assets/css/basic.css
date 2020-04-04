@@ -1,0 +1,212 @@
+/**
+ * Basic (for custom HTML section)
+ *
+ * 01.. Reset
+ * 02.. Common
+ */
+
+/**
+ * 01.. Reset
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1
+}
+audio:not([controls]) {
+  display: none
+}
+[hidden] {
+  display: none
+}
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%
+}
+figure {
+  margin: 0
+}
+figcaption {
+  text-align: center
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic
+}
+ul,
+li {
+  list-style-type: none
+}
+img {
+  max-width: 100%;
+  height: auto
+}
+input {
+  -webkit-border-radius: 0;
+  border-radius: 0
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+
+/**
+ * 02.. Common
+ */
+.as-clearfix:before,
+.as-clearfix:after {
+  content: ' ';
+  display: table
+}
+.as-clearfix:after {
+  clear: both
+}
+.as-clearfix {
+  *zoom: 1
+}
+.as-hide {
+  display: none
+}
+.as-float-right {
+  float: right
+}
+.as-float-left {
+  float: left
+}
+.as-center-text {
+  text-align: center
+}
+.as-left-text {
+  text-align: left
+}
+.as-right-text {
+  text-align: right
+}
+.as-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto
+}
+@media(min-width:768px) {
+  .as-container {
+    max-width: 750px
+  }
+}
+@media(min-width:992px) {
+  .as-container {
+    max-width: 970px
+  }
+}
+@media(min-width:1200px) {
+  .as-container {
+    max-width: 1170px
+  }
+}

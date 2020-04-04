@@ -1,0 +1,20 @@
+{
+  "name": "akshitsethi/woo-customizer",
+  "description": "Plugin to help customise WooCommerce with the help of actions and filters.",
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "woocommerce",
+    "customizer"
+  ],
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=5.6.0",
+    "drewm/mailchimp-api": "^2.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "AkshitSethi\\Plugins\\WooCustomizer\\": "inc"
+    }
+  }
+}
