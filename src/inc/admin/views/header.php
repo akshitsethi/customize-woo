@@ -5,19 +5,19 @@
  * @since 1.0.0
  */
 
-use AkshitSethi\Plugins\MaintenanceMode\Config;
+use AkshitSethi\Plugins\WooCustomizer\Config;
 
 ?>
 
 <div class="as-cnt-fix">
 	<div class="as-header as-clearfix">
-		<img src="<?php echo Config::$plugin_url; ?>assets/admin/images/lrg-icon.png" alt="<?php echo esc_attr_e( 'Widgets Bundle', 'classic-coming-soon-maintenance-mode' ); ?>" class="as-logo">
+		<img src="<?php echo Config::$plugin_url; ?>assets/admin/images/lrg-icon.png" alt="<?php echo esc_attr_e( 'Widgets Bundle', 'woo-customizer' ); ?>" class="as-logo">
 		<p>
-			<strong><?php esc_html_e( 'Classic Coming Soon & Maintenance Mode', 'classic-coming-soon-maintenance-mode' ); ?></strong>
-			<span><?php esc_html_e( 'by', 'classic-coming-soon-maintenance-mode' ); ?> <a href="https://akshitsethi.com/" target="_blank"><?php esc_html_e( 'Akshit Sethi', 'classic-coming-soon-maintenance-mode' ); ?></a></span>
+			<strong><?php esc_html_e( 'Woo Customizer', 'woo-customizer' ); ?></strong>
+			<span><?php esc_html_e( 'by', 'woo-customizer' ); ?> <a href="https://akshitsethi.com/" target="_blank"><?php esc_html_e( 'Akshit Sethi', 'woo-customizer' ); ?></a></span>
 		</p>
 
 		<div class="as-header-right">
-			<input type="submit" id="<?php echo Config::PREFIX . 'submit'; ?>" name="<?php echo Config::PREFIX . 'submit'; ?>" class="as-btn" value="<?php esc_html_e( 'Save Changes', 'classic-coming-soon-maintenance-mode' ); ?>" data-tab="basic">
+			<input type="submit" id="<?php echo Config::PREFIX . 'submit'; ?>" name="<?php echo Config::PREFIX . 'submit'; ?>" class="as-btn" value="<?php esc_html_e( 'Save Changes', 'woo-customizer' ); ?>" data-tab="about">
 		</div><!-- .as-header-right -->
 	</div><!-- .as-header -->
