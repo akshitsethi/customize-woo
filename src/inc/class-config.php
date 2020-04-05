@@ -16,11 +16,11 @@ class Config {
 	public static $plugin_path;
 	public static $default_options;
 
-	const PLUGIN_SLUG   = 'woo-customizer';
-	const SHORT_SLUG    = 'woocustomizer';
-	const VERSION       = '1.0.0';
-	const DB_OPTION     = 'as_' . self::SHORT_SLUG;
-	const PREFIX        = self::SHORT_SLUG . '_';
+	const PLUGIN_SLUG = 'woo-customizer';
+	const SHORT_SLUG  = 'woocustomizer';
+	const VERSION     = '1.0.0';
+	const DB_OPTION   = 'as_' . self::SHORT_SLUG;
+	const PREFIX      = self::SHORT_SLUG . '_';
 
 
 	/**

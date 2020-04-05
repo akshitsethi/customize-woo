@@ -58,10 +58,10 @@ class Admin {
 		wp_enqueue_script( Config::SHORT_SLUG . '-admin', Config::$plugin_url . 'assets/admin/js/admin.js', array( 'jquery' ), Config::VERSION, true );
 
 		$localize = array(
-			'prefix'        => Config::PREFIX,
-			'save_text'     => esc_html__( 'Save Changes', 'woo-customizer' ),
-			'support_text'  => esc_html__( 'Ask for Support', 'woo-customizer' ),
-			'nonce'         => wp_create_nonce( Config::PREFIX . 'nonce' ),
+			'prefix'       => Config::PREFIX,
+			'save_text'    => esc_html__( 'Save Changes', 'woo-customizer' ),
+			'support_text' => esc_html__( 'Ask for Support', 'woo-customizer' ),
+			'nonce'        => wp_create_nonce( Config::PREFIX . 'nonce' ),
 		);
 		wp_localize_script( Config::SHORT_SLUG . '-admin', Config::PREFIX . 'admin_l10n', $localize );
 	}
@@ -114,9 +114,7 @@ class Admin {
 		}
 
 		// Filter and sanitize options
-		$options = array(
-			
-		);
+		$options = array();
 
 		// Update options
 		update_option( Config::DB_OPTION, $options );
@@ -137,7 +135,7 @@ class Admin {
 		// Storing response in an array
 		$response = array(
 			'code'     => 'error',
-			'response' => esc_html__( 'Please fill in both the fields to create your support ticket.',  ),
+			'response' => esc_html__( 'Please fill in both the fields to create your support ticket.', ),
 		);
 
 		// Filter and sanitize
@@ -153,13 +151,13 @@ class Admin {
 				// Success
 				$response = array(
 					'code'     => 'success',
-					'response' => esc_html__( 'I have received your support ticket and will get back to you shortly!',  ),
+					'response' => esc_html__( 'I have received your support ticket and will get back to you shortly!', ),
 				);
 			} else {
 				// Failure
 				$response = array(
 					'code'     => 'error',
-					'response' => esc_html__( 'There was an error creating the support ticket. You can try again later or send me an email directly at akshitsethi@gmail.com',  ),
+					'response' => esc_html__( 'There was an error creating the support ticket. You can try again later or send me an email directly at akshitsethi@gmail.com', ),
 				);
 			}
 		}
