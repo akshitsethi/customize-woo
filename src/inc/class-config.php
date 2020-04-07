@@ -70,7 +70,7 @@ class Config {
 				'single_add_to_cart_text' => '',
 				'single_out_of_stock_text' => esc_html__( 'Out of stock', 'woo-customizer' ),
 				'single_backorder_text' => esc_html__( 'Available on backorder', 'woo-customizer' ),
-				'single_sale_flash_text' => ''
+				'single_sale_flash_text' => esc_html__( 'Sale!', 'woo-customizer' )
 			),
 			'checkout' => array(
 				'must_be_logged_in_message' => '',
