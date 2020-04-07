@@ -51,7 +51,41 @@ class Config {
 	 * @since 1.0.0
 	 */
 	public function default_options() {
-		self::$default_options = array();
+		self::$default_options = array(
+			'shop' => array(
+				'add_to_cart_text' => '',
+				'variable_add_to_cart_text' => '',
+				'grouped_add_to_cart_text' => '',
+				'out_of_stock_add_to_cart_text' => '',
+				'loop_sale_flash_text' => '',
+				'loop_shop_per_page' => '',
+				'loop_shop_columns' => '',
+				'woocommerce_product_thumbnails_columns' => ''
+			),
+			'product' => array(
+				'product_description_tab_title' => '',
+				'product_additional_information_tab_title' => '',
+				'product_description_heading' => '',
+				'product_additional_information_heading' => '',
+				'single_add_to_cart_text' => '',
+				'single_out_of_stock_text' => '',
+				'single_backorder_text' => '',
+				'single_sale_flash_text' => ''
+			),
+			'checkout' => array(
+				'checkout_must_be_logged_in_message' => '',
+				'checkout_coupon_message' => '',
+				'checkout_login_message' => '',
+				'create_account_default_checked' => '',
+				'order_button_text' => ''
+			),
+			'misc' => array(
+				'woocommerce_countries_tax_or_vat' => '',
+				'woocommerce_countries_inc_tax_or_vat' => '',
+				'woocommerce_countries_ex_tax_or_vat' => '',
+				'woocommerce_placeholder_img_src' => ''
+			)
+		);
 	}
 
 }
