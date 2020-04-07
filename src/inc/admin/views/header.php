@@ -18,6 +18,6 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 		</p>
 
 		<div class="as-header-right">
-			<input type="submit" id="<?php echo Config::PREFIX . 'submit'; ?>" name="<?php echo Config::PREFIX . 'submit'; ?>" class="as-btn" value="<?php esc_html_e( 'Save Changes', 'woo-customizer' ); ?>" data-tab="shop">
+			<input type="submit" id="<?php echo Config::PREFIX . 'submit'; ?>" name="<?php echo Config::PREFIX . 'submit'; ?>" class="as-btn" value="<?php esc_html_e( 'Save Changes', 'woo-customizer' ); ?>" data-tab="#shop">
 		</div><!-- .as-header-right -->
 	</div><!-- .as-header -->
