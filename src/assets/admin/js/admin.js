@@ -86,6 +86,67 @@ toastr.options = {
       $('.as-header').stick_in_parent({bottoming: false, offset_top: 32});
     }
 
+    // Submission
+    $(document).on('click', '#' + woocustomizer_admin_l10n.prefix + 'submit', function (e) {
+      e.preventDefault();
+
+      // ID
+      var id 		= $(this).attr('data-tab').replace('#', '');
+
+      // Form data
+      var data 	= new FormData($('#' + id + ' form')[0]);
+
+      // Append action
+      data.append('action', woocustomizer_admin_l10n.prefix + id);
+      data.append('_nonce', woocustomizer_admin_l10n.nonce);
+
+      // AJAX
+      $.ajax( {
+        type: 'POST',
+        url: ajaxurl,
+        data: data,
+        processData: false,
+        contentType: false,
+        beforeSend: function() {
+          $('#' + id).block({
+            message: '<div class="as-strong" style="background: #ecf0f1; padding: 10px 6px; color: #000;">Processing..</div>',
+            css: {
+              border: 'none',
+              backgroundColor: 'none'
+            },
+            overlayCSS: {
+              backgroundColor: '#eeeeee',
+              opacity: '0.5',
+              cursor: 'wait'
+            }
+          });
+        }
+      }).done(function(data) {
+        // Unblock
+        $('#' + id).unblock();
+
+        // Notification
+        toastr[data.code](data.response);
+
+        // Remove input class
+        $('input, textarea, select').removeClass('changed-input');
+      });
+    });
+
+    // On form change
+    $('form').on('change keyup keydown', 'input, textarea, select', function (e) {
+      // Get cookie state
+      var $state = Cookies.get(woocustomizer_admin_l10n.prefix + 'menu');
+
+      if ($state) {
+        if ($state != '#support') {
+          $(this).addClass('changed-input');
+        }
+      } else {
+        $(this).addClass('changed-input');
+      }
+    });
+
     var $state = Cookies.get(woocustomizer_admin_l10n.prefix + 'menu');
 
     // Check menu position
