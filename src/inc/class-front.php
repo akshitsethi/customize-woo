@@ -21,7 +21,7 @@ class Front {
 	 * Class constructor.
 	 */
 	public function __construct() {
-		add_action( 'init', array( $this, 'init' ) );
+		add_action( 'woocommerce_init', array( $this, 'init' ) );
 	}
 
 
@@ -30,6 +30,8 @@ class Front {
 	 *
 	 * @since 1.0.0
 	 */
-	public function init() {}
+	public function init() {
+		
+	}
 
 }
