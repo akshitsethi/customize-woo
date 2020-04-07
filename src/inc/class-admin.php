@@ -135,7 +135,7 @@ class Admin {
 		// Storing response in an array
 		$response = array(
 			'code'     => 'error',
-			'response' => esc_html__( 'Please fill in both the fields to create your support ticket.', ),
+			'response' => esc_html__( 'Please fill in both the fields to create your support ticket.', 'woo-customizer' ),
 		);
 
 		// Filter and sanitize
@@ -151,13 +151,13 @@ class Admin {
 				// Success
 				$response = array(
 					'code'     => 'success',
-					'response' => esc_html__( 'I have received your support ticket and will get back to you shortly!', ),
+					'response' => esc_html__( 'I have received your support ticket and will get back to you shortly!', 'woo-customizer' ),
 				);
 			} else {
 				// Failure
 				$response = array(
 					'code'     => 'error',
-					'response' => esc_html__( 'There was an error creating the support ticket. You can try again later or send me an email directly at akshitsethi@gmail.com', ),
+					'response' => esc_html__( 'There was an error creating the support ticket. You can try again later or send me an email directly at akshitsethi@gmail.com', 'woo-customizer' ),
 				);
 			}
 		}

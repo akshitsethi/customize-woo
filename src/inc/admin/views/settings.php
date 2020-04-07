@@ -19,6 +19,7 @@ require_once 'header.php';
 		</div><!-- .as-mobile-menu -->
 
 		<ul class="as-main-menu">
+			<li><a href="#shop"><?php esc_html_e( 'Shop', 'woo-customizer' ); ?></a></li>
 			<li><a href="#support"><?php esc_html_e( 'Support', 'woo-customizer' ); ?></a></li>
 			<li><a href="#about"><?php esc_html_e( 'About', 'woo-customizer' ); ?></a></li>
 		</ul>
@@ -28,8 +29,9 @@ require_once 'header.php';
 		<?php
 
 			// Tabs
-			require_once 'settings-support.php';
-			require_once 'settings-about.php';
+			require_once Config::$plugin_path . 'inc/admin/views/settings-shop.php';
+			require_once Config::$plugin_path . 'inc/admin/views/settings-support.php';
+			require_once Config::$plugin_path . 'inc/admin/views/settings-about.php';
 
 		?>
 	</div><!-- .as-float-right -->
