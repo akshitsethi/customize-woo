@@ -57,10 +57,10 @@ class Config {
 				'variable_add_to_cart_text' => '',
 				'grouped_add_to_cart_text' => '',
 				'out_of_stock_add_to_cart_text' => '',
-				'loop_sale_flash_text' => '',
-				'loop_shop_per_page' => '',
+				'loop_sale_flash_text' => esc_html__( 'Sale!', 'woo-customizer' ),
+				'loop_shop_per_page' => 12,
 				'loop_shop_columns' => '',
-				'woocommerce_product_thumbnails_columns' => ''
+				'product_thumbnails_columns' => ''
 			),
 			'product' => array(
 				'product_description_tab_title' => '',
@@ -80,10 +80,10 @@ class Config {
 				'order_button_text' => ''
 			),
 			'misc' => array(
-				'woocommerce_countries_tax_or_vat' => '',
-				'woocommerce_countries_inc_tax_or_vat' => '',
-				'woocommerce_countries_ex_tax_or_vat' => '',
-				'woocommerce_placeholder_img_src' => ''
+				'countries_tax_or_vat' => '',
+				'countries_inc_tax_or_vat' => '',
+				'countries_ex_tax_or_vat' => '',
+				'placeholder_img_src' => ''
 			)
 		);
 	}
