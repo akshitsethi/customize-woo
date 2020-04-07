@@ -59,23 +59,23 @@ class Config {
 				'out_of_stock_add_to_cart_text' => '',
 				'loop_sale_flash_text' => esc_html__( 'Sale!', 'woo-customizer' ),
 				'loop_shop_per_page' => 12,
-				'loop_shop_columns' => '',
-				'product_thumbnails_columns' => ''
+				'loop_shop_columns' => 12,
+				'product_thumbnails_columns' => 12
 			),
 			'product' => array(
-				'product_description_tab_title' => '',
-				'product_additional_information_tab_title' => '',
-				'product_description_heading' => '',
-				'product_additional_information_heading' => '',
+				'description_tab_title' => '',
+				'additional_information_tab_title' => '',
+				'description_heading' => '',
+				'additional_information_heading' => '',
 				'single_add_to_cart_text' => '',
-				'single_out_of_stock_text' => '',
-				'single_backorder_text' => '',
+				'single_out_of_stock_text' => esc_html__( 'Out of stock', 'woo-customizer' ),
+				'single_backorder_text' => esc_html__( 'Available on backorder', 'woo-customizer' ),
 				'single_sale_flash_text' => ''
 			),
 			'checkout' => array(
-				'checkout_must_be_logged_in_message' => '',
-				'checkout_coupon_message' => '',
-				'checkout_login_message' => '',
+				'must_be_logged_in_message' => '',
+				'coupon_message' => '',
+				'login_message' => '',
 				'create_account_default_checked' => '',
 				'order_button_text' => ''
 			),
