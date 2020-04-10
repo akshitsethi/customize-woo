@@ -31,7 +31,7 @@ class Front {
 	 * @since 1.0.0
 	 */
 	public function init() {
-		
+
 	}
 
 }

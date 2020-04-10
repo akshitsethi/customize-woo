@@ -62,9 +62,9 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 							<?php
 
 								// Loading font sizes with the help of a loop
-								for ( $i = 1; $i < 100; $i++ ) {
-									echo '<option value="' . $i . '"' . selected( esc_attr( $options['shop']['loop_shop_per_page'] ), $i ) . '>' . $i . '</option>';
-								}
+							for ( $i = 1; $i < 100; $i++ ) {
+								echo '<option value="' . $i . '"' . selected( esc_attr( $options['shop']['loop_shop_per_page'] ), $i ) . '>' . $i . '</option>';
+							}
 
 							?>
 						</select>
@@ -80,9 +80,9 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 							<?php
 
 								// Loading font sizes with the help of a loop
-								for ( $i = 1; $i < 100; $i++ ) {
-									echo '<option value="' . $i . '"' . selected( esc_attr( $options['shop']['loop_shop_columns'] ), $i ) . '>' . $i . '</option>';
-								}
+							for ( $i = 1; $i < 100; $i++ ) {
+								echo '<option value="' . $i . '"' . selected( esc_attr( $options['shop']['loop_shop_columns'] ), $i ) . '>' . $i . '</option>';
+							}
 
 							?>
 						</select>
@@ -96,9 +96,9 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 							<?php
 
 								// Loading font sizes with the help of a loop
-								for ( $i = 1; $i < 100; $i++ ) {
-									echo '<option value="' . $i . '"' . selected( esc_attr( $options['shop']['product_thumbnails_columns'] ), $i ) . '>' . $i . '</option>';
-								}
+							for ( $i = 1; $i < 100; $i++ ) {
+								echo '<option value="' . $i . '"' . selected( esc_attr( $options['shop']['product_thumbnails_columns'] ), $i ) . '>' . $i . '</option>';
+							}
 
 							?>
 						</select>
