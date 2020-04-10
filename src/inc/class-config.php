@@ -52,38 +52,38 @@ class Config {
 	 */
 	public function default_options() {
 		self::$default_options = array(
-			'shop' 			=> array(
-				'add_to_cart_text' 									=> '',
-				'variable_add_to_cart_text' 				=> '',
-				'grouped_add_to_cart_text' 					=> '',
-				'out_of_stock_add_to_cart_text' 		=> '',
-				'loop_sale_flash_text' 							=> esc_html__( 'Sale!', 'woo-customizer' ),
-				'loop_shop_per_page' 								=> 12,
-				'loop_shop_columns' 								=> 12,
-				'product_thumbnails_columns' 				=> 12
+			'shop'     => array(
+				'add_to_cart_text'              => '',
+				'variable_add_to_cart_text'     => '',
+				'grouped_add_to_cart_text'      => '',
+				'out_of_stock_add_to_cart_text' => '',
+				'loop_sale_flash_text'          => esc_html__( 'Sale!', 'woo-customizer' ),
+				'loop_shop_per_page'            => 12,
+				'loop_shop_columns'             => 12,
+				'product_thumbnails_columns'    => 12,
 			),
-			'product' 	=> array(
-				'description_tab_title' 						=> '',
-				'additional_information_tab_title' 	=> '',
-				'description_heading' 							=> '',
-				'additional_information_heading' 		=> '',
-				'single_add_to_cart_text' 					=> '',
-				'single_out_of_stock_text' 					=> esc_html__( 'Out of stock', 'woo-customizer' ),
-				'single_backorder_text' 						=> esc_html__( 'Available on backorder', 'woo-customizer' ),
-				'single_sale_flash_text' 						=> esc_html__( 'Sale!', 'woo-customizer' )
+			'product'  => array(
+				'description_tab_title'            => '',
+				'additional_information_tab_title' => '',
+				'description_heading'              => '',
+				'additional_information_heading'   => '',
+				'single_add_to_cart_text'          => '',
+				'single_out_of_stock_text'         => esc_html__( 'Out of stock', 'woo-customizer' ),
+				'single_backorder_text'            => esc_html__( 'Available on backorder', 'woo-customizer' ),
+				'single_sale_flash_text'           => esc_html__( 'Sale!', 'woo-customizer' ),
 			),
-			'checkout' 	=> array(
-				'must_be_logged_in_message' 				=> '',
-				'coupon_message' 										=> '',
-				'login_message' 										=> '',
-				'create_account_default_checked' 		=> '',
-				'order_button_text' 								=> ''
+			'checkout' => array(
+				'must_be_logged_in_message'      => '',
+				'coupon_message'                 => '',
+				'login_message'                  => '',
+				'create_account_default_checked' => '',
+				'order_button_text'              => '',
 			),
-			'misc' 			=> array(
-				'countries_tax_or_vat' 							=> esc_html__( 'Tax for USA, VAT for European countries', 'woo-customizer' ),
-				'countries_inc_tax_or_vat' 					=> esc_html__( 'Inc. tax for USA, Inc. VAT for European countries', 'woo-customizer' ),
-				'countries_ex_tax_or_vat' 					=> esc_html__( 'Exc. tax for USA, Exc. VAT for European countries', 'woo-customizer' )
-			)
+			'misc'     => array(
+				'countries_tax_or_vat'     => esc_html__( 'Tax for USA, VAT for European countries', 'woo-customizer' ),
+				'countries_inc_tax_or_vat' => esc_html__( 'Inc. tax for USA, Inc. VAT for European countries', 'woo-customizer' ),
+				'countries_ex_tax_or_vat'  => esc_html__( 'Exc. tax for USA, Exc. VAT for European countries', 'woo-customizer' ),
+			),
 		);
 	}
 

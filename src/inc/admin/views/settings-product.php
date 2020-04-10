@@ -16,7 +16,7 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 			<p><?php esc_html_e( 'Configure options for the WooCommerce Product page.', 'woo-customizer' ); ?></p>
 
 			<div class="as-section-content">
-        <div class="as-double-group as-clearfix">
+		<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'description_tab_title'; ?>" class="as-strong"><?php esc_html_e( 'Product Description Tab Title', 'woo-customizer' ); ?></label>
 						<input type="text" name="<?php echo Config::PREFIX . 'description_tab_title'; ?>" id="<?php echo Config::PREFIX . 'description_tab_title'; ?>" value="<?php echo esc_attr( stripslashes( $options['product']['description_tab_title'] ) ); ?>" placeholder="<?php esc_attr_e( 'Product description tab title', 'woo-customizer' ); ?>" class="as-form-control">
@@ -32,7 +32,7 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 					</div>
 				</div>
 
-        <div class="as-double-group as-clearfix">
+		<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'description_heading'; ?>" class="as-strong"><?php esc_html_e( 'Product Description Tab Heading', 'woo-customizer' ); ?></label>
 						<input type="text" name="<?php echo Config::PREFIX . 'description_heading'; ?>" id="<?php echo Config::PREFIX . 'description_heading'; ?>" value="<?php echo esc_attr( stripslashes( $options['product']['description_heading'] ) ); ?>" placeholder="<?php esc_attr_e( 'Product description tab heading', 'woo-customizer' ); ?>" class="as-form-control">
@@ -48,7 +48,7 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 					</div>
 				</div>
 
-        <div class="as-double-group as-clearfix">
+		<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'single_add_to_cart_text'; ?>" class="as-strong"><?php esc_html_e( 'Add to Cart Text', 'woo-customizer' ); ?></label>
 						<input type="text" name="<?php echo Config::PREFIX . 'single_add_to_cart_text'; ?>" id="<?php echo Config::PREFIX . 'single_add_to_cart_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['product']['single_add_to_cart_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Add to Cart text for all product types', 'woo-customizer' ); ?>" class="as-form-control">
@@ -64,7 +64,7 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 					</div>
 				</div>
 
-        <div class="as-double-group as-clearfix">
+		<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'single_backorder_text'; ?>" class="as-strong"><?php esc_html_e( 'Backorder Text', 'woo-customizer' ); ?></label>
 						<input type="text" name="<?php echo Config::PREFIX . 'single_backorder_text'; ?>" id="<?php echo Config::PREFIX . 'single_backorder_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['product']['single_backorder_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Backorder text on product page', 'woo-customizer' ); ?>" class="as-form-control">
