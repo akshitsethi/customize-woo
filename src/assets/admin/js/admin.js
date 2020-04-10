@@ -109,7 +109,7 @@ toastr.options = {
         contentType: false,
         beforeSend: function() {
           $('#' + id).block({
-            message: '<div class="as-strong" style="background: #ecf0f1; padding: 10px 6px; color: #000;">Processing..</div>',
+            message: '<div class="as-strong" style="background: #ecf0f1; padding: 10px 6px; color: #000;">' + woocustomizer_admin_l10n.processing + '</div>',
             css: {
               border: 'none',
               backgroundColor: 'none'
@@ -182,7 +182,7 @@ toastr.options = {
       var $tab      		= $selector.attr('href');
 
       if ($('.changed-input').length) {
-        toastr.error('You haven\'t saved your changes.');
+        toastr.error(woocustomizer_admin_l10n.save_changes);
       } else {
         // Change menu selection
         $('.as-main-menu li a').removeClass('active');

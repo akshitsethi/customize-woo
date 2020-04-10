@@ -64,6 +64,8 @@ class Admin {
 			'prefix'       => Config::PREFIX,
 			'save_text'    => esc_html__( 'Save Changes', 'woo-customizer' ),
 			'support_text' => esc_html__( 'Ask for Support', 'woo-customizer' ),
+			'save_changes' => esc_html__( 'Please save your changes first.', 'woo-customizer' ),
+			'processing'   => esc_html__( 'Processing..', 'woo-customizer' ),
 			'nonce'        => wp_create_nonce( Config::PREFIX . 'nonce' ),
 		);
 		wp_localize_script( Config::SHORT_SLUG . '-admin', Config::PREFIX . 'admin_l10n', $localize );
@@ -126,65 +128,65 @@ class Admin {
 		// Check for _nonce
 		if ( empty( $_POST['_nonce'] ) || ! wp_verify_nonce( $_POST['_nonce'], Config::PREFIX . 'nonce' ) ) {
 			$response['response'] = esc_html__( 'Request does not seem to be a valid one. Please try again by refreshing the page.', 'woo-customizer' );
-		}
+		} else {
+			// Check for action to determine the options to be updated
+			$section = str_replace( Config::PREFIX, '', sanitize_text_field( $_POST['action'] ) );
 
-		// Check for action to determine the options to be updated
-		$section = str_replace( Config::PREFIX, '', sanitize_text_field( $_POST['action'] ) );
+			// Ensure $section is not empty
+			if ( ! empty( $section ) ) {
+				if ( in_array( $section, array( 'shop', 'product', 'checkout', 'misc' ) ) ) {
+					// Filter and sanitize options
+					if ( 'shop' === $section ) {
+						$options[$section] = array(
+							'add_to_cart_text' 									=> sanitize_text_field( $_POST[ Config::PREFIX . 'add_to_cart_text' ] ),
+							'variable_add_to_cart_text' 				=> sanitize_text_field( $_POST[ Config::PREFIX . 'variable_add_to_cart_text' ] ),
+							'grouped_add_to_cart_text' 					=> sanitize_text_field( $_POST[ Config::PREFIX . 'grouped_add_to_cart_text' ] ),
+							'out_of_stock_add_to_cart_text' 		=> sanitize_text_field( $_POST[ Config::PREFIX . 'out_of_stock_add_to_cart_text' ] ),
+							'loop_sale_flash_text' 							=> sanitize_text_field( $_POST[ Config::PREFIX . 'loop_sale_flash_text' ] ),
+							'loop_shop_per_page' 								=> absint( $_POST[ Config::PREFIX . 'loop_shop_per_page' ] ),
+							'loop_shop_columns' 								=> absint( $_POST[ Config::PREFIX . 'loop_shop_columns' ] ),
+							'product_thumbnails_columns' 				=> absint( $_POST[ Config::PREFIX . 'product_thumbnails_columns' ] )
+						);
+					} else if ( 'product' === $section ) {
+						$options[$section] = array(
+							'description_tab_title' 						=> sanitize_text_field( $_POST[ Config::PREFIX . 'description_tab_title' ] ),
+							'additional_information_tab_title' 	=> sanitize_text_field( $_POST[ Config::PREFIX . 'additional_information_tab_title' ] ),
+							'description_heading' 							=> sanitize_text_field( $_POST[ Config::PREFIX . 'description_heading' ] ),
+							'additional_information_heading' 		=> sanitize_text_field( $_POST[ Config::PREFIX . 'additional_information_heading' ] ),
+							'single_add_to_cart_text' 					=> sanitize_text_field( $_POST[ Config::PREFIX . 'single_add_to_cart_text' ] ),
+							'single_out_of_stock_text' 					=> sanitize_text_field( $_POST[ Config::PREFIX . 'single_out_of_stock_text' ] ),
+							'single_backorder_text' 						=> sanitize_text_field( $_POST[ Config::PREFIX . 'single_backorder_text' ] ),
+							'single_sale_flash_text' 						=> sanitize_text_field( $_POST[ Config::PREFIX . 'single_sale_flash_text' ] )
+						);
+					} else if ( 'checkout' === $section ) {
+						$options[$section] = array(
+							'must_be_logged_in_message' 				=> sanitize_text_field( $_POST[ Config::PREFIX . 'must_be_logged_in_message' ] ),
+							'coupon_message' 										=> sanitize_text_field( $_POST[ Config::PREFIX . 'coupon_message' ] ),
+							'login_message' 										=> sanitize_text_field( $_POST[ Config::PREFIX . 'login_message' ] ),
+							'create_account_default_checked' 		=> sanitize_text_field( $_POST[ Config::PREFIX . 'create_account_default_checked' ] ),
+							'order_button_text' 								=> sanitize_text_field( $_POST[ Config::PREFIX . 'order_button_text' ] )
+						);
+					} else if ( 'misc' === $section ) {
+						$options[$section] = array(
+							'countries_tax_or_vat' 							=> sanitize_text_field( $_POST[ Config::PREFIX . 'countries_tax_or_vat' ] ),
+							'countries_inc_tax_or_vat' 					=> sanitize_text_field( $_POST[ Config::PREFIX . 'countries_inc_tax_or_vat' ] ),
+							'countries_ex_tax_or_vat' 					=> sanitize_text_field( $_POST[ Config::PREFIX . 'countries_ex_tax_or_vat' ] )
+						);
+					}
 
-		// Ensure $section is not empty
-		if ( ! empty( $section ) ) {
-			if ( in_array( $section, array( 'shop', 'product', 'checkout', 'misc' ) ) ) {
-				// Filter and sanitize options
-				if ( 'shop' === $section ) {
-					$options[$section] = array(
-						'add_to_cart_text' 									=> sanitize_text_field( $_POST[ Config::PREFIX . 'add_to_cart_text' ] ),
-						'variable_add_to_cart_text' 				=> sanitize_text_field( $_POST[ Config::PREFIX . 'variable_add_to_cart_text' ] ),
-						'grouped_add_to_cart_text' 					=> sanitize_text_field( $_POST[ Config::PREFIX . 'grouped_add_to_cart_text' ] ),
-						'out_of_stock_add_to_cart_text' 		=> sanitize_text_field( $_POST[ Config::PREFIX . 'out_of_stock_add_to_cart_text' ] ),
-						'loop_sale_flash_text' 							=> sanitize_text_field( $_POST[ Config::PREFIX . 'loop_sale_flash_text' ] ),
-						'loop_shop_per_page' 								=> absint( $_POST[ Config::PREFIX . 'loop_shop_per_page' ] ),
-						'loop_shop_columns' 								=> absint( $_POST[ Config::PREFIX . 'loop_shop_columns' ] ),
-						'product_thumbnails_columns' 				=> absint( $_POST[ Config::PREFIX . 'product_thumbnails_columns' ] )
-					);
-				} else if ( 'product' === $section ) {
-					$options[$section] = array(
-						'description_tab_title' 						=> sanitize_text_field( $_POST[ Config::PREFIX . 'description_tab_title' ] ),
-						'additional_information_tab_title' 	=> sanitize_text_field( $_POST[ Config::PREFIX . 'additional_information_tab_title' ] ),
-						'description_heading' 							=> sanitize_text_field( $_POST[ Config::PREFIX . 'description_heading' ] ),
-						'additional_information_heading' 		=> sanitize_text_field( $_POST[ Config::PREFIX . 'additional_information_heading' ] ),
-						'single_add_to_cart_text' 					=> sanitize_text_field( $_POST[ Config::PREFIX . 'single_add_to_cart_text' ] ),
-						'single_out_of_stock_text' 					=> sanitize_text_field( $_POST[ Config::PREFIX . 'single_out_of_stock_text' ] ),
-						'single_backorder_text' 						=> sanitize_text_field( $_POST[ Config::PREFIX . 'single_backorder_text' ] ),
-						'single_sale_flash_text' 						=> sanitize_text_field( $_POST[ Config::PREFIX . 'single_sale_flash_text' ] )
-					);
-				} else if ( 'checkout' === $section ) {
-					$options[$section] = array(
-						'must_be_logged_in_message' 				=> sanitize_text_field( $_POST[ Config::PREFIX . 'must_be_logged_in_message' ] ),
-						'coupon_message' 										=> sanitize_text_field( $_POST[ Config::PREFIX . 'coupon_message' ] ),
-						'login_message' 										=> sanitize_text_field( $_POST[ Config::PREFIX . 'login_message' ] ),
-						'create_account_default_checked' 		=> sanitize_text_field( $_POST[ Config::PREFIX . 'create_account_default_checked' ] ),
-						'order_button_text' 								=> sanitize_text_field( $_POST[ Config::PREFIX . 'order_button_text' ] )
-					);
-				} else if ( 'misc' === $section ) {
-					$options[$section] = array(
-						'countries_tax_or_vat' 							=> sanitize_text_field( $_POST[ Config::PREFIX . 'countries_tax_or_vat' ] ),
-						'countries_inc_tax_or_vat' 					=> sanitize_text_field( $_POST[ Config::PREFIX . 'countries_inc_tax_or_vat' ] ),
-						'countries_ex_tax_or_vat' 					=> sanitize_text_field( $_POST[ Config::PREFIX . 'countries_ex_tax_or_vat' ] )
-					);
+					// Update options
+					update_option( Config::DB_OPTION, $options );
+
+					// Success
+					$response['code']     = 'success';
+					$response['response'] = esc_html__( 'Options have been updated successfully.', 'woo-customizer' );
 				}
-
-				// Update options
-				update_option( Config::DB_OPTION, $options );
-
-				// Success
-				$response['code']     = 'success';
-				$response['response'] = esc_html__( 'Options have been updated successfully.', 'woo-customizer' );
-
-				// Headers for JSON format
-				header( 'Content-Type: application/json' );
-				echo json_encode( $response );
 			}
 		}
+
+		// Headers for JSON format
+		header( 'Content-Type: application/json' );
+		echo json_encode( $response );
 
 		// Exit for AJAX functions
 		exit;
@@ -205,7 +207,7 @@ class Admin {
 		if ( ! empty( $_POST[ Config::PREFIX . 'support_email' ] ) && ! empty( $_POST[ Config::PREFIX . 'support_issue' ] ) ) {
 			$admin_email = sanitize_text_field( $_POST[ Config::PREFIX . 'support_email' ] );
 			$issue       = htmlentities( $_POST[ Config::PREFIX . 'support_issue' ] );
-			$subject     = '[' . Config::get_plugin_name() . 'v' . Config::VERSION . '] by ' . $admin_email;
+			$subject     = '[' . Config::get_plugin_name() . ' v' . Config::VERSION . '] by ' . $admin_email;
 			$body        = "Email: $admin_email \r\nIssue: $issue";
 			$headers     = 'From: ' . $admin_email . "\r\n" . 'Reply-To: ' . $admin_email;
 
