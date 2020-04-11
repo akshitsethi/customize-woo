@@ -19,14 +19,14 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'add_to_cart_text'; ?>" class="as-strong"><?php esc_html_e( 'Simple Product', 'woo-customizer' ); ?></label>
-						<input type="text" name="<?php echo Config::PREFIX . 'add_to_cart_text'; ?>" id="<?php echo Config::PREFIX . 'add_to_cart_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['shop']['add_to_cart_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Add to Cart button text for simple products', 'woo-customizer' ); ?>" class="as-form-control">
+						<input type="text" name="<?php echo Config::PREFIX . 'add_to_cart_text'; ?>" id="<?php echo Config::PREFIX . 'add_to_cart_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['add_to_cart_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Add to Cart button text for simple products', 'woo-customizer' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the add to cart button text for simple products on all loop pages.', 'woo-customizer' ); ?></p>
 					</div>
 
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'variable_add_to_cart_text'; ?>" class="as-strong"><?php esc_html_e( 'Variable Product', 'woo-customizer' ); ?></label>
-						<input type="text" name="<?php echo Config::PREFIX . 'variable_add_to_cart_text'; ?>" id="<?php echo Config::PREFIX . 'variable_add_to_cart_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['shop']['variable_add_to_cart_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Add to Cart button text for variable products', 'woo-customizer' ); ?>" class="as-form-control">
+						<input type="text" name="<?php echo Config::PREFIX . 'variable_add_to_cart_text'; ?>" id="<?php echo Config::PREFIX . 'variable_add_to_cart_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['variable_add_to_cart_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Add to Cart button text for variable products', 'woo-customizer' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the add to cart button text for variable products on all loop pages.', 'woo-customizer' ); ?></p>
 					</div>
@@ -35,14 +35,14 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'grouped_add_to_cart_text'; ?>" class="as-strong"><?php esc_html_e( 'Grouped Product', 'woo-customizer' ); ?></label>
-						<input type="text" name="<?php echo Config::PREFIX . 'grouped_add_to_cart_text'; ?>" id="<?php echo Config::PREFIX . 'grouped_add_to_cart_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['shop']['grouped_add_to_cart_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Add to Cart button text for grouped products', 'woo-customizer' ); ?>" class="as-form-control">
+						<input type="text" name="<?php echo Config::PREFIX . 'grouped_add_to_cart_text'; ?>" id="<?php echo Config::PREFIX . 'grouped_add_to_cart_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['grouped_add_to_cart_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Add to Cart button text for grouped products', 'woo-customizer' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the add to cart button text for grouped products on all loop pages.', 'woo-customizer' ); ?></p>
 					</div>
 
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'out_of_stock_add_to_cart_text'; ?>" class="as-strong"><?php esc_html_e( 'Out of Stock Product', 'woo-customizer' ); ?></label>
-						<input type="text" name="<?php echo Config::PREFIX . 'out_of_stock_add_to_cart_text'; ?>" id="<?php echo Config::PREFIX . 'out_of_stock_add_to_cart_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['shop']['out_of_stock_add_to_cart_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Add to Cart button text for out of stock products', 'woo-customizer' ); ?>" class="as-form-control">
+						<input type="text" name="<?php echo Config::PREFIX . 'out_of_stock_add_to_cart_text'; ?>" id="<?php echo Config::PREFIX . 'out_of_stock_add_to_cart_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['out_of_stock_add_to_cart_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Add to Cart button text for out of stock products', 'woo-customizer' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the add to cart button text for out of stock products on all loop pages.', 'woo-customizer' ); ?></p>
 					</div>
@@ -51,7 +51,7 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'loop_sale_flash_text'; ?>" class="as-strong"><?php esc_html_e( 'Sale Badge Text', 'woo-customizer' ); ?></label>
-						<input type="text" name="<?php echo Config::PREFIX . 'loop_sale_flash_text'; ?>" id="<?php echo Config::PREFIX . 'loop_sale_flash_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['shop']['loop_sale_flash_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Add text for Sale badge', 'woo-customizer' ); ?>" class="as-form-control">
+						<input type="text" name="<?php echo Config::PREFIX . 'loop_sale_flash_text'; ?>" id="<?php echo Config::PREFIX . 'loop_sale_flash_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['loop_sale_flash_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Add text for Sale badge', 'woo-customizer' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes text for the sale flash on all loop pages.', 'woo-customizer' ); ?></p>
 					</div>
@@ -63,7 +63,7 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 
 								// Loading font sizes with the help of a loop
 							for ( $i = 1; $i < 100; $i++ ) {
-								echo '<option value="' . $i . '"' . selected( esc_attr( $options['shop']['loop_shop_per_page'] ), $i ) . '>' . $i . '</option>';
+								echo '<option value="' . $i . '"' . selected( esc_attr( $options['loop_shop_per_page'] ), $i ) . '>' . $i . '</option>';
 							}
 
 							?>
@@ -81,7 +81,7 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 
 								// Loading font sizes with the help of a loop
 							for ( $i = 1; $i < 100; $i++ ) {
-								echo '<option value="' . $i . '"' . selected( esc_attr( $options['shop']['loop_shop_columns'] ), $i ) . '>' . $i . '</option>';
+								echo '<option value="' . $i . '"' . selected( esc_attr( $options['loop_shop_columns'] ), $i ) . '>' . $i . '</option>';
 							}
 
 							?>
@@ -97,7 +97,7 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 
 								// Loading font sizes with the help of a loop
 							for ( $i = 1; $i < 100; $i++ ) {
-								echo '<option value="' . $i . '"' . selected( esc_attr( $options['shop']['product_thumbnails_columns'] ), $i ) . '>' . $i . '</option>';
+								echo '<option value="' . $i . '"' . selected( esc_attr( $options['woocommerce_product_thumbnails_columns'] ), $i ) . '>' . $i . '</option>';
 							}
 
 							?>
