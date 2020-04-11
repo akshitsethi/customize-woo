@@ -97,7 +97,9 @@ class Front {
 	 * @since 1.0.0
 	 */
 	public function single_add_to_cart_text() {
-		return $this->filters['single_add_to_cart_text'];
+		if ( $this->if_exists( $this->filters['single_add_to_cart_text'] ) ) {
+			return $this->filters['single_add_to_cart_text'];
+		}
 	}
 
 

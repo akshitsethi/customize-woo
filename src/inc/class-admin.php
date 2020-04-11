@@ -137,6 +137,7 @@ class Admin {
 							'variable_add_to_cart_text' => sanitize_text_field( $_POST[ Config::PREFIX . 'variable_add_to_cart_text' ] ),
 							'grouped_add_to_cart_text'  => sanitize_text_field( $_POST[ Config::PREFIX . 'grouped_add_to_cart_text' ] ),
 							'out_of_stock_add_to_cart_text' => sanitize_text_field( $_POST[ Config::PREFIX . 'out_of_stock_add_to_cart_text' ] ),
+							'external_add_to_cart_text' => sanitize_text_field( $_POST[ Config::PREFIX . 'external_add_to_cart_text' ] ),
 							'loop_sale_flash_text'      => sanitize_text_field( $_POST[ Config::PREFIX . 'loop_sale_flash_text' ] ),
 							'loop_shop_per_page'        => absint( $_POST[ Config::PREFIX . 'loop_shop_per_page' ] ),
 							'loop_shop_columns'         => absint( $_POST[ Config::PREFIX . 'loop_shop_columns' ] ),

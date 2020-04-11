@@ -50,12 +50,21 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 
 				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
+						<label for="<?php echo Config::PREFIX . 'external_add_to_cart_text'; ?>" class="as-strong"><?php esc_html_e( 'External Product', 'woo-customizer' ); ?></label>
+						<input type="text" name="<?php echo Config::PREFIX . 'external_add_to_cart_text'; ?>" id="<?php echo Config::PREFIX . 'external_add_to_cart_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['external_add_to_cart_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Add to Cart button text for external products', 'woo-customizer' ); ?>" class="as-form-control">
+
+						<p class="as-form-help-block"><?php esc_html_e( 'Changes the add to cart button text for external products.', 'woo-customizer' ); ?></p>
+					</div>
+
+					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'loop_sale_flash_text'; ?>" class="as-strong"><?php esc_html_e( 'Sale Badge Text', 'woo-customizer' ); ?></label>
 						<input type="text" name="<?php echo Config::PREFIX . 'loop_sale_flash_text'; ?>" id="<?php echo Config::PREFIX . 'loop_sale_flash_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['loop_sale_flash_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Add text for Sale badge', 'woo-customizer' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes text for the sale flash on all loop pages.', 'woo-customizer' ); ?></p>
 					</div>
+				</div>
 
+				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'loop_shop_per_page'; ?>" class="as-strong"><?php esc_html_e( 'Products Displayed Per Page', 'woo-customizer' ); ?></label>
 						<select name="<?php echo Config::PREFIX . 'loop_shop_per_page'; ?>" id="<?php echo Config::PREFIX . 'loop_shop_per_page'; ?>">
@@ -71,9 +80,7 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the number of products displayed per page.', 'woo-customizer' ); ?></p>
 					</div>
-				</div>
 
-				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'loop_shop_columns'; ?>" class="as-strong"><?php esc_html_e( 'Product Columns Displayed Per Page', 'woo-customizer' ); ?></label>
 						<select name="<?php echo Config::PREFIX . 'loop_shop_columns'; ?>" id="<?php echo Config::PREFIX . 'loop_shop_columns'; ?>">
@@ -89,7 +96,9 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the number of product columns displayed per page.', 'woo-customizer' ); ?></p>
 					</div>
+				</div>
 
+				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'product_thumbnails_columns'; ?>" class="as-strong"><?php esc_html_e( 'Product Thumbnail Columns Displayed', 'woo-customizer' ); ?></label>
 						<select name="<?php echo Config::PREFIX . 'product_thumbnails_columns'; ?>" id="<?php echo Config::PREFIX . 'product_thumbnails_columns'; ?>">
