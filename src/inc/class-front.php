@@ -160,7 +160,7 @@ class Front {
 			$text    = str_replace( '{percent}', "{$percent}%", $text );
 		}
 
-		return ! empty( $text ) ? "<span class='onsale'>{$text}</span>" : $html;
+		return ! empty( $text ) ? '<span class="onsale">' . $text . '</span>' : $html;
 	}
 
 

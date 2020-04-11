@@ -45,8 +45,8 @@ class WooCustomizer {
 	 */
 	public function init() {
 		// Initialize front and admin
-		new Front();
 		new Admin();
+		new Front();
 	}
 
 
