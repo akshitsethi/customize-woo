@@ -5,20 +5,21 @@ Tags: woocommerce, customizer, woo
 Requires at least: 3.5.1
 Tested up to: 5.4
 Requires PHP: 5.6
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-## Short description here
+An easy way to customize your WooCommerce store with a click of few buttons.
 
 
 == Description ==
-## Long description here
+Customize your WooCommerce store with a click of few buttons. This plugin provides an options panel where you can add your customizations and save them without needing to write any PHP code. And, it's absolutely free.
 
 
 = Plugin Features =
 
-* Works with any WooCommerce Theme.
+* Works with any WooCommerce Theme
+* Over 30+ customizations
 * **FREE Forever**
 
 == Installation ==

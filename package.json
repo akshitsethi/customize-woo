@@ -1,6 +1,6 @@
 {
   "name": "woo-customizer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Plugin to help customise WooCommerce with the help of actions and filters.",
   "scripts": {
     "lint": "eslint",
