@@ -505,7 +505,7 @@ msgid "There was an error creating the support ticket. You can try again later o
 msgstr ""
 
 #: inc/class-config.php:45
-msgid "Woo Customizer"
+msgid "Customize Woo"
 msgstr ""
 
 #: inc/class-config.php:56

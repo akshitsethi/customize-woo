@@ -42,7 +42,7 @@ class Config {
 	 * @since 1.0.0
 	 */
 	public static function get_plugin_name() {
-		return esc_html__( 'Woo Customizer', 'customize-woo' );
+		return esc_html__( 'Customize Woo', 'customize-woo' );
 	}
 
 
