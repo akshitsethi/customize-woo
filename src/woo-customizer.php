@@ -20,6 +20,12 @@ defined( 'ABSPATH' ) || exit;
 // Composer autoloder file.
 require_once __DIR__ . '/vendor/autoload.php';
 
+// WooCommerce version check
+if ( ! WooCheck::is_plugin_active( 'woocommerce.php' ) ) {
+	add_action( 'admin_notices', array( 'AkshitSethi\Plugins\WooCustomizer\WooCheck', 'inactive_notice' ) );
+	return;
+}
+
 /**
  * Plugin class where all the action happens.
  *
