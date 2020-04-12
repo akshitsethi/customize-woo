@@ -20,12 +20,6 @@ defined( 'ABSPATH' ) || exit;
 // Composer autoloder file.
 require_once __DIR__ . '/vendor/autoload.php';
 
-// WooCommerce version check
-if ( ! WooCheck::is_plugin_active( 'woocommerce.php' ) ) {
-	add_action( 'admin_notices', array( 'AkshitSethi\Plugins\WooCustomizer\WooCheck', 'inactive_notice' ) );
-	return;
-}
-
 /**
  * Plugin class where all the action happens.
  *
@@ -39,6 +33,12 @@ class WooCustomizer {
 	 * Class Constructor.
 	 */
 	public function __construct() {
+		// WooCommerce version check
+		if ( ! WooCheck::is_plugin_active( 'woocommerce.php' ) ) {
+			add_action( 'admin_notices', array( 'AkshitSethi\Plugins\WooCustomizer\WooCheck', 'inactive_notice' ) );
+			return;
+		}
+
 		add_action( 'plugins_loaded', array( $this, 'init' ) );
 		add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
 	}
@@ -47,7 +47,7 @@ class WooCustomizer {
 	/**
 	 * Initialize plugin when all the plugins have been loaded.
 	 *
-	 * @since 2.0.0
+	 * @since 1.0.0
 	 */
 	public function init() {
 		// Initialize front and admin
@@ -59,7 +59,7 @@ class WooCustomizer {
 	/**
 	 * Loads textdomain for the plugin.
 	 *
-	 * @since 2.0.0
+	 * @since 1.0.0
 	 */
 	public function load_textdomain() {
 		load_plugin_textdomain( Config::PLUGIN_SLUG, false, Config::$plugin_path . 'i18n/' );
