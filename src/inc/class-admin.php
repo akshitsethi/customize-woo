@@ -145,10 +145,11 @@ class Admin {
 						);
 					} elseif ( 'product' === $section ) {
 						$section_options = array(
-							'woocommerce_description_tab_title' => sanitize_text_field( $_POST[ Config::PREFIX . 'description_tab_title' ] ),
-							'woocommerce_additional_information_tab_title' => sanitize_text_field( $_POST[ Config::PREFIX . 'additional_information_tab_title' ] ),
-							'woocommerce_description_heading' => sanitize_text_field( $_POST[ Config::PREFIX . 'description_heading' ] ),
-							'woocommerce_additional_information_heading' => sanitize_text_field( $_POST[ Config::PREFIX . 'additional_information_heading' ] ),
+							'woocommerce_product_description_tab_title' => sanitize_text_field( $_POST[ Config::PREFIX . 'description_tab_title' ] ),
+							'woocommerce_product_description_heading' => sanitize_text_field( $_POST[ Config::PREFIX . 'description_heading' ] ),
+							'woocommerce_product_reviews_tab_title' => sanitize_text_field( $_POST[ Config::PREFIX . 'reviews_tab_title' ] ),
+							'woocommerce_product_additional_information_tab_title' => sanitize_text_field( $_POST[ Config::PREFIX . 'additional_information_tab_title' ] ),
+							'woocommerce_product_additional_information_heading' => sanitize_text_field( $_POST[ Config::PREFIX . 'additional_information_heading' ] ),
 							'single_add_to_cart_text'  => sanitize_text_field( $_POST[ Config::PREFIX . 'single_add_to_cart_text' ] ),
 							'single_out_of_stock_text' => sanitize_text_field( $_POST[ Config::PREFIX . 'single_out_of_stock_text' ] ),
 							'single_backorder_text'    => sanitize_text_field( $_POST[ Config::PREFIX . 'single_backorder_text' ] ),
