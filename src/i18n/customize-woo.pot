@@ -1,24 +1,21 @@
 # Copyright (C) 2020 akshitsethi
-# This file is distributed under the same license as the Woo Customizer plugin.
+# This file is distributed under the same license as the Customize WooCommerce plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Woo Customizer 1.0.1\n"
+"Project-Id-Version: Customize WooCommerce 1.0.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/src\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-04-12T16:44:38+05:30\n"
+"POT-Creation-Date: 2020-04-12T16:57:12+05:30\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
-"X-Domain: woo-customizer\n"
+"X-Domain: customize-woo\n"
 
 #. Plugin Name of the plugin
-#: inc/class-admin.php:42
-#: inc/class-admin.php:43
-#: inc/class-config.php:45
-msgid "Woo Customizer"
+msgid "Customize WooCommerce"
 msgstr ""
 
 #. Description of the plugin
@@ -466,6 +463,11 @@ msgstr ""
 msgid "About"
 msgstr ""
 
+#: inc/class-admin.php:42
+#: inc/class-admin.php:43
+msgid "Customizer"
+msgstr ""
+
 #: inc/class-admin.php:67
 msgid "Ask for Support"
 msgstr ""
@@ -500,6 +502,10 @@ msgstr ""
 
 #: inc/class-admin.php:226
 msgid "There was an error creating the support ticket. You can try again later or send me an email directly at akshitsethi@gmail.com"
+msgstr ""
+
+#: inc/class-config.php:45
+msgid "Woo Customizer"
 msgstr ""
 
 #: inc/class-config.php:56

@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Woo Customizer
+ * Plugin Name: Customize WooCommerce
  * Description: Plugin to help customise WooCommerce with the help of actions and filters.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Runtime: 5.6+
  * Author: akshitsethi
- * Text Domain: woo-customizer
+ * Text Domain: customize-woo
  * Domain Path: i18n
  * Author URI: https://akshitsethi.com
  * License: GPLv3

@@ -1,5 +1,5 @@
-VERSION := 1.0.1
-PLUGINSLUG := woo-customizer
+VERSION := 1.0.2
+PLUGINSLUG := customize-woo
 SRCPATH := $(shell pwd)/src
 
 bin/linux/amd64/github-release:

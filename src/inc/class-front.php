@@ -230,7 +230,7 @@ class Front {
 			// Only add "up to" if there's > 1 percentage possible
 			if ( ! empty( $child_sale_percents ) ) {
 				/* translators: Placeholder: %s - sale percentage */
-				$percentage = count( $child_sale_percents ) > 1 ? sprintf( esc_html__( 'up to %s', 'woo-customizer' ), max( $child_sale_percents ) ) : current( $child_sale_percents );
+				$percentage = count( $child_sale_percents ) > 1 ? sprintf( esc_html__( 'up to %s', 'customize-woo' ), max( $child_sale_percents ) ) : current( $child_sale_percents );
 			}
 		} else {
 			$percentage = $this->calculate_sale_percentage( $product->get_regular_price(), $product->get_sale_price() );

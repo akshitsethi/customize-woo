@@ -58,7 +58,7 @@ class WooCheck {
 	public static function inactive_notice() {
 		$message = sprintf(
 			/* translators: %1$s - <strong>, %2$s - </strong>, %3$s - <a>, %4$s - version number, %5$s - </a> */
-			esc_html__( '%1$sWooCommerce Customizer won\'t work properly%2$s as it requires WooCommerce. Please %3$sactivate%4$s WooCommerce version %5$s or newer.', 'woo-customizer' ),
+			esc_html__( '%1$sWooCommerce Customizer won\'t work properly%2$s as it requires WooCommerce. Please %3$sactivate%4$s WooCommerce version %5$s or newer.', 'customize-woo' ),
 			'<strong>',
 			'</strong>',
 			'<a href="' . admin_url( 'plugins.php' ) . '">',

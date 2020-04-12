@@ -39,8 +39,8 @@ class Admin {
 		if ( is_admin() && current_user_can( 'manage_options' ) ) {
 			$menu = add_submenu_page(
 				'woocommerce',
-				esc_html__( 'Woo Customizer', 'woo-customizer' ),
-				esc_html__( 'Woo Customizer', 'woo-customizer' ),
+				esc_html__( 'Customizer', 'customize-woo' ),
+				esc_html__( 'Customizer', 'customize-woo' ),
 				'manage_options',
 				Config::PREFIX . 'options',
 				array( $this, 'settings' )
@@ -63,10 +63,10 @@ class Admin {
 
 		$localize = array(
 			'prefix'       => Config::PREFIX,
-			'save_text'    => esc_html__( 'Save Changes', 'woo-customizer' ),
-			'support_text' => esc_html__( 'Ask for Support', 'woo-customizer' ),
-			'save_changes' => esc_html__( 'Please save your changes first.', 'woo-customizer' ),
-			'processing'   => esc_html__( 'Processing..', 'woo-customizer' ),
+			'save_text'    => esc_html__( 'Save Changes', 'customize-woo' ),
+			'support_text' => esc_html__( 'Ask for Support', 'customize-woo' ),
+			'save_changes' => esc_html__( 'Please save your changes first.', 'customize-woo' ),
+			'processing'   => esc_html__( 'Processing..', 'customize-woo' ),
 			'nonce'        => wp_create_nonce( Config::PREFIX . 'nonce' ),
 		);
 		wp_localize_script( Config::SHORT_SLUG . '-admin', Config::PREFIX . 'admin_l10n', $localize );
@@ -90,10 +90,10 @@ class Admin {
 	 * @return array
 	 */
 	public function meta_links( $links, $file ) {
-		if ( strpos( $file, 'woo-customizer.php' ) !== false ) {
+		if ( strpos( $file, 'customize-woo.php' ) !== false ) {
 			$new_links = array(
-				'<a href="https://www.facebook.com/akshitsethi" target="_blank">' . esc_html__( 'Facebook', 'woo-customizer' ) . '</a>',
-				'<a href="https://twitter.com/akshitsethi" target="_blank">' . esc_html__( 'Twitter', 'woo-customizer' ) . '</a>',
+				'<a href="https://www.facebook.com/akshitsethi" target="_blank">' . esc_html__( 'Facebook', 'customize-woo' ) . '</a>',
+				'<a href="https://twitter.com/akshitsethi" target="_blank">' . esc_html__( 'Twitter', 'customize-woo' ) . '</a>',
 			);
 
 			$links = array_merge( $links, $new_links );
@@ -118,12 +118,12 @@ class Admin {
 		// Default response
 		$response = array(
 			'code'     => 'error',
-			'response' => esc_html__( 'There was an error processing the request. Please try again later.', 'woo-customizer' ),
+			'response' => esc_html__( 'There was an error processing the request. Please try again later.', 'customize-woo' ),
 		);
 
 		// Check for _nonce
 		if ( empty( $_POST['_nonce'] ) || ! wp_verify_nonce( $_POST['_nonce'], Config::PREFIX . 'nonce' ) ) {
-			$response['response'] = esc_html__( 'Request does not seem to be a valid one. Please try again by refreshing the page.', 'woo-customizer' );
+			$response['response'] = esc_html__( 'Request does not seem to be a valid one. Please try again by refreshing the page.', 'customize-woo' );
 		} else {
 			// Check for action to determine the options to be updated
 			$section = str_replace( Config::PREFIX, '', sanitize_text_field( $_POST['action'] ) );
@@ -180,7 +180,7 @@ class Admin {
 
 					// Success
 					$response['code']     = 'success';
-					$response['response'] = esc_html__( 'Options have been updated successfully.', 'woo-customizer' );
+					$response['response'] = esc_html__( 'Options have been updated successfully.', 'customize-woo' );
 				}
 			}
 		}
@@ -201,7 +201,7 @@ class Admin {
 		// Storing response in an array
 		$response = array(
 			'code'     => 'error',
-			'response' => esc_html__( 'Please fill in both the fields to create your support ticket.', 'woo-customizer' ),
+			'response' => esc_html__( 'Please fill in both the fields to create your support ticket.', 'customize-woo' ),
 		);
 
 		// Filter and sanitize
@@ -217,13 +217,13 @@ class Admin {
 				// Success
 				$response = array(
 					'code'     => 'success',
-					'response' => esc_html__( 'I have received your support ticket and will get back to you shortly!', 'woo-customizer' ),
+					'response' => esc_html__( 'I have received your support ticket and will get back to you shortly!', 'customize-woo' ),
 				);
 			} else {
 				// Failure
 				$response = array(
 					'code'     => 'error',
-					'response' => esc_html__( 'There was an error creating the support ticket. You can try again later or send me an email directly at akshitsethi@gmail.com', 'woo-customizer' ),
+					'response' => esc_html__( 'There was an error creating the support ticket. You can try again later or send me an email directly at akshitsethi@gmail.com', 'customize-woo' ),
 				);
 			}
 		}

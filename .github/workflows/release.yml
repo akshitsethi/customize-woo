@@ -32,6 +32,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: build/woo-customizer.zip
-          asset_name: woo-customizer.zip
+          asset_path: build/customize-woo.zip
+          asset_name: customize-woo.zip
           asset_content_type: application/zip
