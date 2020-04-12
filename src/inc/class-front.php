@@ -104,7 +104,7 @@ class Front {
 
 
 	/**
-	 * Apply the product page out of stock text customization
+	 * Apply the product page out of stock text customization.
 	 *
 	 * @param string      $text out of stock text
 	 * @param \WC_Product $product product object
@@ -121,7 +121,7 @@ class Front {
 
 
 	/**
-	 * Apply the product page backorder text customization
+	 * Apply the product page backorder text customization.
 	 *
 	 * @param string      $text backorder text
 	 * @param \WC_Product $product product object
@@ -176,6 +176,10 @@ class Front {
 		$current_filter = current_filter();
 
 		if ( $this->if_exists( $this->filters[ $current_filter ] ) ) {
+			if ( 'woocommerce_create_account_default_checked' === $current_filter ) {
+				return 'checked' === $this->filters[ $current_filter ];
+			}
+
 			return $this->filters[ $current_filter ];
 		}
 	}

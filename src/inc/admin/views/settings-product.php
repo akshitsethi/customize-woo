@@ -19,30 +19,44 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 		<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'description_tab_title'; ?>" class="as-strong"><?php esc_html_e( 'Product Description Tab Title', 'woo-customizer' ); ?></label>
-						<input type="text" name="<?php echo Config::PREFIX . 'description_tab_title'; ?>" id="<?php echo Config::PREFIX . 'description_tab_title'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_description_tab_title'] ) ); ?>" placeholder="<?php esc_attr_e( 'Product description tab title', 'woo-customizer' ); ?>" class="as-form-control">
+						<input type="text" name="<?php echo Config::PREFIX . 'description_tab_title'; ?>" id="<?php echo Config::PREFIX . 'description_tab_title'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_product_description_tab_title'] ) ); ?>" placeholder="<?php esc_attr_e( 'Product description tab title', 'woo-customizer' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the product description tab title.', 'woo-customizer' ); ?></p>
 					</div>
 
 					<div class="as-form-group">
-						<label for="<?php echo Config::PREFIX . 'additional_information_tab_title'; ?>" class="as-strong"><?php esc_html_e( 'Additional Information Tab Title', 'woo-customizer' ); ?></label>
-						<input type="text" name="<?php echo Config::PREFIX . 'additional_information_tab_title'; ?>" id="<?php echo Config::PREFIX . 'additional_information_tab_title'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_additional_information_tab_title'] ) ); ?>" placeholder="<?php esc_attr_e( 'Additional information tab title', 'woo-customizer' ); ?>" class="as-form-control">
+						<label for="<?php echo Config::PREFIX . 'description_heading'; ?>" class="as-strong"><?php esc_html_e( 'Product Description Tab Heading', 'woo-customizer' ); ?></label>
+						<input type="text" name="<?php echo Config::PREFIX . 'description_heading'; ?>" id="<?php echo Config::PREFIX . 'description_heading'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_product_description_heading'] ) ); ?>" placeholder="<?php esc_attr_e( 'Product description tab heading', 'woo-customizer' ); ?>" class="as-form-control">
 
-						<p class="as-form-help-block"><?php esc_html_e( 'Changes the additional information tab title.', 'woo-customizer' ); ?></p>
+						<p class="as-form-help-block"><?php esc_html_e( 'Changes the product description tab heading.', 'woo-customizer' ); ?></p>
 					</div>
 				</div>
 
 		<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
-						<label for="<?php echo Config::PREFIX . 'description_heading'; ?>" class="as-strong"><?php esc_html_e( 'Product Description Tab Heading', 'woo-customizer' ); ?></label>
-						<input type="text" name="<?php echo Config::PREFIX . 'description_heading'; ?>" id="<?php echo Config::PREFIX . 'description_heading'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_description_heading'] ) ); ?>" placeholder="<?php esc_attr_e( 'Product description tab heading', 'woo-customizer' ); ?>" class="as-form-control">
+						<label for="<?php echo Config::PREFIX . 'reviews_tab_title'; ?>" class="as-strong"><?php esc_html_e( 'Reviews Tab Title', 'woo-customizer' ); ?></label>
+						<input type="text" name="<?php echo Config::PREFIX . 'reviews_tab_title'; ?>" id="<?php echo Config::PREFIX . 'reviews_tab_title'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_product_reviews_tab_title'] ) ); ?>" placeholder="<?php esc_attr_e( 'Reviews tab title', 'woo-customizer' ); ?>" class="as-form-control">
 
-						<p class="as-form-help-block"><?php esc_html_e( 'Changes the product description tab heading.', 'woo-customizer' ); ?></p>
+						<p class="as-form-help-block"><?php esc_html_e( 'Changes the reviews tab title.', 'woo-customizer' ); ?></p>
+					</div>
+
+					<div class="as-form-group">
+						<label class="as-strong"><?php esc_html_e( 'Reviews Tab Heading', 'woo-customizer' ); ?></label>
+						<p class="as-form-help-block"><?php esc_html_e( 'Unfortunately, WooCommerce does not provide a method to modify this.', 'woo-customizer' ); ?></p>
+					</div>
+				</div>
+
+		<div class="as-double-group as-clearfix">
+					<div class="as-form-group">
+						<label for="<?php echo Config::PREFIX . 'additional_information_tab_title'; ?>" class="as-strong"><?php esc_html_e( 'Additional Information Tab Title', 'woo-customizer' ); ?></label>
+						<input type="text" name="<?php echo Config::PREFIX . 'additional_information_tab_title'; ?>" id="<?php echo Config::PREFIX . 'additional_information_tab_title'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_product_additional_information_tab_title'] ) ); ?>" placeholder="<?php esc_attr_e( 'Additional information tab title', 'woo-customizer' ); ?>" class="as-form-control">
+
+						<p class="as-form-help-block"><?php esc_html_e( 'Changes the additional information tab title.', 'woo-customizer' ); ?></p>
 					</div>
 
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'additional_information_heading'; ?>" class="as-strong"><?php esc_html_e( 'Additional Information Tab Heading', 'woo-customizer' ); ?></label>
-						<input type="text" name="<?php echo Config::PREFIX . 'additional_information_heading'; ?>" id="<?php echo Config::PREFIX . 'additional_information_heading'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_additional_information_heading'] ) ); ?>" placeholder="<?php esc_attr_e( 'Additional information tab heading', 'woo-customizer' ); ?>" class="as-form-control">
+						<input type="text" name="<?php echo Config::PREFIX . 'additional_information_heading'; ?>" id="<?php echo Config::PREFIX . 'additional_information_heading'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_product_additional_information_heading'] ) ); ?>" placeholder="<?php esc_attr_e( 'Additional information tab heading', 'woo-customizer' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the additional information tab heading.', 'woo-customizer' ); ?></p>
 					</div>

@@ -43,8 +43,8 @@ use AkshitSethi\Plugins\WooCustomizer\Config;
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'create_account_default_checked'; ?>" class="as-strong"><?php esc_html_e( 'Create Account Checkbox Default', 'woo-customizer' ); ?></label>
 						<select name="<?php echo Config::PREFIX . 'create_account_default_checked'; ?>" id="<?php echo Config::PREFIX . 'create_account_default_checked'; ?>">
-							<option value="1"<?php echo selected( esc_attr( $options['woocommerce_create_account_default_checked'] ), true ); ?>><?php esc_html_e( 'Checked', 'woo-customizer' ); ?></option>
-							<option value="0"<?php echo selected( esc_attr( $options['woocommerce_create_account_default_checked'] ), false ); ?>><?php esc_html_e( 'Unchecked', 'woo-customizer' ); ?></option>
+							<option value="checked"<?php echo selected( esc_attr( $options['woocommerce_create_account_default_checked'] ), 'checked' ); ?>><?php esc_html_e( 'Checked', 'woo-customizer' ); ?></option>
+							<option value="unchecked"<?php echo selected( esc_attr( $options['woocommerce_create_account_default_checked'] ), 'unchecked' ); ?>><?php esc_html_e( 'Unchecked', 'woo-customizer' ); ?></option>
 						</select>
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Control the default state for the Create Account checkbox.', 'woo-customizer' ); ?></p>
