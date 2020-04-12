@@ -18,7 +18,7 @@ class Config {
 
 	const PLUGIN_SLUG    = 'customize-woo';
 	const SHORT_SLUG     = 'customizewoo';
-	const VERSION        = '1.0.2';
+	const VERSION        = '1.0.3';
 	const DB_OPTION      = 'as_' . self::SHORT_SLUG;
 	const PREFIX         = self::SHORT_SLUG . '_';
 	const MIN_WC_VERSION = '3.1.0';
