@@ -21,7 +21,7 @@ class Admin {
 	 * Class constructor.
 	 */
 	public function __construct() {
-		add_action( 'admin_menu', array( $this, 'add_menu' ) );
+		add_action( 'admin_menu', array( $this, 'add_menu' ), PHP_INT_MAX );
 		add_action( 'wp_ajax_' . Config::PREFIX . 'support', array( $this, 'support_ticket' ) );
 		add_action( 'wp_ajax_' . Config::PREFIX . 'shop', array( $this, 'save_options' ) );
 		add_action( 'wp_ajax_' . Config::PREFIX . 'product', array( $this, 'save_options' ) );
@@ -37,7 +37,8 @@ class Admin {
 	 */
 	public function add_menu() {
 		if ( is_admin() && current_user_can( 'manage_options' ) ) {
-			$menu = add_options_page(
+			$menu = add_submenu_page(
+				'woocommerce',
 				esc_html__( 'Woo Customizer', 'woo-customizer' ),
 				esc_html__( 'Woo Customizer', 'woo-customizer' ),
 				'manage_options',
