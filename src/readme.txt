@@ -1,4 +1,4 @@
-=== Woo Customizer ===
+=== Customize Woo ===
 Contributors: akshitsethi
 Donate link: https://akshitsethi.com/
 Tags: woocommerce, customizer, woo
