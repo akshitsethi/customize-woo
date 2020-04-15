@@ -19,23 +19,16 @@ use AkshitSethi\Plugins\CustomizeWoo\Config;
 				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'must_be_logged_in_message'; ?>" class="as-strong"><?php esc_html_e( 'Must be Logged-in Text', 'customize-woo' ); ?></label>
-						<input type="text" name="<?php echo Config::PREFIX . 'must_be_logged_in_message'; ?>" id="<?php echo Config::PREFIX . 'must_be_logged_in_message'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_must_be_logged_in_message'] ) ); ?>" placeholder="<?php esc_attr_e( 'Must be logged-in message on checkout page', 'customize-woo' ); ?>" class="as-form-control">
+						<input type="text" name="<?php echo Config::PREFIX . 'must_be_logged_in_message'; ?>" id="<?php echo Config::PREFIX . 'must_be_logged_in_message'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_checkout_must_be_logged_in_message'] ) ); ?>" placeholder="<?php esc_attr_e( 'Must be logged-in message on checkout page', 'customize-woo' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the message displayed when a customer must be logged in to checkout.', 'customize-woo' ); ?></p>
-					</div>
-
-					<div class="as-form-group">
-						<label for="<?php echo Config::PREFIX . 'coupon_message'; ?>" class="as-strong"><?php esc_html_e( 'Coupon Text', 'customize-woo' ); ?></label>
-						<input type="text" name="<?php echo Config::PREFIX . 'coupon_message'; ?>" id="<?php echo Config::PREFIX . 'coupon_message'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_coupon_message'] ) ); ?>" placeholder="<?php esc_attr_e( 'Coupon message text on checkout page', 'customize-woo' ); ?>" class="as-form-control">
-
-						<p class="as-form-help-block"><?php esc_html_e( 'Changes the message displayed if the coupon form is enabled on checkout.', 'customize-woo' ); ?></p>
 					</div>
 				</div>
 
 				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'login_message'; ?>" class="as-strong"><?php esc_html_e( 'Login Text', 'customize-woo' ); ?></label>
-						<input type="text" name="<?php echo Config::PREFIX . 'login_message'; ?>" id="<?php echo Config::PREFIX . 'login_message'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_login_message'] ) ); ?>" placeholder="<?php esc_attr_e( 'Login message text on product page', 'customize-woo' ); ?>" class="as-form-control">
+						<input type="text" name="<?php echo Config::PREFIX . 'login_message'; ?>" id="<?php echo Config::PREFIX . 'login_message'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_checkout_login_message'] ) ); ?>" placeholder="<?php esc_attr_e( 'Login message text on product page', 'customize-woo' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the message displayed if customers can login at checkout.', 'customize-woo' ); ?></p>
 					</div>
@@ -57,6 +50,13 @@ use AkshitSethi\Plugins\CustomizeWoo\Config;
 						<input type="text" name="<?php echo Config::PREFIX . 'order_button_text'; ?>" id="<?php echo Config::PREFIX . 'order_button_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_order_button_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Place order button text on product page', 'customize-woo' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the "Place Order" button text on checkout.', 'customize-woo' ); ?></p>
+					</div>
+
+					<div class="as-form-group">
+						<label for="<?php echo Config::PREFIX . 'show_terms'; ?>" class="as-strong"><?php esc_html_e( 'Show Checkout Terms', 'customize-woo' ); ?></label>
+						<input type="checkbox" class="as-form-ios" name="<?php echo Config::PREFIX . 'show_terms'; ?>" value="1"<?php checked( true, esc_attr( $options['woocommerce_checkout_show_terms'] ) ); ?>>
+
+						<p class="as-form-help-block"><?php esc_html_e( 'Show or hide Terms & Conditions checkbox on checkout page.', 'customize-woo' ); ?></p>
 					</div>
 				</div>
 			</div>

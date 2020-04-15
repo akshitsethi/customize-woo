@@ -25,6 +25,7 @@ class Admin {
 		add_action( 'wp_ajax_' . Config::PREFIX . 'support', array( $this, 'support_ticket' ) );
 		add_action( 'wp_ajax_' . Config::PREFIX . 'shop', array( $this, 'save_options' ) );
 		add_action( 'wp_ajax_' . Config::PREFIX . 'product', array( $this, 'save_options' ) );
+		add_action( 'wp_ajax_' . Config::PREFIX . 'cart', array( $this, 'save_options' ) );
 		add_action( 'wp_ajax_' . Config::PREFIX . 'checkout', array( $this, 'save_options' ) );
 		add_action( 'wp_ajax_' . Config::PREFIX . 'misc', array( $this, 'save_options' ) );
 
@@ -130,7 +131,7 @@ class Admin {
 
 			// Ensure $section is not empty
 			if ( ! empty( $section ) ) {
-				if ( in_array( $section, array( 'shop', 'product', 'checkout', 'misc' ) ) ) {
+				if ( in_array( $section, array( 'shop', 'product', 'cart', 'checkout', 'misc' ) ) ) {
 					// Filter and sanitize options
 					if ( 'shop' === $section ) {
 						$section_options = array(
@@ -156,13 +157,19 @@ class Admin {
 							'single_backorder_text'    => sanitize_text_field( $_POST[ Config::PREFIX . 'single_backorder_text' ] ),
 							'single_sale_flash_text'   => sanitize_text_field( $_POST[ Config::PREFIX . 'single_sale_flash_text' ] ),
 						);
+					} elseif ( 'cart' === $section ) {
+						$section_options = array(
+							'woocommerce_no_shipping_available_html'    => sanitize_text_field( $_POST[ Config::PREFIX . 'no_shipping_available_html' ] ),
+							'woocommerce_shipping_estimate_html'            => sanitize_text_field( $_POST[ Config::PREFIX . 'shipping_estimate_html' ] ),
+						);
 					} elseif ( 'checkout' === $section ) {
 						$section_options = array(
-							'woocommerce_must_be_logged_in_message' => sanitize_text_field( $_POST[ Config::PREFIX . 'must_be_logged_in_message' ] ),
+							'woocommerce_checkout_must_be_logged_in_message' => sanitize_text_field( $_POST[ Config::PREFIX . 'must_be_logged_in_message' ] ),
 							'woocommerce_coupon_message' => sanitize_text_field( $_POST[ Config::PREFIX . 'coupon_message' ] ),
-							'woocommerce_login_message'  => sanitize_text_field( $_POST[ Config::PREFIX . 'login_message' ] ),
+							'woocommerce_checkout_login_message' => sanitize_text_field( $_POST[ Config::PREFIX . 'login_message' ] ),
 							'woocommerce_create_account_default_checked' => sanitize_text_field( $_POST[ Config::PREFIX . 'create_account_default_checked' ] ),
 							'woocommerce_order_button_text' => sanitize_text_field( $_POST[ Config::PREFIX . 'order_button_text' ] ),
+							'woocommerce_checkout_show_terms' => isset( $_POST[ Config::PREFIX . 'show_terms' ] ) ? true : false,
 						);
 					} elseif ( 'misc' === $section ) {
 						$section_options = array(
