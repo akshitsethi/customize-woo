@@ -55,6 +55,10 @@ class Front {
 					add_filter( 'woocommerce_get_availability_text', array( $this, 'single_out_of_stock_text' ), 50, 2 );
 				} elseif ( 'single_backorder_text' === $filter ) {
 					add_filter( 'woocommerce_get_availability_text', array( $this, 'single_backorder_text' ), 50, 2 );
+				} elseif ( 'woocommerce_checkout_show_terms' === $filter ) {
+					if ( ! $value ) {
+						add_filter( 'woocommerce_checkout_show_terms', '__return_false' );
+					}
 				} else {
 					add_filter( $filter, array( $this, 'render_filter' ), 50 );
 				}

@@ -21,6 +21,7 @@ require_once 'header.php';
 		<ul class="as-main-menu">
 			<li><a href="#shop"><?php esc_html_e( 'Shop', 'customize-woo' ); ?></a></li>
 			<li><a href="#product"><?php esc_html_e( 'Product', 'customize-woo' ); ?></a></li>
+			<li><a href="#cart"><?php esc_html_e( 'Cart', 'customize-woo' ); ?></a></li>
 			<li><a href="#checkout"><?php esc_html_e( 'Checkout', 'customize-woo' ); ?></a></li>
 			<li><a href="#misc"><?php esc_html_e( 'Misc', 'customize-woo' ); ?></a></li>
 			<li><a href="#support"><?php esc_html_e( 'Support', 'customize-woo' ); ?></a></li>
@@ -34,6 +35,7 @@ require_once 'header.php';
 			// Tabs
 			require_once Config::$plugin_path . 'inc/admin/views/settings-shop.php';
 			require_once Config::$plugin_path . 'inc/admin/views/settings-product.php';
+			require_once Config::$plugin_path . 'inc/admin/views/settings-cart.php';
 			require_once Config::$plugin_path . 'inc/admin/views/settings-checkout.php';
 			require_once Config::$plugin_path . 'inc/admin/views/settings-misc.php';
 			require_once Config::$plugin_path . 'inc/admin/views/settings-support.php';
