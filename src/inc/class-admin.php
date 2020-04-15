@@ -27,6 +27,7 @@ class Admin {
 		add_action( 'wp_ajax_' . Config::PREFIX . 'product', array( $this, 'save_options' ) );
 		add_action( 'wp_ajax_' . Config::PREFIX . 'cart', array( $this, 'save_options' ) );
 		add_action( 'wp_ajax_' . Config::PREFIX . 'checkout', array( $this, 'save_options' ) );
+		add_action( 'wp_ajax_' . Config::PREFIX . 'authentication', array( $this, 'save_options' ) );
 		add_action( 'wp_ajax_' . Config::PREFIX . 'misc', array( $this, 'save_options' ) );
 
 		add_filter( 'plugin_row_meta', array( $this, 'meta_links' ), 10, 2 );
@@ -182,7 +183,7 @@ class Admin {
 							'woocommerce_countries_tax_or_vat'              => sanitize_text_field( $_POST[ Config::PREFIX . 'countries_tax_or_vat' ] ),
 							'woocommerce_countries_inc_tax_or_vat'          => sanitize_text_field( $_POST[ Config::PREFIX . 'countries_inc_tax_or_vat' ] ),
 							'woocommerce_countries_ex_tax_or_vat'           => sanitize_text_field( $_POST[ Config::PREFIX . 'countries_ex_tax_or_vat' ] ),
-							'woocommerce_thankyou_order_received_text'  => sanitize_text_field( $_POST[ Config::PREFIX . 'order_received_text' ] ),
+							'woocommerce_thankyou_order_received_text'          => sanitize_text_field( $_POST[ Config::PREFIX . 'order_received_text' ] ),
 						);
 					}
 
