@@ -39,6 +39,13 @@ use AkshitSethi\Plugins\CustomizeWoo\Config;
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the excluding Taxes label.', 'customize-woo' ); ?></p>
 					</div>
+
+					<div class="as-form-group">
+						<label for="<?php echo Config::PREFIX . 'order_received_text'; ?>" class="as-strong"><?php esc_html_e( 'Order Received Text', 'customize-woo' ); ?></label>
+						<input type="text" name="<?php echo Config::PREFIX . 'order_received_text'; ?>" id="<?php echo Config::PREFIX . 'order_received_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_thankyou_order_received_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Order received thank you text', 'customize-woo' ); ?>" class="as-form-control">
+
+						<p class="as-form-help-block"><?php esc_html_e( 'Changes the Order received text on thank you page.', 'customize-woo' ); ?></p>
+					</div>
 				</div>
 			</div>
 		</div>
