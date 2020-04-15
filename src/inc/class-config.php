@@ -85,11 +85,18 @@ class Config {
 			'woocommerce_create_account_default_checked' => 'checked',
 			'woocommerce_order_button_text'              => esc_html__( 'Place order', 'customize-woo' ),
 			'woocommerce_checkout_show_terms'            => true,
+			'woocommerce_enable_order_notes_field'       => true,
+
+			// Authentication
+			'woocommerce_lost_password_confirmation_message' => esc_html( 'A password reset email has been sent to the email address on file for your account, but may take several minutes to show up in your inbox. Please wait at least 10 minutes before attempting another reset.', 'customize-woo' ),
+			'woocommerce_lost_password_message'          => esc_html( 'Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.', 'customize-woo' ),
+			'woocommerce_reset_password_message'         => esc_html( 'Enter a new password below.', 'customize-woo' ),
 
 			// Misc
 			'woocommerce_countries_tax_or_vat'           => esc_html__( 'Tax for USA, VAT for European countries', 'customize-woo' ),
 			'woocommerce_countries_inc_tax_or_vat'       => esc_html__( 'Inc. tax for USA, Inc. VAT for European countries', 'customize-woo' ),
 			'woocommerce_countries_ex_tax_or_vat'        => esc_html__( 'Exc. tax for USA, Exc. VAT for European countries', 'customize-woo' ),
+			'woocommerce_thankyou_order_received_text'   => esc_html__( 'Thank you. Your order has been received.', 'customize-woo' ),
 		);
 	}
 

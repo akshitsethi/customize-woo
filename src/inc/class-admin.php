@@ -131,7 +131,7 @@ class Admin {
 
 			// Ensure $section is not empty
 			if ( ! empty( $section ) ) {
-				if ( in_array( $section, array( 'shop', 'product', 'cart', 'checkout', 'misc' ) ) ) {
+				if ( in_array( $section, array( 'shop', 'product', 'cart', 'checkout', 'authentication', 'misc' ) ) ) {
 					// Filter and sanitize options
 					if ( 'shop' === $section ) {
 						$section_options = array(
@@ -164,18 +164,25 @@ class Admin {
 						);
 					} elseif ( 'checkout' === $section ) {
 						$section_options = array(
-							'woocommerce_checkout_must_be_logged_in_message' => sanitize_text_field( $_POST[ Config::PREFIX . 'must_be_logged_in_message' ] ),
-							'woocommerce_coupon_message' => sanitize_text_field( $_POST[ Config::PREFIX . 'coupon_message' ] ),
-							'woocommerce_checkout_login_message' => sanitize_text_field( $_POST[ Config::PREFIX . 'login_message' ] ),
-							'woocommerce_create_account_default_checked' => sanitize_text_field( $_POST[ Config::PREFIX . 'create_account_default_checked' ] ),
-							'woocommerce_order_button_text' => sanitize_text_field( $_POST[ Config::PREFIX . 'order_button_text' ] ),
-							'woocommerce_checkout_show_terms' => isset( $_POST[ Config::PREFIX . 'show_terms' ] ) ? true : false,
+							'woocommerce_checkout_must_be_logged_in_message'    => sanitize_text_field( $_POST[ Config::PREFIX . 'must_be_logged_in_message' ] ),
+							'woocommerce_checkout_login_message'                            => sanitize_text_field( $_POST[ Config::PREFIX . 'login_message' ] ),
+							'woocommerce_create_account_default_checked'            => sanitize_text_field( $_POST[ Config::PREFIX . 'create_account_default_checked' ] ),
+							'woocommerce_order_button_text'                                     => sanitize_text_field( $_POST[ Config::PREFIX . 'order_button_text' ] ),
+							'woocommerce_checkout_show_terms'                               => isset( $_POST[ Config::PREFIX . 'show_terms' ] ) ? true : false,
+							'woocommerce_enable_order_notes_field'                      => isset( $_POST[ Config::PREFIX . 'order_notes_field' ] ) ? true : false,
+						);
+					} elseif ( 'authentication' === $section ) {
+						$section_options = array(
+							'woocommerce_lost_password_confirmation_message'    => sanitize_text_field( $_POST[ Config::PREFIX . 'lost_password_confirmation_message' ] ),
+							'woocommerce_lost_password_message'                             => sanitize_text_field( $_POST[ Config::PREFIX . 'lost_password_message' ] ),
+							'woocommerce_reset_password_message'                            => sanitize_text_field( $_POST[ Config::PREFIX . 'reset_password_message' ] ),
 						);
 					} elseif ( 'misc' === $section ) {
 						$section_options = array(
-							'woocommerce_countries_tax_or_vat'     => sanitize_text_field( $_POST[ Config::PREFIX . 'countries_tax_or_vat' ] ),
-							'woocommerce_countries_inc_tax_or_vat' => sanitize_text_field( $_POST[ Config::PREFIX . 'countries_inc_tax_or_vat' ] ),
-							'woocommerce_countries_ex_tax_or_vat'  => sanitize_text_field( $_POST[ Config::PREFIX . 'countries_ex_tax_or_vat' ] ),
+							'woocommerce_countries_tax_or_vat'              => sanitize_text_field( $_POST[ Config::PREFIX . 'countries_tax_or_vat' ] ),
+							'woocommerce_countries_inc_tax_or_vat'          => sanitize_text_field( $_POST[ Config::PREFIX . 'countries_inc_tax_or_vat' ] ),
+							'woocommerce_countries_ex_tax_or_vat'           => sanitize_text_field( $_POST[ Config::PREFIX . 'countries_ex_tax_or_vat' ] ),
+							'woocommerce_thankyou_order_received_text'  => sanitize_text_field( $_POST[ Config::PREFIX . 'order_received_text' ] ),
 						);
 					}
 

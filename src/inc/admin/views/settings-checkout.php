@@ -23,16 +23,16 @@ use AkshitSethi\Plugins\CustomizeWoo\Config;
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the message displayed when a customer must be logged in to checkout.', 'customize-woo' ); ?></p>
 					</div>
-				</div>
 
-				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'login_message'; ?>" class="as-strong"><?php esc_html_e( 'Login Text', 'customize-woo' ); ?></label>
 						<input type="text" name="<?php echo Config::PREFIX . 'login_message'; ?>" id="<?php echo Config::PREFIX . 'login_message'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_checkout_login_message'] ) ); ?>" placeholder="<?php esc_attr_e( 'Login message text on product page', 'customize-woo' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the message displayed if customers can login at checkout.', 'customize-woo' ); ?></p>
 					</div>
+				</div>
 
+				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'create_account_default_checked'; ?>" class="as-strong"><?php esc_html_e( 'Create Account Checkbox Default', 'customize-woo' ); ?></label>
 						<select name="<?php echo Config::PREFIX . 'create_account_default_checked'; ?>" id="<?php echo Config::PREFIX . 'create_account_default_checked'; ?>">
@@ -42,21 +42,28 @@ use AkshitSethi\Plugins\CustomizeWoo\Config;
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Control the default state for the Create Account checkbox.', 'customize-woo' ); ?></p>
 					</div>
-				</div>
 
-				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'order_button_text'; ?>" class="as-strong"><?php esc_html_e( 'Order Button Text', 'customize-woo' ); ?></label>
 						<input type="text" name="<?php echo Config::PREFIX . 'order_button_text'; ?>" id="<?php echo Config::PREFIX . 'order_button_text'; ?>" value="<?php echo esc_attr( stripslashes( $options['woocommerce_order_button_text'] ) ); ?>" placeholder="<?php esc_attr_e( 'Place order button text on product page', 'customize-woo' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the "Place Order" button text on checkout.', 'customize-woo' ); ?></p>
 					</div>
+				</div>
 
+				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="<?php echo Config::PREFIX . 'show_terms'; ?>" class="as-strong"><?php esc_html_e( 'Show Checkout Terms', 'customize-woo' ); ?></label>
 						<input type="checkbox" class="as-form-ios" name="<?php echo Config::PREFIX . 'show_terms'; ?>" value="1"<?php checked( true, esc_attr( $options['woocommerce_checkout_show_terms'] ) ); ?>>
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Show or hide Terms & Conditions checkbox on checkout page.', 'customize-woo' ); ?></p>
+					</div>
+
+					<div class="as-form-group">
+						<label for="<?php echo Config::PREFIX . 'order_notes_field'; ?>" class="as-strong"><?php esc_html_e( 'Show Order Notes Field', 'customize-woo' ); ?></label>
+						<input type="checkbox" class="as-form-ios" name="<?php echo Config::PREFIX . 'order_notes_field'; ?>" value="1"<?php checked( true, esc_attr( $options['woocommerce_enable_order_notes_field'] ) ); ?>>
+
+						<p class="as-form-help-block"><?php esc_html_e( 'Show or hide Order notes field on checkout page.', 'customize-woo' ); ?></p>
 					</div>
 				</div>
 			</div>
