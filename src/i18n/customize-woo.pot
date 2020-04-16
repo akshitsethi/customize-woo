@@ -1,21 +1,22 @@
 # Copyright (C) 2020 akshitsethi
-# This file is distributed under the same license as the Customize WooCommerce plugin.
+# This file is distributed under the same license as the Customize Woo plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Customize WooCommerce 1.0.4\n"
+"Project-Id-Version: Customize Woo 1.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/src\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-04-12T16:57:12+05:30\n"
+"POT-Creation-Date: 2020-04-16T20:55:14+05:30\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: customize-woo\n"
 
 #. Plugin Name of the plugin
-msgid "Customize WooCommerce"
+#: inc/class-config.php:45
+msgid "Customize Woo"
 msgstr ""
 
 #. Description of the plugin
@@ -39,7 +40,7 @@ msgid "Akshit Sethi"
 msgstr ""
 
 #: inc/admin/views/header.php:21
-#: inc/class-admin.php:66
+#: inc/class-admin.php:68
 msgid "Save Changes"
 msgstr ""
 
@@ -56,13 +57,89 @@ msgid "Show me some love and connect with me via social channels."
 msgstr ""
 
 #: inc/admin/views/settings-about.php:20
-#: inc/class-admin.php:96
+#: inc/class-admin.php:98
 msgid "Twitter"
 msgstr ""
 
 #: inc/admin/views/settings-about.php:24
-#: inc/class-admin.php:95
+#: inc/class-admin.php:97
 msgid "Facebook"
+msgstr ""
+
+#: inc/admin/views/settings-authentication.php:15
+msgid "AUTHENTICATION"
+msgstr ""
+
+#: inc/admin/views/settings-authentication.php:16
+msgid "Configure options related to WooCommerce authentication."
+msgstr ""
+
+#: inc/admin/views/settings-authentication.php:21
+msgid "Lost Password Text"
+msgstr ""
+
+#: inc/admin/views/settings-authentication.php:22
+msgid "Lost password text"
+msgstr ""
+
+#: inc/admin/views/settings-authentication.php:24
+msgid "Changes text shown on the lost password screen."
+msgstr ""
+
+#: inc/admin/views/settings-authentication.php:28
+msgid "Lost Password Confirmation Message"
+msgstr ""
+
+#: inc/admin/views/settings-authentication.php:29
+msgid "Lost password confirmation message"
+msgstr ""
+
+#: inc/admin/views/settings-authentication.php:31
+msgid "Changes text for lost password confirmation message."
+msgstr ""
+
+#: inc/admin/views/settings-authentication.php:37
+msgid "Reset Password Text"
+msgstr ""
+
+#: inc/admin/views/settings-authentication.php:38
+msgid "Reset password text"
+msgstr ""
+
+#: inc/admin/views/settings-authentication.php:40
+msgid "Changes text shown on the reset password screen."
+msgstr ""
+
+#: inc/admin/views/settings-cart.php:15
+msgid "CART"
+msgstr ""
+
+#: inc/admin/views/settings-cart.php:16
+msgid "Configure options for the WooCommerce Cart page."
+msgstr ""
+
+#: inc/admin/views/settings-cart.php:21
+msgid "No Shipping Available Text"
+msgstr ""
+
+#: inc/admin/views/settings-cart.php:22
+msgid "No shipping available text on cart page"
+msgstr ""
+
+#: inc/admin/views/settings-cart.php:24
+msgid "Changes the no shipping available text on cart."
+msgstr ""
+
+#: inc/admin/views/settings-cart.php:28
+msgid "Shipping Estimate Text"
+msgstr ""
+
+#: inc/admin/views/settings-cart.php:29
+msgid "Shipping estimate text on cart page"
+msgstr ""
+
+#: inc/admin/views/settings-cart.php:31
+msgid "Changes the shipping estimate text on cart."
 msgstr ""
 
 #: inc/admin/views/settings-checkout.php:15
@@ -86,55 +163,59 @@ msgid "Changes the message displayed when a customer must be logged in to checko
 msgstr ""
 
 #: inc/admin/views/settings-checkout.php:28
-msgid "Coupon Text"
-msgstr ""
-
-#: inc/admin/views/settings-checkout.php:29
-msgid "Coupon message text on checkout page"
-msgstr ""
-
-#: inc/admin/views/settings-checkout.php:31
-msgid "Changes the message displayed if the coupon form is enabled on checkout."
-msgstr ""
-
-#: inc/admin/views/settings-checkout.php:37
 msgid "Login Text"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:38
+#: inc/admin/views/settings-checkout.php:29
 msgid "Login message text on product page"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:40
+#: inc/admin/views/settings-checkout.php:31
 msgid "Changes the message displayed if customers can login at checkout."
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:44
+#: inc/admin/views/settings-checkout.php:37
 msgid "Create Account Checkbox Default"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:46
+#: inc/admin/views/settings-checkout.php:39
 msgid "Checked"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:47
+#: inc/admin/views/settings-checkout.php:40
 msgid "Unchecked"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:50
+#: inc/admin/views/settings-checkout.php:43
 msgid "Control the default state for the Create Account checkbox."
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:56
+#: inc/admin/views/settings-checkout.php:47
 msgid "Order Button Text"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:57
+#: inc/admin/views/settings-checkout.php:48
 msgid "Place order button text on product page"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:59
+#: inc/admin/views/settings-checkout.php:50
 msgid "Changes the \"Place Order\" button text on checkout."
+msgstr ""
+
+#: inc/admin/views/settings-checkout.php:56
+msgid "Show Checkout Terms"
+msgstr ""
+
+#: inc/admin/views/settings-checkout.php:59
+msgid "Show or hide Terms & Conditions checkbox on checkout page."
+msgstr ""
+
+#: inc/admin/views/settings-checkout.php:63
+msgid "Show Order Notes Field"
+msgstr ""
+
+#: inc/admin/views/settings-checkout.php:66
+msgid "Show or hide Order notes field on checkout page."
 msgstr ""
 
 #: inc/admin/views/settings-misc.php:15
@@ -179,6 +260,18 @@ msgstr ""
 
 #: inc/admin/views/settings-misc.php:40
 msgid "Changes the excluding Taxes label."
+msgstr ""
+
+#: inc/admin/views/settings-misc.php:44
+msgid "Order Received Text"
+msgstr ""
+
+#: inc/admin/views/settings-misc.php:45
+msgid "Order received thank you text"
+msgstr ""
+
+#: inc/admin/views/settings-misc.php:47
+msgid "Changes the Order received text on thank you page."
 msgstr ""
 
 #: inc/admin/views/settings-product.php:15
@@ -448,128 +541,156 @@ msgid "Product"
 msgstr ""
 
 #: inc/admin/views/settings.php:24
-msgid "Checkout"
+msgid "Cart"
 msgstr ""
 
 #: inc/admin/views/settings.php:25
-msgid "Misc"
+msgid "Checkout"
 msgstr ""
 
 #: inc/admin/views/settings.php:26
-msgid "Support"
+msgid "Authentication"
 msgstr ""
 
 #: inc/admin/views/settings.php:27
+msgid "Misc"
+msgstr ""
+
+#: inc/admin/views/settings.php:28
+msgid "Support"
+msgstr ""
+
+#: inc/admin/views/settings.php:29
 msgid "About"
 msgstr ""
 
-#: inc/class-admin.php:42
-#: inc/class-admin.php:43
+#: inc/class-admin.php:44
+#: inc/class-admin.php:45
 msgid "Customizer"
 msgstr ""
 
-#: inc/class-admin.php:67
+#: inc/class-admin.php:69
 msgid "Ask for Support"
 msgstr ""
 
-#: inc/class-admin.php:68
+#: inc/class-admin.php:70
 msgid "Please save your changes first."
 msgstr ""
 
-#: inc/class-admin.php:69
+#: inc/class-admin.php:71
 msgid "Processing.."
 msgstr ""
 
-#: inc/class-admin.php:121
+#: inc/class-admin.php:123
 msgid "There was an error processing the request. Please try again later."
 msgstr ""
 
-#: inc/class-admin.php:126
+#: inc/class-admin.php:128
 msgid "Request does not seem to be a valid one. Please try again by refreshing the page."
 msgstr ""
 
-#: inc/class-admin.php:183
+#: inc/class-admin.php:198
 msgid "Options have been updated successfully."
 msgstr ""
 
-#: inc/class-admin.php:204
+#: inc/class-admin.php:219
 msgid "Please fill in both the fields to create your support ticket."
 msgstr ""
 
-#: inc/class-admin.php:220
+#: inc/class-admin.php:235
 msgid "I have received your support ticket and will get back to you shortly!"
 msgstr ""
 
-#: inc/class-admin.php:226
+#: inc/class-admin.php:241
 msgid "There was an error creating the support ticket. You can try again later or send me an email directly at akshitsethi@gmail.com"
 msgstr ""
 
-#: inc/class-config.php:45
-msgid "Customize Woo"
-msgstr ""
-
-#: inc/class-config.php:56
-#: inc/class-config.php:70
+#: inc/class-config.php:57
+#: inc/class-config.php:73
 msgid "Add to Cart"
 msgstr ""
 
-#: inc/class-config.php:57
+#: inc/class-config.php:58
 msgid "Select Options"
 msgstr ""
 
-#: inc/class-config.php:58
+#: inc/class-config.php:59
 msgid "View Options"
 msgstr ""
 
-#: inc/class-config.php:59
+#: inc/class-config.php:60
 msgid "Out of Stock"
 msgstr ""
 
-#: inc/class-config.php:60
+#: inc/class-config.php:61
 msgid "Read More"
 msgstr ""
 
-#: inc/class-config.php:61
-#: inc/class-config.php:73
+#: inc/class-config.php:62
+#: inc/class-config.php:76
 msgid "Sale!"
-msgstr ""
-
-#: inc/class-config.php:65
-#: inc/class-config.php:66
-msgid "Description"
-msgstr ""
-
-#: inc/class-config.php:67
-msgid "Reviews"
 msgstr ""
 
 #: inc/class-config.php:68
 #: inc/class-config.php:69
-msgid "Additional Information"
+msgid "Description"
+msgstr ""
+
+#: inc/class-config.php:70
+msgid "Reviews"
 msgstr ""
 
 #: inc/class-config.php:71
+#: inc/class-config.php:72
+msgid "Additional Information"
+msgstr ""
+
+#: inc/class-config.php:74
 msgid "Out of stock"
 msgstr ""
 
-#: inc/class-config.php:72
+#: inc/class-config.php:75
 msgid "Available on backorder"
 msgstr ""
 
 #: inc/class-config.php:79
-msgid "Tax for USA, VAT for European countries"
+msgid "There are no shipping options available. Please ensure that your address has been entered correctly, or contact us if you need any help."
 msgstr ""
 
 #: inc/class-config.php:80
+msgid "Shipping options will be updated during checkout."
+msgstr ""
+
+#: inc/class-config.php:83
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: inc/class-config.php:84
+msgid "Returning customer?"
+msgstr ""
+
+#: inc/class-config.php:86
+msgid "Place order"
+msgstr ""
+
+#: inc/class-config.php:96
+msgid "Tax for USA, VAT for European countries"
+msgstr ""
+
+#: inc/class-config.php:97
 msgid "Inc. tax for USA, Inc. VAT for European countries"
 msgstr ""
 
-#: inc/class-config.php:81
+#: inc/class-config.php:98
 msgid "Exc. tax for USA, Exc. VAT for European countries"
 msgstr ""
 
+#: inc/class-config.php:99
+msgid "Thank you. Your order has been received."
+msgstr ""
+
 #. translators: Placeholder: %s - sale percentage
-#: inc/class-front.php:233
+#: inc/class-front.php:237
 msgid "up to %s"
 msgstr ""
 
