@@ -5,7 +5,7 @@ Tags: woocommerce, customizer, woo
 Requires at least: 3.5.1
 Tested up to: 5.4
 Requires PHP: 5.6
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -20,6 +20,9 @@ Customize your WooCommerce store with a click of few buttons. This plugin provid
 
 * Works with any WooCommerce Theme
 * Over 30+ customizations
+* Take care of the minor details of your WooCommerce store
+* No need to write a single line of code
+
 * **FREE Forever**
 
 == Installation ==
@@ -28,7 +31,7 @@ To manually install this plugin, please follow the instructions below.
 
 1. Upload `customize-woo` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Go to 'Customizer' options under the 'Settings' menu.
+3. Go to 'Customizer' option under the 'WooCommerce' menu.
 4. Configure the plugin and start enjoying it.
 
 

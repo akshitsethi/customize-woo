@@ -5,7 +5,7 @@
  * @since 1.0.0
  */
 
-use AkshitSethi\Plugins\WooCustomizer\Config;
+use AkshitSethi\Plugins\CustomizeWoo\Config;
 require_once 'header.php';
 
 ?>

@@ -58,7 +58,7 @@ toastr.options = {
   // When switching between support and about
   function hacks($tab) {
     // Submit button
-    var $as_button = $('#' + woocustomizer_admin_l10n.prefix + 'submit');
+    var $as_button = $('#' + customizewoo_admin_l10n.prefix + 'submit');
 
     // About
     if ($tab == '#about') {
@@ -69,9 +69,9 @@ toastr.options = {
 
     // Support
     if ($tab == '#support') {
-      $as_button.val(woocustomizer_admin_l10n.support_text);
+      $as_button.val(customizewoo_admin_l10n.support_text);
     } else {
-      $as_button.val(woocustomizer_admin_l10n.save_text);
+      $as_button.val(customizewoo_admin_l10n.save_text);
     }
   }
 
@@ -87,7 +87,7 @@ toastr.options = {
     }
 
     // Submission
-    $(document).on('click', '#' + woocustomizer_admin_l10n.prefix + 'submit', function (e) {
+    $(document).on('click', '#' + customizewoo_admin_l10n.prefix + 'submit', function (e) {
       e.preventDefault();
 
       // ID
@@ -97,8 +97,8 @@ toastr.options = {
       var data 	= new FormData($('#' + id + ' form')[0]);
 
       // Append action
-      data.append('action', woocustomizer_admin_l10n.prefix + id);
-      data.append('_nonce', woocustomizer_admin_l10n.nonce);
+      data.append('action', customizewoo_admin_l10n.prefix + id);
+      data.append('_nonce', customizewoo_admin_l10n.nonce);
 
       // AJAX
       $.ajax( {
@@ -109,7 +109,7 @@ toastr.options = {
         contentType: false,
         beforeSend: function() {
           $('#' + id).block({
-            message: '<div class="as-strong" style="background: #ecf0f1; padding: 10px 6px; color: #000;">' + woocustomizer_admin_l10n.processing + '</div>',
+            message: '<div class="as-strong" style="background: #ecf0f1; padding: 10px 6px; color: #000;">' + customizewoo_admin_l10n.processing + '</div>',
             css: {
               border: 'none',
               backgroundColor: 'none'
@@ -136,7 +136,7 @@ toastr.options = {
     // On form change
     $('form').on('change keyup keydown', 'input, textarea, select', function (e) {
       // Get cookie state
-      var $state = Cookies.get(woocustomizer_admin_l10n.prefix + 'menu');
+      var $state = Cookies.get(customizewoo_admin_l10n.prefix + 'menu');
 
       if ($state) {
         if ($state != '#support') {
@@ -147,7 +147,7 @@ toastr.options = {
       }
     });
 
-    var $state = Cookies.get(woocustomizer_admin_l10n.prefix + 'menu');
+    var $state = Cookies.get(customizewoo_admin_l10n.prefix + 'menu');
 
     // Check menu position
     if ($state) {
@@ -155,7 +155,7 @@ toastr.options = {
       $('a[href="' + $state + '"]').addClass('active');
 
       // Add : Button (data-tab)
-      $('#' + woocustomizer_admin_l10n.prefix + 'submit' ).attr('data-tab', $state);
+      $('#' + customizewoo_admin_l10n.prefix + 'submit' ).attr('data-tab', $state);
 
       // Hacks for support and about tabs
       hacks($state);
@@ -167,7 +167,7 @@ toastr.options = {
       $('.as-tile:first').fadeIn();
 
       // Add options (data-tab)
-      $('#' + woocustomizer_admin_l10n.prefix + 'submit').attr('data-tab', '#basic');
+      $('#' + customizewoo_admin_l10n.prefix + 'submit').attr('data-tab', '#basic');
     }
 
 
@@ -176,13 +176,13 @@ toastr.options = {
       e.preventDefault();
 
       // Remove cookies
-      Cookies.remove(woocustomizer_admin_l10n.prefix + 'menu', {path: '/'});
+      Cookies.remove(customizewoo_admin_l10n.prefix + 'menu', {path: '/'});
 
       var $selector 		= $(this);
       var $tab      		= $selector.attr('href');
 
       if ($('.changed-input').length) {
-        toastr.error(woocustomizer_admin_l10n.save_changes);
+        toastr.error(customizewoo_admin_l10n.save_changes);
       } else {
         // Change menu selection
         $('.as-main-menu li a').removeClass('active');
@@ -195,10 +195,10 @@ toastr.options = {
         $($tab).fadeIn();
 
         // Set cookie
-        Cookies.set(woocustomizer_admin_l10n.prefix + 'menu', $tab, {path: '/'});
+        Cookies.set(customizewoo_admin_l10n.prefix + 'menu', $tab, {path: '/'});
 
         // State button (add)
-        $('#' + woocustomizer_admin_l10n.prefix + 'submit').attr('data-tab', $tab);
+        $('#' + customizewoo_admin_l10n.prefix + 'submit').attr('data-tab', $tab);
 
         // Hacks for support and about tabs
         hacks($tab)

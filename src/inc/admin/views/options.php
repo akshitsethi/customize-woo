@@ -5,7 +5,7 @@
  * @since 1.0.0
  */
 
-use AkshitSethi\Plugins\WooCustomizer\Config;
+use AkshitSethi\Plugins\CustomizeWoo\Config;
 
 print_r( Config::$plugin_path );
 

@@ -13,7 +13,7 @@
   },
   "autoload": {
     "psr-4": {
-      "AkshitSethi\\Plugins\\WooCustomizer\\": "inc"
+      "AkshitSethi\\Plugins\\CustomizeWoo\\": "inc"
     }
   }
 }

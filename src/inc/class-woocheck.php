@@ -2,18 +2,18 @@
 /**
  * WooCommerce check class.
  *
- * @package AkshitSethi\Plugins\WooCustomizer
+ * @package AkshitSethi\Plugins\CustomizeWoo
  */
 
-namespace AkshitSethi\Plugins\WooCustomizer;
+namespace AkshitSethi\Plugins\CustomizeWoo;
 
-use AkshitSethi\Plugins\WooCustomizer\Config;
+use AkshitSethi\Plugins\CustomizeWoo\Config;
 
 /**
  * Check if the WooCommerce plugin is active or not and render the admin
  * message accordingly.
  *
- * @package    AkshitSethi\Plugins\WooCustomizer
+ * @package    AkshitSethi\Plugins\CustomizeWoo
  * @since      1.0.0
  */
 class WooCheck {

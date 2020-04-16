@@ -4,10 +4,10 @@
  * sort of setup, nothing is done over here.
  *
  * @since   1.0.0
- * @package AkshitSethi/Plugins/WooCustomizer
+ * @package AkshitSethi\Plugins\CustomizeWoo
  */
 
-namespace AkshitSethi\Plugins\WooCustomizer;
+namespace AkshitSethi\Plugins\CustomizeWoo;
 
 // Prevent unauthorized access
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {

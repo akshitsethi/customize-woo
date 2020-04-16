@@ -3,12 +3,12 @@
  * Configuration file for the plugin.
  */
 
-namespace AkshitSethi\Plugins\WooCustomizer;
+namespace AkshitSethi\Plugins\CustomizeWoo;
 
 /**
  * Set configuration options.
  *
- * @package AkshitSethi\Plugins\WooCustomizer
+ * @package AkshitSethi\Plugins\CustomizeWoo
  */
 class Config {
 
@@ -18,7 +18,7 @@ class Config {
 
 	const PLUGIN_SLUG    = 'customize-woo';
 	const SHORT_SLUG     = 'customizewoo';
-	const VERSION        = '1.0.3';
+	const VERSION        = '1.0.4';
 	const DB_OPTION      = 'as_' . self::SHORT_SLUG;
 	const PREFIX         = self::SHORT_SLUG . '_';
 	const MIN_WC_VERSION = '3.1.0';

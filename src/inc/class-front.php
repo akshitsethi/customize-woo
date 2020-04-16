@@ -2,17 +2,17 @@
 /**
  * Frontend class for the plugin.
  *
- * @package AkshitSethi\Plugins\WooCustomizer
+ * @package AkshitSethi\Plugins\CustomizeWoo
  */
 
-namespace AkshitSethi\Plugins\WooCustomizer;
+namespace AkshitSethi\Plugins\CustomizeWoo;
 
-use AkshitSethi\Plugins\WooCustomizer\Config;
+use AkshitSethi\Plugins\CustomizeWoo\Config;
 
 /**
  * Frontend for the plugin.
  *
- * @package    AkshitSethi\Plugins\WooCustomizer
+ * @package    AkshitSethi\Plugins\CustomizeWoo
  * @since      1.0.0
  */
 class Front {

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Customize Woo
  * Description: Plugin to help customise WooCommerce with the help of actions and filters.
- * Version: 1.0.3
+ * Version: 1.0.4
  * Runtime: 5.6+
  * Author: akshitsethi
  * Text Domain: customize-woo
@@ -12,7 +12,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  */
 
-namespace AkshitSethi\Plugins\WooCustomizer;
+namespace AkshitSethi\Plugins\CustomizeWoo;
 
 // Stop execution if the file is called directly
 defined( 'ABSPATH' ) || exit;
@@ -24,10 +24,10 @@ require_once __DIR__ . '/vendor/autoload.php';
  * Plugin class where all the action happens.
  *
  * @category    Plugins
- * @package     AkshitSethi\Plugins\WooCustomizer
+ * @package     AkshitSethi\Plugins\CustomizeWoo
  * @since       1.0.0
  */
-class WooCustomizer {
+class CustomizeWoo {
 
 	/**
 	 * Class Constructor.
@@ -35,7 +35,7 @@ class WooCustomizer {
 	public function __construct() {
 		// WooCommerce version check
 		if ( ! WooCheck::is_plugin_active( 'woocommerce.php' ) ) {
-			add_action( 'admin_notices', array( 'AkshitSethi\Plugins\WooCustomizer\WooCheck', 'inactive_notice' ) );
+			add_action( 'admin_notices', array( 'AkshitSethi\Plugins\CustomizeWoo\WooCheck', 'inactive_notice' ) );
 			return;
 		}
 
@@ -97,10 +97,10 @@ class WooCustomizer {
 }
 
 // Initialize plugin
-$woo_customizer = new WooCustomizer();
+$customize_woo = new CustomizeWoo();
 
 /**
  * Hooks for plugin activation & deactivation.
  */
-register_activation_hook( __FILE__, array( $woo_customizer, 'activate' ) );
-register_deactivation_hook( __FILE__, array( $woo_customizer, 'deactivate' ) );
+register_activation_hook( __FILE__, array( $customize_woo, 'activate' ) );
+register_deactivation_hook( __FILE__, array( $customize_woo, 'deactivate' ) );

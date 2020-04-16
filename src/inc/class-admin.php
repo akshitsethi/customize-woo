@@ -2,17 +2,17 @@
 /**
  * Admin class for the plugin.
  *
- * @package AkshitSethi\Plugins\WooCustomizer
+ * @package AkshitSethi\Plugins\CustomizeWoo
  */
 
-namespace AkshitSethi\Plugins\WooCustomizer;
+namespace AkshitSethi\Plugins\CustomizeWoo;
 
-use AkshitSethi\Plugins\WooCustomizer\Config;
+use AkshitSethi\Plugins\CustomizeWoo\Config;
 
 /**
  * Admin options for the plugin.
  *
- * @package    AkshitSethi\Plugins\WooCustomizer
+ * @package    AkshitSethi\Plugins\CustomizeWoo
  * @since      2.0.0
  */
 class Admin {
