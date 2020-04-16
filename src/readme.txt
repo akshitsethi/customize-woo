@@ -1,7 +1,7 @@
 === Customize Woo ===
 Contributors: akshitsethi
 Donate link: https://akshitsethi.com/
-Tags: woocommerce, customizer, woo
+Tags: woocommerce, customizer, customize woo, woocommerce filters, wc customize
 Requires at least: 3.5.1
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -44,9 +44,14 @@ Getting help is just a click away now. Report your issues using the support form
 
 == Screenshots ==
 
+1. Plugin options panel
 
 
 == Changelog ==
+
+= 1.0.4 =
+* Minor bug fixes
+* Added plugin assets
 
 = 1.0 =
 First release of the plugin.
