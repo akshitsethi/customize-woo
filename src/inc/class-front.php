@@ -59,6 +59,10 @@ class Front {
 					if ( ! $value ) {
 						add_filter( 'woocommerce_checkout_show_terms', '__return_false' );
 					}
+				} elseif ( 'woocommerce_enable_order_notes_field' === $filter ) {
+					if ( ! $value ) {
+						add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
+					}
 				} else {
 					add_filter( $filter, array( $this, 'render_filter' ), 50 );
 				}
