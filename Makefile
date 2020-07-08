@@ -8,7 +8,6 @@ bin/linux/amd64/github-release:
 	chmod +x bin/linux/amd64/github-release
 	rm linux-amd64-github-release.tar.bz2
 
-ensure: vendor
 vendor: src/vendor
 	composer install --dev
 	composer dump-autoload -a
@@ -24,7 +23,7 @@ src/vendor:
 	cd src && composer install
 	cd src && composer dump-autoload -a
 
-build: ensure
+build: vendor
 	mkdir -p build
 	rm -rf src/vendor
 	cd src && composer install --no-dev
@@ -34,20 +33,12 @@ build: ensure
 	rm -rf $(PLUGINSLUG)
 	mv $(PLUGINSLUG).zip build/
 
-dist: ensure
+dist: vendor
 	mkdir -p dist
 	rm -rf src/vendor
 	cd src && composer install --no-dev
 	cd src && composer dump-autoload -a
 	cp -r $(SRCPATH)/. dist/
-
-publish: build bin/linux/amd64/github-release
-	bin/linux/amd64/github-release upload \
-		--user akshitsethi \
-		--repo $(PLUGINSLUG) \
-		--tag "v$(VERSION)" \
-		--name $(PLUGINSLUG)-$(VERSION).zip \
-		--file build/$(PLUGINSLUG).zip
 
 release:
 	git stash
@@ -58,10 +49,10 @@ release:
 	git push origin v$(VERSION)
 	git pull -r
 
-fmt: ensure
+fmt: vendor
 	bin/phpcbf --standard=WordPress src --ignore=src/vendor,src/assets
 
-lint: ensure
+lint: vendor
 	bin/phpcs --standard=WordPress src --ignore=src/vendor,src/assets
 
 psr: src/vendor
