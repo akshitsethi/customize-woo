@@ -43,7 +43,6 @@ class CustomizeWoo {
 		add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
 	}
 
-
 	/**
 	 * Initialize plugin when all the plugins have been loaded.
 	 *
@@ -55,7 +54,6 @@ class CustomizeWoo {
 		new Front();
 	}
 
-
 	/**
 	 * Loads textdomain for the plugin.
 	 *
@@ -64,7 +62,6 @@ class CustomizeWoo {
 	public function load_textdomain() {
 		load_plugin_textdomain( Config::PLUGIN_SLUG, false, Config::$plugin_path . 'i18n/' );
 	}
-
 
 	/**
 	 * Attached to the activation hook.
@@ -83,7 +80,6 @@ class CustomizeWoo {
 		// Update `wp_options` table
 		update_option( Config::DB_OPTION, $options );
 	}
-
 
 	/**
 	 * Attached to the de-activation hook.

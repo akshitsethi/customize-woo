@@ -62,26 +62,6 @@ toastr.options = {
 (function($) {
   'use strict';
 
-  // When switching between support and about
-  function hacks($tab) {
-    // Submit button
-    var $as_button = $('#' + customizewoo_admin_l10n.prefix + 'submit');
-
-    // About
-    if ($tab == '#about') {
-      $as_button.hide();
-    } else {
-      $as_button.show();
-    }
-
-    // Support
-    if ($tab == '#support') {
-      $as_button.val(customizewoo_admin_l10n.support_text);
-    } else {
-      $as_button.val(customizewoo_admin_l10n.save_text);
-    }
-  }
-
   // On DOM ready
   $(document).ready(function () {
     // IOS switches
@@ -148,17 +128,11 @@ toastr.options = {
     });
 
     // On form change
-    $('form').on('change keyup keydown', 'input, textarea, select', function (e) {
+    $('form').on('change', 'input, textarea, select', function (e) {
       // Get cookie state
       var $state = Cookies.get(customizewoo_admin_l10n.prefix + 'menu');
 
-      if ($state) {
-        if ($state != '#support') {
-          $(this).addClass('changed-input');
-        }
-      } else {
-        $(this).addClass('changed-input');
-      }
+      $(this).addClass('changed-input');
     });
 
     var $state = Cookies.get(customizewoo_admin_l10n.prefix + 'menu');
@@ -171,9 +145,6 @@ toastr.options = {
       // Add : Button (data-tab)
       $('#' + customizewoo_admin_l10n.prefix + 'submit' ).attr('data-tab', $state);
 
-      // Hacks for support and about tabs
-      hacks($state);
-
       // Load
       $($state).fadeIn();
     } else {
@@ -183,7 +154,6 @@ toastr.options = {
       // Add options (data-tab)
       $('#' + customizewoo_admin_l10n.prefix + 'submit').attr('data-tab', '#basic');
     }
-
 
     // Menu
     $('.as-main-menu li a').click(function (e) {
@@ -213,12 +183,8 @@ toastr.options = {
 
         // State button (add)
         $('#' + customizewoo_admin_l10n.prefix + 'submit').attr('data-tab', $tab);
-
-        // Hacks for support and about tabs
-        hacks($tab)
       }
     });
-
 
     // Mobile navigation
     $('.as-mobile-menu a').click(function () {
