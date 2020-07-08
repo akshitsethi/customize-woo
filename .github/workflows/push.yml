@@ -8,6 +8,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Install Dependencies
-      run: make ensure
+      run: make vendor
     - name: Lint
       run: make fmt
