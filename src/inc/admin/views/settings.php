@@ -25,8 +25,6 @@ require_once 'header.php';
 			<li><a href="#checkout"><?php esc_html_e( 'Checkout', 'customize-woo' ); ?></a></li>
 			<li><a href="#authentication"><?php esc_html_e( 'Authentication', 'customize-woo' ); ?></a></li>
 			<li><a href="#misc"><?php esc_html_e( 'Misc', 'customize-woo' ); ?></a></li>
-			<li><a href="#support"><?php esc_html_e( 'Support', 'customize-woo' ); ?></a></li>
-			<li><a href="#about"><?php esc_html_e( 'About', 'customize-woo' ); ?></a></li>
 		</ul>
 	</div><!-- .as-float-left -->
 
@@ -40,8 +38,6 @@ require_once 'header.php';
 			require_once Config::$plugin_path . 'inc/admin/views/settings-checkout.php';
 			require_once Config::$plugin_path . 'inc/admin/views/settings-authentication.php';
 			require_once Config::$plugin_path . 'inc/admin/views/settings-misc.php';
-			require_once Config::$plugin_path . 'inc/admin/views/settings-support.php';
-			require_once Config::$plugin_path . 'inc/admin/views/settings-about.php';
 
 		?>
 	</div><!-- .as-float-right -->
