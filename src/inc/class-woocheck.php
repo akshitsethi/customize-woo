@@ -7,8 +7,6 @@
 
 namespace AkshitSethi\Plugins\CustomizeWoo;
 
-use AkshitSethi\Plugins\CustomizeWoo\Config;
-
 /**
  * Check if the WooCommerce plugin is active or not and render the admin
  * message accordingly.
@@ -49,7 +47,6 @@ class WooCheck {
 		return in_array( $plugin_name, $plugin_filenames );
 	}
 
-
 	/**
 	 * Renders a notice when WooCommerce version is outdated.
 	 *
@@ -58,7 +55,7 @@ class WooCheck {
 	public static function inactive_notice() {
 		$message = sprintf(
 			/* translators: %1$s - <strong>, %2$s - </strong>, %3$s - <a>, %4$s - version number, %5$s - </a> */
-			esc_html__( '%1$sWooCommerce Customizer won\'t work properly%2$s as it requires WooCommerce. Please %3$sactivate%4$s WooCommerce version %5$s or newer.', 'customize-woo' ),
+			esc_html__( '%1$sCustomize Woo%2$s won\'t work properly as it requires WooCommerce. Please %3$sactivate%4$s WooCommerce version %5$s or newer.', 'customize-woo' ),
 			'<strong>',
 			'</strong>',
 			'<a href="' . admin_url( 'plugins.php' ) . '">',

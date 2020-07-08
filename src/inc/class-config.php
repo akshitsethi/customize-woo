@@ -12,15 +12,49 @@ namespace AkshitSethi\Plugins\CustomizeWoo;
  */
 class Config {
 
+	/**
+	 * @var string
+	 */
 	public static $plugin_url;
+
+	/**
+	 * @var string
+	 */
 	public static $plugin_path;
+
+	/**
+	 * @var array
+	 */
 	public static $default_options;
 
-	const PLUGIN_SLUG    = 'customize-woo';
-	const SHORT_SLUG     = 'customizewoo';
-	const VERSION        = '1.1.0';
-	const DB_OPTION      = 'as_' . self::SHORT_SLUG;
-	const PREFIX         = self::SHORT_SLUG . '_';
+	/**
+	 * @var string
+	 */
+	const PLUGIN_SLUG = 'customize-woo';
+
+	/**
+	 * @var string
+	 */
+	const SHORT_SLUG = 'customizewoo';
+
+	/**
+	 * @var float
+	 */
+	const VERSION = '1.1.0';
+
+	/**
+	 * @var string
+	 */
+	const DB_OPTION = 'as_' . self::SHORT_SLUG;
+
+	/**
+	 * @var string
+	 */
+	const PREFIX = self::SHORT_SLUG . '_';
+
+	/**
+	 * @var float
+	 */
 	const MIN_WC_VERSION = '3.1.0';
 
 
