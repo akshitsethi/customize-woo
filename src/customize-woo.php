@@ -49,7 +49,8 @@ class CustomizeWoo {
 	 * @since 1.0.0
 	 */
 	public function init() {
-		// Initialize front and admin
+		// Initialize modules
+		new Config();
 		new Admin();
 		new Front();
 	}

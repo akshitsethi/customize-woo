@@ -135,5 +135,3 @@ class Config {
 	}
 
 }
-
-new Config();
