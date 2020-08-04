@@ -6,12 +6,11 @@
   },
   "type": "wordpress-plugin",
   "require-dev": {
-    "lucatume/wp-browser": "^2.6.4",
     "10up/wp_mock": "^0.4.2",
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-    "squizlabs/php_codesniffer": "^3.5.5",
-    "wp-coding-standards/wpcs": "^2.3.0",
-    "phpro/grumphp": "^0.19.1"
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",
+    "squizlabs/php_codesniffer": "^3.5.4",
+    "wp-coding-standards/wpcs": "^2.2.1",
+    "phpro/grumphp": "^0.14.3"
   },
   "config": {
     "bin-dir": "bin/"
