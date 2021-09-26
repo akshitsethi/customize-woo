@@ -60,7 +60,7 @@ class Config {
 		self::$plugin_url  = plugin_dir_url( dirname( __FILE__ ) );
 		self::$plugin_path = plugin_dir_path( dirname( __FILE__ ) );
 
-		self::$default_options = [
+		self::$default_options = array(
 			// Shop
 			'add_to_cart_text'                           => esc_html__( 'Add to Cart', 'customize-woo' ),
 			'variable_add_to_cart_text'                  => esc_html__( 'Select Options', 'customize-woo' ),
@@ -105,7 +105,7 @@ class Config {
 			'woocommerce_countries_inc_tax_or_vat'       => esc_html__( 'Inc. tax for USA, Inc. VAT for European countries', 'customize-woo' ),
 			'woocommerce_countries_ex_tax_or_vat'        => esc_html__( 'Exc. tax for USA, Exc. VAT for European countries', 'customize-woo' ),
 			'woocommerce_thankyou_order_received_text'   => esc_html__( 'Thank you. Your order has been received.', 'customize-woo' ),
-		];
+		);
 	}
 
 

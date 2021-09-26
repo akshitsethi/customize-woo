@@ -8,5 +8,5 @@ grumphp:
     make:
       make_file: ~
       task: fmt
-      task: test
       triggered_by: [php]
+    phpunit: ~
