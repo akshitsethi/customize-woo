@@ -1,6 +1,6 @@
 <?php
 /**
- * WooCommerce check class.
+ * Class to check for the presence of WooCommerce plugin.
  *
  * @package AkshitSethi\Plugins\CustomizeWoo
  */
@@ -11,19 +11,17 @@ namespace AkshitSethi\Plugins\CustomizeWoo;
  * Check if the WooCommerce plugin is active or not and render the admin
  * message accordingly.
  *
- * @package    AkshitSethi\Plugins\CustomizeWoo
- * @since      1.0.0
+ * @package AkshitSethi\Plugins\CustomizeWoo
  */
 class WooCheck {
 
 	/**
 	 * Helper function to determine whether a plugin is active.
 	 *
-	 * @param string $plugin_name plugin name, as the plugin-filename.php
-	 * @return boolean true if the named plugin is installed and active
-	 * @since 1.0.0
+	 * @param string $plugin_name plugin file name (plugin-filename.php)
+	 * @return boolean
 	 */
-	public static function is_plugin_active( $plugin_name ) {
+	public function is_plugin_active( string $plugin_name ) : bool {
 		$active_plugins = (array) get_option( 'active_plugins', array() );
 
 		if ( is_multisite() ) {
@@ -34,10 +32,8 @@ class WooCheck {
 
 		foreach ( $active_plugins as $plugin ) {
 			if ( false !== strpos( $plugin, '/' ) ) {
-				// Plugin name (plugin-dir/plugin-filename.php)
 				list( , $filename ) = explode( '/', $plugin );
 			} else {
-				// No directory, just plugin file
 				$filename = $plugin;
 			}
 
@@ -52,18 +48,22 @@ class WooCheck {
 	 *
 	 * @since 1.0.0
 	 */
-	public static function inactive_notice() {
+	public function inactive_notice() {
 		$message = sprintf(
-			/* translators: %1$s - <strong>, %2$s - </strong>, %3$s - <a>, %4$s - version number, %5$s - </a> */
-			esc_html__( '%1$sCustomize Woo%2$s won\'t work properly as it requires WooCommerce. Please %3$sactivate%4$s WooCommerce version %5$s or newer.', 'customize-woo' ),
-			'<strong>',
-			'</strong>',
-			'<a href="' . admin_url( 'plugins.php' ) . '">',
+			/* translators: %1$s - plugin name, %2$s - link to plugins page, %3$s - closing anchor tag, %4$s - plugin version */
+			esc_html__( '%1$s won\'t work properly as it requires WooCommerce. Please %2$sactivate%3$s WooCommerce version %4$s or newer.', 'customize-woo' ),
+			'<strong>' . Config::get_plugin_name() . '</strong>',
+			'<a href="' . self_admin_url( 'plugins.php' ) . '">',
 			'</a>',
 			Config::MIN_WC_VERSION
 		);
+	?>
 
-		printf( '<div class="error"><p>%s</p></div>', $message );
+		<div class="error">
+			<p><?php echo $message; ?></p>
+		</div><!-- .error -->
+
+	<?php
 	}
 
 }

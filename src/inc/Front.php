@@ -12,8 +12,7 @@ use AkshitSethi\Plugins\CustomizeWoo\Config;
 /**
  * Frontend for the plugin.
  *
- * @package    AkshitSethi\Plugins\CustomizeWoo
- * @since      1.0.0
+ * @package AkshitSethi\Plugins\CustomizeWoo
  */
 class Front {
 
@@ -22,7 +21,6 @@ class Front {
 	 */
 	public $filters;
 
-
 	/**
 	 * Class constructor.
 	 */
@@ -30,19 +28,16 @@ class Front {
 		add_action( 'woocommerce_init', array( $this, 'init' ) );
 	}
 
-
 	/**
 	 * Initialize the frontend for the plugin.
 	 *
-	 * @since 1.0.0
+	 * @return void
 	 */
-	public function init() {
-		// Get options
+	public function init() : void {
 		$this->filters = get_option( Config::DB_OPTION );
 
 		if ( $this->filters ) {
 			foreach ( $this->filters as $filter => $value ) {
-				// Add to cart text
 				if ( false !== strpos( $filter, 'add_to_cart_text' ) ) {
 					if ( 'single_add_to_cart_text' === $filter ) {
 						add_filter( 'woocommerce_product_single_add_to_cart_text', array( $this, 'single_add_to_cart_text' ), 50 );
@@ -70,17 +65,16 @@ class Front {
 		}
 	}
 
-
 	/**
 	 * Apply the shop loop add to cart button text customization.
 	 *
-	 * @param string      $text add to cart text
-	 * @param \WC_Product $product product object
-	 * @return string modified add to cart text
-	 * @since 1.0.0
+	 * @param string      $text 		Add-to-cart text.
+	 * @param \WC_Product $product 	WC_Product instance.
+	 *
+	 * @return string
 	 */
-	public function add_to_cart_text( $text, $product ) {
-		// Out of stock
+	public function add_to_cart_text( string $text, \WC_Product $product ) : string {
+		// Out of stock.
 		if ( $this->if_exists( $this->filters['out_of_stock_add_to_cart_text'] ) && ! $product->is_in_stock() ) {
 			return $this->filters['out_of_stock_add_to_cart_text'];
 		}
@@ -98,11 +92,8 @@ class Front {
 		return $text;
 	}
 
-
 	/**
 	 * Apply the single add to cart button text customization.
-	 *
-	 * @since 1.0.0
 	 */
 	public function single_add_to_cart_text() {
 		if ( $this->if_exists( $this->filters['single_add_to_cart_text'] ) ) {
@@ -110,16 +101,15 @@ class Front {
 		}
 	}
 
-
 	/**
 	 * Apply the product page out of stock text customization.
 	 *
 	 * @param string      $text out of stock text
 	 * @param \WC_Product $product product object
-	 * @return string modified out of stock text
-	 * @since 1.0.0
+	 *
+	 * @return string
 	 */
-	public function single_out_of_stock_text( $text, $product ) {
+	public function single_out_of_stock_text( string $text, \WC_Product $product ) : string {
 		if ( isset( $this->filters['single_out_of_stock_text'] ) && ! $product->is_in_stock() ) {
 			return $this->filters['single_out_of_stock_text'];
 		}
@@ -127,14 +117,13 @@ class Front {
 		return $text;
 	}
 
-
 	/**
 	 * Apply the product page backorder text customization.
 	 *
-	 * @param string      $text backorder text
-	 * @param \WC_Product $product product object
+	 * @param string      $text 		Backorder text.
+	 * @param \WC_Product $product 	WC_Product instance.
+	 *
 	 * @return string modified backorder text
-	 * @since 1.0.0
 	 */
 	public function single_backorder_text( $text, $product ) {
 		if ( isset( $this->filters['single_backorder_text'] ) && $product->managing_stock() && $product->is_on_backorder( 1 ) ) {
@@ -144,17 +133,16 @@ class Front {
 		return $text;
 	}
 
-
 	/**
 	 * Apply the shop loop sale flash text customization.
 	 *
-	 * @param string      $html add to cart flash HTML
-	 * @param \WP_Post    $_ post object, unused
-	 * @param \WC_Product $product the prdouct object
-	 * @return string updated HTML
-	 * @since 1.0.0
+	 * @param string 			$html 		Add to cart flash text.
+	 * @param \WP_Post 		$post 		WP_Post instance.
+	 * @param \WC_Product $product 	WP_Product instance.
+	 *
+	 * @return string
 	 */
-	public function sale_flash( $html, $_, $product ) {
+	public function sale_flash( $html, $post, $product ) {
 		$text = '';
 
 		if ( is_product() && isset( $this->filters['single_sale_flash_text'] ) ) {
@@ -173,12 +161,10 @@ class Front {
 		return ! empty( $text ) ? '<span class="onsale">' . $text . '</span>' : $html;
 	}
 
-
 	/**
 	 * Add hook to selected filters.
 	 *
 	 * @return void|string $filter Value to use for selected hook
-	 * @since 1.0.0
 	 */
 	public function render_filter() {
 		$current_filter = current_filter();
@@ -192,32 +178,33 @@ class Front {
 		}
 	}
 
-
 	/**
 	 * Checks if the option is set and is not empty.
 	 *
-	 * @param string|integer|boolean $option Option to check and verify
-	 * @since 1.0.0
+	 * @param string|integer|boolean $option Option to check and verify.
+	 *
+	 * @return boolean
 	 */
-	private function if_exists( $option ) {
-		if ( isset( $option ) ) {
-			if ( ! empty( $option ) ) {
-				return true;
-			}
+	private function if_exists( $option ) : bool {
+		if ( ! isset( $option ) ) {
+			return false;
 		}
 
-		return false;
-	}
+		if ( empty( $option ) ) {
+			return false;
+		}
 
+		return true;
+	}
 
 	/**
 	 * Helper to get the percent discount for a product on sale.
 	 *
-	 * @param \WC_Product $product product instance
-	 * @return string percentage discount
-	 * @since 1.0.0
+	 * @param \WC_Product $product WC_Product instance.
+	 *
+	 * @return string
 	 */
-	private function get_sale_percentage( $product ) {
+	private function get_sale_percentage( string $product ) : string {
 		$child_sale_percents = array();
 		$percentage          = '0';
 
@@ -247,16 +234,15 @@ class Front {
 		return $percentage;
 	}
 
-
 	/**
 	 * Calculates a sales percentage difference given regular and sale prices for a product.
 	 *
-	 * @param string $regular_price product regular price
-	 * @param string $sale_price product sale price
-	 * @return float percentage difference
-	 * @since 1.0.0
+	 * @param string $regular_price Product regular price.
+	 * @param string $sale_price 		Product sale price.
+	 *
+	 * @return float
 	 */
-	private function calculate_sale_percentage( $regular_price, $sale_price ) {
+	private function calculate_sale_percentage( string $regular_price, string $sale_price ) : float {
 		$percent = 0;
 		$regular = (float) $regular_price;
 		$sale    = (float) $sale_price;

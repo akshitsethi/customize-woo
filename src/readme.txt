@@ -49,6 +49,10 @@ Getting help is just a click away now. Report your issues using the support form
 
 == Changelog ==
 
+= 1.2.0 =
+* Major code-refactoring
+* Added 10+ customization options
+
 = 1.1.0 =
 * More customization options added
 * Bug fixes
@@ -58,4 +62,4 @@ Getting help is just a click away now. Report your issues using the support form
 * Added plugin assets
 
 = 1.0 =
-First release of the plugin.
+Initial release
