@@ -1,18 +1,23 @@
-VERSION := 1.1.0
+VERSION := 1.2.0
 PLUGINSLUG := customize-woo
 SRCPATH := $(shell pwd)/src
 
-bin/linux/amd64/github-release:
-	wget https://github.com/aktau/github-release/releases/download/v0.7.2/linux-amd64-github-release.tar.bz2
-	tar -xvf linux-amd64-github-release.tar.bz2
-	chmod +x bin/linux/amd64/github-release
-	rm linux-amd64-github-release.tar.bz2
-
+install: vendor
 vendor: src/vendor
-	composer install --dev
-	composer dump-autoload -a
+	composer install
+	composer dump-autoload -o
 
 clover.xml: vendor test
+
+update_version:
+	sed -i "s/@##VERSION##@/${VERSION}/" src/$(PLUGINSLUG).php
+	sed -i "s/@##VERSION##@/${VERSION}/" src/inc/Config.php
+	sed -i "s/@##VERSION##@/${VERSION}/" src/i18n/$(PLUGINSLUG).pot
+
+remove_version:
+	sed -i "s/${VERSION}/@##VERSION##@/" src/$(PLUGINSLUG).php
+	sed -i "s/${VERSION}/@##VERSION##@/" src/inc/Config.php
+	sed -i "s/${VERSION}/@##VERSION##@/" src/i18n/$(PLUGINSLUG).pot
 
 unit: test
 
@@ -21,24 +26,26 @@ test: vendor
 
 src/vendor:
 	cd src && composer install
-	cd src && composer dump-autoload -a
+	cd src && composer dump-autoload -o
 
-build: vendor
+build: install update_version
 	mkdir -p build
 	rm -rf src/vendor
 	cd src && composer install --no-dev
-	cd src && composer dump-autoload -a
+	cd src && composer dump-autoload -o
 	cp -ar $(SRCPATH) $(PLUGINSLUG)
 	zip -r $(PLUGINSLUG).zip $(PLUGINSLUG)
 	rm -rf $(PLUGINSLUG)
 	mv $(PLUGINSLUG).zip build/
+	make remove_version
 
-dist: vendor
+dist: install update_version
 	mkdir -p dist
 	rm -rf src/vendor
 	cd src && composer install --no-dev
-	cd src && composer dump-autoload -a
+	cd src && composer dump-autoload -o
 	cp -r $(SRCPATH)/. dist/
+	make remove_version
 
 release:
 	git stash
@@ -49,18 +56,20 @@ release:
 	git push origin v$(VERSION)
 	git pull -r
 
-fmt: vendor
+fmt: install
 	bin/phpcbf --standard=WordPress src --ignore=src/vendor,src/assets
+	bin/phpcbf --standard=WordPress tests
 
-lint: vendor
+lint: install
 	bin/phpcs --standard=WordPress src --ignore=src/vendor,src/assets
+	bin/phpcs --standard=WordPress tests
 
 psr: src/vendor
-	composer dump-autoload -a
-	cd src && composer dump-autoload -a
+	composer dump-autoload -o
+	cd src && composer dump-autoload -o
 
 i18n: src/vendor
-	wp i18n make-pot src src/i18n/$(PLUGINSLUG).pot
+	wp i18n make-pot src src/i18n/$(PLUGINSLUG).pot --slug=$(PLUGINSLUG) --skip-js --exclude=vendor
 
 cover: vendor
 	bin/coverage-check clover.xml 100
