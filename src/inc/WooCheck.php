@@ -57,13 +57,13 @@ class WooCheck {
 			'</a>',
 			Config::MIN_WC_VERSION
 		);
-	?>
+		?>
 
 		<div class="error">
 			<p><?php echo $message; ?></p>
 		</div><!-- .error -->
 
-	<?php
+		<?php
 	}
 
 }

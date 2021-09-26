@@ -68,8 +68,8 @@ class Front {
 	/**
 	 * Apply the shop loop add to cart button text customization.
 	 *
-	 * @param string      $text 		Add-to-cart text.
-	 * @param \WC_Product $product 	WC_Product instance.
+	 * @param string      $text         Add-to-cart text.
+	 * @param \WC_Product $product  WC_Product instance.
 	 *
 	 * @return string
 	 */
@@ -120,8 +120,8 @@ class Front {
 	/**
 	 * Apply the product page backorder text customization.
 	 *
-	 * @param string      $text 		Backorder text.
-	 * @param \WC_Product $product 	WC_Product instance.
+	 * @param string      $text         Backorder text.
+	 * @param \WC_Product $product  WC_Product instance.
 	 *
 	 * @return string modified backorder text
 	 */
@@ -136,9 +136,9 @@ class Front {
 	/**
 	 * Apply the shop loop sale flash text customization.
 	 *
-	 * @param string 			$html 		Add to cart flash text.
-	 * @param \WP_Post 		$post 		WP_Post instance.
-	 * @param \WC_Product $product 	WP_Product instance.
+	 * @param string      $html       Add to cart flash text.
+	 * @param \WP_Post    $post       WP_Post instance.
+	 * @param \WC_Product $product  WP_Product instance.
 	 *
 	 * @return string
 	 */
@@ -238,7 +238,7 @@ class Front {
 	 * Calculates a sales percentage difference given regular and sale prices for a product.
 	 *
 	 * @param string $regular_price Product regular price.
-	 * @param string $sale_price 		Product sale price.
+	 * @param string $sale_price        Product sale price.
 	 *
 	 * @return float
 	 */
