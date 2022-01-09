@@ -62,4 +62,4 @@ Getting help is just a click away now. Report your issues using the support form
 * Added plugin assets
 
 = 1.0 =
-Initial release
+* Initial release

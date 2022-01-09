@@ -15,6 +15,11 @@
     "phpunit/phpunit": "^9.5.4",
     "antecedent/patchwork": "^2.1"
   },
+  "autoload": {
+    "psr-4": {
+      "AkshitSethi\\Plugins\\CustomizeWoo\\": "inc"
+    }
+  },
   "config": {
     "bin-dir": "bin/"
   }

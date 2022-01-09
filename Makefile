@@ -1,49 +1,49 @@
 VERSION := 1.2.0
 PLUGINSLUG := customize-woo
-SRCPATH := $(shell pwd)/src
+SRCPATH := $(shell pwd)
 
-install: vendor
-vendor: src/vendor
+install:
 	composer install
 	composer dump-autoload -o
 
-clover.xml: vendor test
+clover.xml: install test
 
 update_version:
-	sed -i "s/@##VERSION##@/${VERSION}/" src/$(PLUGINSLUG).php
-	sed -i "s/@##VERSION##@/${VERSION}/" src/inc/Config.php
-	sed -i "s/@##VERSION##@/${VERSION}/" src/i18n/$(PLUGINSLUG).pot
+	sed -i "s/@##VERSION##@/${VERSION}/" $(PLUGINSLUG).php
+	sed -i "s/@##VERSION##@/${VERSION}/" inc/Config.php
+	sed -i "s/@##VERSION##@/${VERSION}/" i18n/$(PLUGINSLUG).pot
 
 remove_version:
-	sed -i "s/${VERSION}/@##VERSION##@/" src/$(PLUGINSLUG).php
-	sed -i "s/${VERSION}/@##VERSION##@/" src/inc/Config.php
-	sed -i "s/${VERSION}/@##VERSION##@/" src/i18n/$(PLUGINSLUG).pot
+	sed -i "s/${VERSION}/@##VERSION##@/" $(PLUGINSLUG).php
+	sed -i "s/${VERSION}/@##VERSION##@/" inc/Config.php
+	sed -i "s/${VERSION}/@##VERSION##@/" i18n/$(PLUGINSLUG).pot
 
 unit: test
 
-test: vendor
+test: install
 	bin/phpunit --coverage-html=./reports
-
-src/vendor:
-	cd src && composer install
-	cd src && composer dump-autoload -o
 
 build: install update_version
 	mkdir -p build
-	rm -rf src/vendor
-	cd src && composer install --no-dev
-	cd src && composer dump-autoload -o
-	cp -ar $(SRCPATH) $(PLUGINSLUG)
+	rm -rf vendor
+	composer install --no-dev
+	composer dump-autoload -o
+	make copy
 	zip -r $(PLUGINSLUG).zip $(PLUGINSLUG)
 	rm -rf $(PLUGINSLUG)
 	mv $(PLUGINSLUG).zip build/
 	make remove_version
 
+copy:
+	mkdir $(PLUGINSLUG)
+	cp -ar assets inc i18n vendor $(PLUGINSLUG)/
+	cp customize-woo.php uninstall.php readme.txt license.txt $(PLUGINSLUG)/
+
 dist: install update_version
 	mkdir -p dist
-	rm -rf src/vendor
-	cd src && composer install --no-dev
-	cd src && composer dump-autoload -o
+	rm -rf vendor
+	composer install --no-dev
+	composer dump-autoload -o
 	cp -r $(SRCPATH)/. dist/
 	make remove_version
 
@@ -57,22 +57,19 @@ release:
 	git pull -r
 
 fmt: install
-	bin/phpcbf --standard=WordPress src --ignore=src/vendor,src/assets
-	bin/phpcbf --standard=WordPress tests
+	bin/phpcbf --standard=WordPress . --ignore=assets,bin,i18n,vendor
 
 lint: install
-	bin/phpcs --standard=WordPress src --ignore=src/vendor,src/assets
-	bin/phpcs --standard=WordPress tests
+	bin/phpcs --standard=WordPress . --ignore=assets,bin,i18n,vendor
 
-psr: src/vendor
+psr:
 	composer dump-autoload -o
-	cd src && composer dump-autoload -o
 
-i18n: src/vendor
-	wp i18n make-pot src src/i18n/$(PLUGINSLUG).pot --slug=$(PLUGINSLUG) --skip-js --exclude=vendor
+i18n:
+	wp i18n make-pot . i18n/$(PLUGINSLUG).pot --slug=$(PLUGINSLUG) --skip-js --exclude=vendor
 
-cover: vendor
+cover: install
 	bin/coverage-check clover.xml 100
 
 clean:
-	rm -rf vendor/ src/vendor/
+	rm -rf vendor/
