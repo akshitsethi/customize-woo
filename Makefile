@@ -1,6 +1,6 @@
 VERSION := 1.2.0
 PLUGINSLUG := customize-woo
-SRCPATH := $(shell pwd)
+PLUGINPATH := $(shell pwd)
 
 install:
 	composer install
@@ -44,7 +44,7 @@ dist: install update_version
 	rm -rf vendor
 	composer install --no-dev
 	composer dump-autoload -o
-	cp -r $(SRCPATH)/. dist/
+	cp -r $(PLUGINPATH)/. dist/
 	make remove_version
 
 release:
@@ -65,7 +65,7 @@ lint: install
 psr:
 	composer dump-autoload -o
 
-i18n:
+i18n: install
 	wp i18n make-pot . i18n/$(PLUGINSLUG).pot --slug=$(PLUGINSLUG) --skip-js --exclude=vendor
 
 cover: install
