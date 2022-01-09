@@ -2,12 +2,12 @@ on: push
 name: Tests
 
 jobs:
-  onMasterOrPR:
-    name: On master or PR
+  tests:
+    name: Plugin Checks
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
     - name: Install Dependencies
-      run: make vendor
+      run: make install
     - name: Lint
       run: make fmt
