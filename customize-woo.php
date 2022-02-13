@@ -41,11 +41,32 @@ class CustomizeWoo {
 	 * @return void
 	 */
 	public function init() : void {
+		if ( ! $this->check_woocommerce() ) {
+			return;
+		}
+
 		new Config();
 		new Admin();
 		new Front();
 
 		load_plugin_textdomain( Config::SLUG, false, Config::$plugin_path . 'i18n/' );
+	}
+
+	/**
+	 * Checks whether WooCommerce plugin is active or not.
+	 *
+	 * @return bool
+	 */
+	public function check_woocommerce() : bool {
+		$woo_check = new WooCheck();
+
+		if ( false === $woo_check->is_plugin_active( 'woocommerce.php' ) ) {
+			add_action( 'admin_notices', array( $woo_check, 'inactive_notice' ) );
+
+			return false;
+		}
+
+		return true;
 	}
 
 	/**
