@@ -64,10 +64,10 @@ class Admin {
 	 * Scripts for the plugin options page.
 	 */
 	public function admin_scripts() {
-		wp_enqueue_style( Config::SHORT_SLUG . '-admin', Config::$plugin_url . 'assets/admin/css/admin.css', false, Config::VERSION );
+		wp_enqueue_style( Config::SLUG . '-admin', Config::$plugin_url . 'assets/admin/css/admin.css', false, Config::VERSION );
 
 		// Localize and enqueue script
-		wp_enqueue_script( Config::SHORT_SLUG . '-admin', Config::$plugin_url . 'assets/admin/js/admin.js', array( 'jquery' ), Config::VERSION, true );
+		wp_enqueue_script( Config::SLUG . '-admin', Config::$plugin_url . 'assets/admin/js/admin.js', array( 'jquery' ), Config::VERSION, true );
 
 		$localize = array(
 			'prefix'       => Config::PREFIX,
@@ -77,7 +77,7 @@ class Admin {
 			'processing'   => esc_html__( 'Processing..', 'customize-woo' ),
 			'nonce'        => wp_create_nonce( Config::PREFIX . 'nonce' ),
 		);
-		wp_localize_script( Config::SHORT_SLUG . '-admin', Config::PREFIX . 'admin_l10n', $localize );
+		wp_localize_script( Config::SLUG . '-admin', Config::PREFIX . 'admin_l10n', $localize );
 	}
 
 
