@@ -18,9 +18,7 @@ remove_version:
 	sed -i "s/${VERSION}/@##VERSION##@/" inc/Config.php
 	sed -i "s/${VERSION}/@##VERSION##@/" i18n/$(PLUGINSLUG).pot
 
-unit: test
-
-test: install
+test:
 	bin/phpunit --coverage-html=./reports
 
 build: install update_version
@@ -56,19 +54,19 @@ release:
 	git push origin v$(VERSION)
 	git pull -r
 
-fmt: install
-	bin/phpcbf --standard=WordPress . --ignore=assets,bin,i18n,vendor
+fmt:
+	bin/phpcbf --standard=WordPress . --ignore=assets,bin,i18n,views,vendor
 
-lint: install
+lint:
 	bin/phpcs --standard=WordPress . --ignore=assets,bin,i18n,vendor
 
 psr:
 	composer dump-autoload -o
 
-i18n: install
+pot:
 	wp i18n make-pot . i18n/$(PLUGINSLUG).pot --slug=$(PLUGINSLUG) --skip-js --exclude=vendor
 
-cover: install
+cover:
 	bin/coverage-check clover.xml 100
 
 clean:

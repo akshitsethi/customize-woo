@@ -2,7 +2,7 @@
 /**
  * View: Footer
  *
- * @since 1.0.0
+ * @package AkshitSethi\Plugins\CustomizeWoo
  */
 
 ?>

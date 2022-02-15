@@ -2,7 +2,7 @@
 /**
  * View: Header
  *
- * @since 1.0.0
+ * @package AkshitSethi\Plugins\CustomizeWoo
  */
 
 use AkshitSethi\Plugins\CustomizeWoo\Config;
@@ -18,6 +18,6 @@ use AkshitSethi\Plugins\CustomizeWoo\Config;
 		</p>
 
 		<div class="as-header-right">
-			<input type="submit" id="<?php echo Config::PREFIX . 'submit'; ?>" name="<?php echo Config::PREFIX . 'submit'; ?>" class="as-btn" value="<?php esc_attr_e( 'Save Changes', 'customize-woo' ); ?>" data-tab="#shop">
+			<input type="submit" id="customizewoo_submit" name="customizewoo_submit" class="as-btn" value="<?php esc_attr_e( 'Save Changes', 'customize-woo' ); ?>" data-tab="#shop">
 		</div><!-- .as-header-right -->
 	</div><!-- .as-header -->

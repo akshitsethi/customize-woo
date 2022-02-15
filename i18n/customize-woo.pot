@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-01-09T21:55:08+05:30\n"
+"POT-Creation-Date: 2022-02-14T15:03:18+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.5.0\n"
+"X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: customize-woo\n"
 
 #. Plugin Name of the plugin
@@ -606,6 +606,14 @@ msgstr ""
 msgid "Place order"
 msgstr ""
 
+#: inc/Config.php:100
+msgid "Lost your password? Please enter your username or email address. You will receive a link to create a new password via email."
+msgstr ""
+
+#: inc/Config.php:101
+msgid "Enter a new password below."
+msgstr ""
+
 #: inc/Config.php:104
 msgid "Tax for USA, VAT for European countries"
 msgstr ""
@@ -628,6 +636,6 @@ msgid "up to %s"
 msgstr ""
 
 #. translators: %1$s - plugin name, %2$s - link to plugins page, %3$s - closing anchor tag, %4$s - plugin version
-#: inc/WooCheck.php:54
+#: inc/WooCheck.php:57
 msgid "%1$s won't work properly as it requires WooCommerce. Please %2$sactivate%3$s WooCommerce version %4$s or newer."
 msgstr ""
