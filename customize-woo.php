@@ -10,6 +10,8 @@
  * Author URI: https://akshitsethi.com
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+ *
+ * @package AkshitSethi\Plugins\CustomizeWoo
  */
 
 namespace AkshitSethi\Plugins\CustomizeWoo;

@@ -4,7 +4,7 @@
   "type": "wordpress-plugin",
   "prefer-stable": true,
   "require": {
-    "php": ">=7.2.0"
+    "php": ">=7.3.0"
   },
   "require-dev": {
     "10up/wp_mock": "^0.4.2",
@@ -17,7 +17,7 @@
   },
   "autoload": {
     "psr-4": {
-      "AkshitSethi\\Plugins\\CustomizeWoo\\": "inc"
+      "AkshitSethi\\Plugins\\CustomizeWoo\\": "php"
     }
   },
   "config": {

@@ -2,7 +2,7 @@
 /**
  * Settings panel view for the plugin.
  *
- * @since 1.0.0
+ * @package AkshitSethi\Plugins\CustomizeWoo
  */
 
 use AkshitSethi\Plugins\CustomizeWoo\Config;
@@ -32,12 +32,12 @@ require_once 'header.php';
 		<?php
 
 			// Tabs
-			require_once Config::$plugin_path . 'inc/admin/views/settings-shop.php';
-			require_once Config::$plugin_path . 'inc/admin/views/settings-product.php';
-			require_once Config::$plugin_path . 'inc/admin/views/settings-cart.php';
-			require_once Config::$plugin_path . 'inc/admin/views/settings-checkout.php';
-			require_once Config::$plugin_path . 'inc/admin/views/settings-authentication.php';
-			require_once Config::$plugin_path . 'inc/admin/views/settings-misc.php';
+			require_once Config::$plugin_path . 'php/admin/views/settings-shop.php';
+			require_once Config::$plugin_path . 'php/admin/views/settings-product.php';
+			require_once Config::$plugin_path . 'php/admin/views/settings-cart.php';
+			require_once Config::$plugin_path . 'php/admin/views/settings-checkout.php';
+			require_once Config::$plugin_path . 'php/admin/views/settings-authentication.php';
+			require_once Config::$plugin_path . 'php/admin/views/settings-misc.php';
 
 		?>
 	</div><!-- .as-float-right -->

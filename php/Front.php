@@ -11,8 +11,6 @@ use AkshitSethi\Plugins\CustomizeWoo\Config;
 
 /**
  * Frontend for the plugin.
- *
- * @package AkshitSethi\Plugins\CustomizeWoo
  */
 class Front {
 
@@ -68,7 +66,7 @@ class Front {
 	/**
 	 * Apply the shop loop add to cart button text customization.
 	 *
-	 * @param string      $text         Add-to-cart text.
+	 * @param string      $text     Add-to-cart text.
 	 * @param \WC_Product $product  WC_Product instance.
 	 *
 	 * @return string

@@ -1,6 +1,8 @@
 <?php
 /**
  * Setup for unit tests.
+ *
+ * @package AkshitSethi\Plugins\CustomizeWoo
  */
 
 $root_dir = dirname( dirname( __FILE__ ) );
