@@ -95,7 +95,7 @@ class Admin {
 	 */
 	public function meta_links( $links, $file ) {
 		if ( false === strpos( $file, 'customize-woo.php' ) ) {
-			return;
+			return $links;
 		}
 
 		$new_links = array(
