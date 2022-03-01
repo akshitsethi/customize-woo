@@ -15,6 +15,8 @@ use AkshitSethi\Plugins\CustomizeWoo\Config;
 class Front {
 
 	/**
+	 * WooCommerce filters.
+	 *
 	 * @var array
 	 */
 	public $filters;
@@ -102,8 +104,8 @@ class Front {
 	/**
 	 * Apply the product page out of stock text customization.
 	 *
-	 * @param string      $text out of stock text
-	 * @param \WC_Product $product product object
+	 * @param string      $text    out of stock text.
+	 * @param \WC_Product $product product object.
 	 *
 	 * @return string
 	 */
@@ -118,8 +120,8 @@ class Front {
 	/**
 	 * Apply the product page backorder text customization.
 	 *
-	 * @param string      $text         Backorder text.
-	 * @param \WC_Product $product  WC_Product instance.
+	 * @param string      $text      Backorder text.
+	 * @param \WC_Product $product   WC_Product instance.
 	 *
 	 * @return string modified backorder text
 	 */
@@ -136,7 +138,7 @@ class Front {
 	 *
 	 * @param string      $html       Add to cart flash text.
 	 * @param \WP_Post    $post       WP_Post instance.
-	 * @param \WC_Product $product  WP_Product instance.
+	 * @param \WC_Product $product    WP_Product instance.
 	 *
 	 * @return string
 	 */
@@ -149,8 +151,8 @@ class Front {
 			$text = $this->filters['loop_sale_flash_text'];
 		}
 
-		// Only get sales percentages when we should be replacing text
-		// Check "false" specifically since the position could be 0
+		// Only get sales percentages when we should be replacing text.
+		// Check "false" specifically since the position could be 0.
 		if ( false !== strpos( $text, '{percent}' ) ) {
 			$percent = $this->get_sale_percentage( $product );
 			$text    = str_replace( '{percent}', "{$percent}%", $text );
@@ -202,7 +204,7 @@ class Front {
 	 *
 	 * @return string
 	 */
-	private function get_sale_percentage( string $product ) : string {
+	private function get_sale_percentage( \WC_Product $product ) : string {
 		$child_sale_percents = array();
 		$percentage          = '0';
 
@@ -217,10 +219,10 @@ class Front {
 				}
 			}
 
-			// Filter out duplicate values
+			// Filter out duplicate values.
 			$child_sale_percents = array_unique( $child_sale_percents );
 
-			// Only add "up to" if there's > 1 percentage possible
+			// Only add "up to" if there's > 1 percentage possible.
 			if ( ! empty( $child_sale_percents ) ) {
 				/* translators: Placeholder: %s - sale percentage */
 				$percentage = count( $child_sale_percents ) > 1 ? sprintf( esc_html__( 'up to %s', 'customize-woo' ), max( $child_sale_percents ) ) : current( $child_sale_percents );
@@ -235,8 +237,8 @@ class Front {
 	/**
 	 * Calculates a sales percentage difference given regular and sale prices for a product.
 	 *
-	 * @param string $regular_price Product regular price.
-	 * @param string $sale_price        Product sale price.
+	 * @param string $regular_price   Product regular price.
+	 * @param string $sale_price      Product sale price.
 	 *
 	 * @return float
 	 */
@@ -245,7 +247,7 @@ class Front {
 		$regular = (float) $regular_price;
 		$sale    = (float) $sale_price;
 
-		// In case of free products so we don't divide by 0
+		// In case of free products so we don't divide by 0.
 		if ( $regular ) {
 			$percent = round( ( ( $regular - $sale ) / $regular ) * 100 );
 		}

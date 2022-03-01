@@ -35,7 +35,7 @@ build: install update_version
 copy:
 	mkdir $(PLUGINSLUG)
 	cp -ar assets inc i18n vendor $(PLUGINSLUG)/
-	cp customize-woo.php uninstall.php readme.txt license.txt $(PLUGINSLUG)/
+	cp $(PLUGINSLUG).php uninstall.php readme.txt license.txt $(PLUGINSLUG)/
 
 dist: install update_version
 	mkdir -p dist

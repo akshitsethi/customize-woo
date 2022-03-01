@@ -71,7 +71,7 @@ class Admin {
 			'prefix'       => 'customizewoo_',
 			'save_text'    => esc_html__( 'Save Changes', 'customize-woo' ),
 			'support_text' => esc_html__( 'Ask for Support', 'customize-woo' ),
-			'save_changes' => esc_html__( 'Please save your changes first.', 'customize-woo' ),
+			'save_changes' => esc_html__( 'Please save your changes.', 'customize-woo' ),
 			'processing'   => esc_html__( 'Processing..', 'customize-woo' ),
 			'nonce'        => wp_create_nonce( 'customizewoo_nonce' ),
 		);
@@ -111,7 +111,7 @@ class Admin {
 	 * Processes plugin options via an AJAX call.
 	 */
 	public function save_options() {
-		// Check & verify nonce
+		// Check & verify nonce.
 		if ( empty( $_POST['_nonce'] ) ) {
 			return;
 		}
@@ -120,10 +120,10 @@ class Admin {
 			return;
 		}
 
-		// Check for action to determine the options to be updated
+		// Check for action to determine the options to be updated.
 		$section = str_replace( 'customizewoo_', '', sanitize_text_field( $_POST['action'] ) );
 
-		// Ensure $section is not empty
+		// Ensure $section is not empty.
 		if ( empty( $section ) ) {
 			return;
 		}
@@ -132,21 +132,21 @@ class Admin {
 			return;
 		}
 
-		// Default response
+		// Default response.
 		$response = array(
 			'code'     => 'error',
 			'response' => esc_html__( 'There was an error processing the request. Please try again later.', 'customize-woo' ),
 		);
 
-		// Current options
+		// Current options.
 		$options = get_option( Config::DB_OPTION );
 
-		// If the options do not exist
+		// If the options do not exist.
 		if ( ! $options ) {
 			$options = array();
 		}
 
-		// Filter & sanitize options
+		// Filter & sanitize options.
 		if ( 'shop' === $section ) {
 			$section_options = array(
 				'add_to_cart_text'                       => sanitize_text_field( $_POST['customizewoo_add_to_cart_text'] ),
@@ -210,32 +210,28 @@ class Admin {
 			);
 		}
 
-		// Merge the arrays
+		// Merge arrays.
 		$options = array_merge( $options, $section_options );
 
-		// Update options
+		// Update options.
 		update_option( Config::DB_OPTION, $options );
 
-		// Success
+		// Success message.
 		$response['code']     = 'success';
 		$response['response'] = esc_html__( 'Options have been updated successfully.', 'customize-woo' );
 
-		// Headers for JSON format
-		header( 'Content-Type: application/json' );
-		echo json_encode( $response );
-
-		// Exit for AJAX functions
-		exit;
+        // Send response.
+		wp_send_json( $response );
 	}
 
 	/**
 	 * Displays settings page for the plugin.
 	 */
 	public function settings() {
-		// Plugin options
+		// Plugin options.
 		$options = get_option( Config::DB_OPTION );
 
-		// Settings page
+		// Settings page.
 		require_once Config::$plugin_path . 'php/admin/views/settings.php';
 	}
 

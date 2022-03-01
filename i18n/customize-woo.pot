@@ -9,13 +9,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-02-14T15:03:18+00:00\n"
+"POT-Creation-Date: 2022-03-01T21:22:24+05:30\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.6.0\n"
+"X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: customize-woo\n"
 
 #. Plugin Name of the plugin
-#: inc/Config.php:118
+#: php/Config.php:113
 msgid "Customize Woo"
 msgstr ""
 
@@ -31,611 +31,611 @@ msgstr ""
 msgid "https://akshitsethi.com"
 msgstr ""
 
-#: inc/Admin.php:51
-#: inc/Admin.php:52
+#: php/Admin.php:50
+#: php/Admin.php:51
 msgid "Customizer"
 msgstr ""
 
-#: inc/Admin.php:74
-#: inc/admin/views/header.php:21
+#: php/Admin.php:72
+#: php/admin/views/header.php:21
 msgid "Save Changes"
 msgstr ""
 
-#: inc/Admin.php:75
+#: php/Admin.php:73
 msgid "Ask for Support"
 msgstr ""
 
-#: inc/Admin.php:76
-msgid "Please save your changes first."
+#: php/Admin.php:74
+msgid "Please save your changes."
 msgstr ""
 
-#: inc/Admin.php:77
+#: php/Admin.php:75
 msgid "Processing.."
 msgstr ""
 
-#: inc/Admin.php:106
+#: php/Admin.php:102
 msgid "Facebook"
 msgstr ""
 
-#: inc/Admin.php:107
+#: php/Admin.php:103
 msgid "Twitter"
 msgstr ""
 
-#: inc/Admin.php:142
+#: php/Admin.php:138
 msgid "There was an error processing the request. Please try again later."
 msgstr ""
 
-#: inc/Admin.php:225
+#: php/Admin.php:221
 msgid "Options have been updated successfully."
 msgstr ""
 
-#: inc/admin/views/header.php:17
+#: php/admin/views/header.php:17
 msgid "by"
 msgstr ""
 
-#: inc/admin/views/header.php:17
+#: php/admin/views/header.php:17
 msgid "Akshit Sethi"
 msgstr ""
 
-#: inc/admin/views/settings-authentication.php:15
+#: php/admin/views/settings-authentication.php:13
 msgid "AUTHENTICATION"
 msgstr ""
 
-#: inc/admin/views/settings-authentication.php:16
+#: php/admin/views/settings-authentication.php:14
 msgid "Configure options related to WooCommerce authentication."
 msgstr ""
 
-#: inc/admin/views/settings-authentication.php:21
+#: php/admin/views/settings-authentication.php:19
 msgid "Lost Password Text"
 msgstr ""
 
-#: inc/admin/views/settings-authentication.php:22
+#: php/admin/views/settings-authentication.php:20
 msgid "Lost password text"
 msgstr ""
 
-#: inc/admin/views/settings-authentication.php:24
+#: php/admin/views/settings-authentication.php:22
 msgid "Changes text shown on the lost password screen."
 msgstr ""
 
-#: inc/admin/views/settings-authentication.php:28
+#: php/admin/views/settings-authentication.php:26
 msgid "Lost Password Confirmation Message"
 msgstr ""
 
-#: inc/admin/views/settings-authentication.php:29
+#: php/admin/views/settings-authentication.php:27
 msgid "Lost password confirmation message"
 msgstr ""
 
-#: inc/admin/views/settings-authentication.php:31
+#: php/admin/views/settings-authentication.php:29
 msgid "Changes text for lost password confirmation message."
 msgstr ""
 
-#: inc/admin/views/settings-authentication.php:37
+#: php/admin/views/settings-authentication.php:35
 msgid "Reset Password Text"
 msgstr ""
 
-#: inc/admin/views/settings-authentication.php:38
+#: php/admin/views/settings-authentication.php:36
 msgid "Reset password text"
 msgstr ""
 
-#: inc/admin/views/settings-authentication.php:40
+#: php/admin/views/settings-authentication.php:38
 msgid "Changes text shown on the reset password screen."
 msgstr ""
 
-#: inc/admin/views/settings-cart.php:15
+#: php/admin/views/settings-cart.php:13
 msgid "CART"
 msgstr ""
 
-#: inc/admin/views/settings-cart.php:16
+#: php/admin/views/settings-cart.php:14
 msgid "Configure options for the WooCommerce Cart page."
 msgstr ""
 
-#: inc/admin/views/settings-cart.php:21
+#: php/admin/views/settings-cart.php:19
 msgid "No Shipping Available Text"
 msgstr ""
 
-#: inc/admin/views/settings-cart.php:22
+#: php/admin/views/settings-cart.php:20
 msgid "No shipping available text on cart page"
 msgstr ""
 
-#: inc/admin/views/settings-cart.php:24
+#: php/admin/views/settings-cart.php:22
 msgid "Changes the no shipping available text on cart."
 msgstr ""
 
-#: inc/admin/views/settings-cart.php:28
+#: php/admin/views/settings-cart.php:26
 msgid "Shipping Estimate Text"
 msgstr ""
 
-#: inc/admin/views/settings-cart.php:29
+#: php/admin/views/settings-cart.php:27
 msgid "Shipping estimate text on cart page"
 msgstr ""
 
-#: inc/admin/views/settings-cart.php:31
+#: php/admin/views/settings-cart.php:29
 msgid "Changes the shipping estimate text on cart."
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:15
+#: php/admin/views/settings-checkout.php:13
 msgid "CHECKOUT"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:16
+#: php/admin/views/settings-checkout.php:14
 msgid "Configure options for the WooCommerce Checkout page."
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:21
+#: php/admin/views/settings-checkout.php:19
 msgid "Must be Logged-in Text"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:22
+#: php/admin/views/settings-checkout.php:20
 msgid "Must be logged-in message on checkout page"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:24
+#: php/admin/views/settings-checkout.php:22
 msgid "Changes the message displayed when a customer must be logged in to checkout."
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:28
+#: php/admin/views/settings-checkout.php:26
 msgid "Login Text"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:29
+#: php/admin/views/settings-checkout.php:27
 msgid "Login message text on product page"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:31
+#: php/admin/views/settings-checkout.php:29
 msgid "Changes the message displayed if customers can login at checkout."
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:37
+#: php/admin/views/settings-checkout.php:35
 msgid "Create Account Checkbox Default"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:39
+#: php/admin/views/settings-checkout.php:37
 msgid "Checked"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:40
+#: php/admin/views/settings-checkout.php:38
 msgid "Unchecked"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:43
+#: php/admin/views/settings-checkout.php:41
 msgid "Control the default state for the Create Account checkbox."
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:47
+#: php/admin/views/settings-checkout.php:45
 msgid "Order Button Text"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:48
+#: php/admin/views/settings-checkout.php:46
 msgid "Place order button text on product page"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:50
+#: php/admin/views/settings-checkout.php:48
 msgid "Changes the \"Place Order\" button text on checkout."
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:56
+#: php/admin/views/settings-checkout.php:54
 msgid "Show Checkout Terms"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:59
+#: php/admin/views/settings-checkout.php:57
 msgid "Show or hide Terms & Conditions checkbox on checkout page."
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:63
+#: php/admin/views/settings-checkout.php:61
 msgid "Show Order Notes Field"
 msgstr ""
 
-#: inc/admin/views/settings-checkout.php:66
+#: php/admin/views/settings-checkout.php:64
 msgid "Show or hide Order notes field on checkout page."
 msgstr ""
 
-#: inc/admin/views/settings-misc.php:15
+#: php/admin/views/settings-misc.php:13
 msgid "MISC"
 msgstr ""
 
-#: inc/admin/views/settings-misc.php:16
+#: php/admin/views/settings-misc.php:14
 msgid "Configure other options for the WooCommerce."
 msgstr ""
 
-#: inc/admin/views/settings-misc.php:21
+#: php/admin/views/settings-misc.php:19
 msgid "Tax Label"
 msgstr ""
 
-#: inc/admin/views/settings-misc.php:22
+#: php/admin/views/settings-misc.php:20
 msgid "Taxes label text"
 msgstr ""
 
-#: inc/admin/views/settings-misc.php:24
+#: php/admin/views/settings-misc.php:22
 msgid "Changes the Taxes label."
 msgstr ""
 
-#: inc/admin/views/settings-misc.php:28
+#: php/admin/views/settings-misc.php:26
 msgid "Including Tax Label"
 msgstr ""
 
-#: inc/admin/views/settings-misc.php:29
+#: php/admin/views/settings-misc.php:27
 msgid "Including taxes label text"
 msgstr ""
 
-#: inc/admin/views/settings-misc.php:31
+#: php/admin/views/settings-misc.php:29
 msgid "Changes the including Taxes label."
 msgstr ""
 
-#: inc/admin/views/settings-misc.php:37
+#: php/admin/views/settings-misc.php:35
 msgid "Excluding Tax Label"
 msgstr ""
 
-#: inc/admin/views/settings-misc.php:38
+#: php/admin/views/settings-misc.php:36
 msgid "Excluding taxes label text"
 msgstr ""
 
-#: inc/admin/views/settings-misc.php:40
+#: php/admin/views/settings-misc.php:38
 msgid "Changes the excluding Taxes label."
 msgstr ""
 
-#: inc/admin/views/settings-misc.php:44
+#: php/admin/views/settings-misc.php:42
 msgid "Order Received Text"
 msgstr ""
 
-#: inc/admin/views/settings-misc.php:45
+#: php/admin/views/settings-misc.php:43
 msgid "Order received thank you text"
 msgstr ""
 
-#: inc/admin/views/settings-misc.php:47
+#: php/admin/views/settings-misc.php:45
 msgid "Changes the Order received text on thank you page."
 msgstr ""
 
-#: inc/admin/views/settings-product.php:15
+#: php/admin/views/settings-product.php:13
 msgid "PRODUCT"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:16
+#: php/admin/views/settings-product.php:14
 msgid "Configure options for the WooCommerce Product page."
 msgstr ""
 
-#: inc/admin/views/settings-product.php:21
+#: php/admin/views/settings-product.php:19
 msgid "Product Description Tab Title"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:22
+#: php/admin/views/settings-product.php:20
 msgid "Product description tab title"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:24
+#: php/admin/views/settings-product.php:22
 msgid "Changes the product description tab title."
 msgstr ""
 
-#: inc/admin/views/settings-product.php:28
+#: php/admin/views/settings-product.php:26
 msgid "Product Description Tab Heading"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:29
+#: php/admin/views/settings-product.php:27
 msgid "Product description tab heading"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:31
+#: php/admin/views/settings-product.php:29
 msgid "Changes the product description tab heading."
 msgstr ""
 
-#: inc/admin/views/settings-product.php:37
+#: php/admin/views/settings-product.php:35
 msgid "Reviews Tab Title"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:38
+#: php/admin/views/settings-product.php:36
 msgid "Reviews tab title"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:40
+#: php/admin/views/settings-product.php:38
 msgid "Changes the reviews tab title."
 msgstr ""
 
-#: inc/admin/views/settings-product.php:44
+#: php/admin/views/settings-product.php:42
 msgid "Reviews Tab Heading"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:45
+#: php/admin/views/settings-product.php:43
 msgid "Unfortunately, WooCommerce does not provide a method to modify this."
 msgstr ""
 
-#: inc/admin/views/settings-product.php:51
+#: php/admin/views/settings-product.php:49
 msgid "Additional Information Tab Title"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:52
+#: php/admin/views/settings-product.php:50
 msgid "Additional information tab title"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:54
+#: php/admin/views/settings-product.php:52
 msgid "Changes the additional information tab title."
 msgstr ""
 
-#: inc/admin/views/settings-product.php:58
+#: php/admin/views/settings-product.php:56
 msgid "Additional Information Tab Heading"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:59
+#: php/admin/views/settings-product.php:57
 msgid "Additional information tab heading"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:61
+#: php/admin/views/settings-product.php:59
 msgid "Changes the additional information tab heading."
 msgstr ""
 
-#: inc/admin/views/settings-product.php:67
+#: php/admin/views/settings-product.php:65
 msgid "Add to Cart Text"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:68
+#: php/admin/views/settings-product.php:66
 msgid "Add to Cart text for all product types"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:70
+#: php/admin/views/settings-product.php:68
 msgid "Changes the Add to Cart button text on the single product page for all product types."
 msgstr ""
 
-#: inc/admin/views/settings-product.php:74
+#: php/admin/views/settings-product.php:72
 msgid "Out of Stock Text"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:75
+#: php/admin/views/settings-product.php:73
 msgid "Out of Stock text on product page"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:77
+#: php/admin/views/settings-product.php:75
 msgid "Changes text for the out of stock on product pages."
 msgstr ""
 
-#: inc/admin/views/settings-product.php:83
+#: php/admin/views/settings-product.php:81
 msgid "Backorder Text"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:84
+#: php/admin/views/settings-product.php:82
 msgid "Backorder text on product page"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:86
+#: php/admin/views/settings-product.php:84
 msgid "Changes text for the backorder on product pages."
 msgstr ""
 
-#: inc/admin/views/settings-product.php:90
-#: inc/admin/views/settings-shop.php:60
+#: php/admin/views/settings-product.php:88
+#: php/admin/views/settings-shop.php:58
 msgid "Sale Badge Text"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:91
+#: php/admin/views/settings-product.php:89
 msgid "Sale badge text on product page"
 msgstr ""
 
-#: inc/admin/views/settings-product.php:93
+#: php/admin/views/settings-product.php:91
 msgid "Changes text for the sale flash on product pages."
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:15
+#: php/admin/views/settings-shop.php:13
 msgid "SHOP"
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:16
+#: php/admin/views/settings-shop.php:14
 msgid "Configure options for the WooCommerce Shop page."
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:21
+#: php/admin/views/settings-shop.php:19
 msgid "Simple Product"
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:22
+#: php/admin/views/settings-shop.php:20
 msgid "Add to Cart button text for simple products"
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:24
+#: php/admin/views/settings-shop.php:22
 msgid "Changes the add to cart button text for simple products on all loop pages."
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:28
+#: php/admin/views/settings-shop.php:26
 msgid "Variable Product"
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:29
+#: php/admin/views/settings-shop.php:27
 msgid "Add to Cart button text for variable products"
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:31
+#: php/admin/views/settings-shop.php:29
 msgid "Changes the add to cart button text for variable products on all loop pages."
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:37
+#: php/admin/views/settings-shop.php:35
 msgid "Grouped Product"
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:38
+#: php/admin/views/settings-shop.php:36
 msgid "Add to Cart button text for grouped products"
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:40
+#: php/admin/views/settings-shop.php:38
 msgid "Changes the add to cart button text for grouped products on all loop pages."
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:44
+#: php/admin/views/settings-shop.php:42
 msgid "Out of Stock Product"
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:45
+#: php/admin/views/settings-shop.php:43
 msgid "Add to Cart button text for out of stock products"
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:47
+#: php/admin/views/settings-shop.php:45
 msgid "Changes the add to cart button text for out of stock products on all loop pages."
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:53
+#: php/admin/views/settings-shop.php:51
 msgid "External Product"
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:54
+#: php/admin/views/settings-shop.php:52
 msgid "Add to Cart button text for external products"
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:56
+#: php/admin/views/settings-shop.php:54
 msgid "Changes the add to cart button text for external products."
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:61
+#: php/admin/views/settings-shop.php:59
 msgid "Add text for Sale badge"
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:63
+#: php/admin/views/settings-shop.php:61
 msgid "Changes text for the sale flash on all loop pages."
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:69
+#: php/admin/views/settings-shop.php:67
 msgid "Products Displayed Per Page"
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:81
+#: php/admin/views/settings-shop.php:79
 msgid "Changes the number of products displayed per page."
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:85
+#: php/admin/views/settings-shop.php:83
 msgid "Product Columns Displayed Per Page"
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:97
+#: php/admin/views/settings-shop.php:95
 msgid "Changes the number of product columns displayed per page."
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:103
+#: php/admin/views/settings-shop.php:101
 msgid "Product Thumbnail Columns Displayed"
 msgstr ""
 
-#: inc/admin/views/settings-shop.php:115
+#: php/admin/views/settings-shop.php:113
 msgid "Changes the number of products thumbnail columns displayed."
 msgstr ""
 
-#: inc/admin/views/settings.php:17
+#: php/admin/views/settings.php:17
 msgid "Menu"
 msgstr ""
 
-#: inc/admin/views/settings.php:22
+#: php/admin/views/settings.php:22
 msgid "Shop"
 msgstr ""
 
-#: inc/admin/views/settings.php:23
+#: php/admin/views/settings.php:23
 msgid "Product"
 msgstr ""
 
-#: inc/admin/views/settings.php:24
+#: php/admin/views/settings.php:24
 msgid "Cart"
 msgstr ""
 
-#: inc/admin/views/settings.php:25
+#: php/admin/views/settings.php:25
 msgid "Checkout"
 msgstr ""
 
-#: inc/admin/views/settings.php:26
+#: php/admin/views/settings.php:26
 msgid "Authentication"
 msgstr ""
 
-#: inc/admin/views/settings.php:27
+#: php/admin/views/settings.php:27
 msgid "Misc"
 msgstr ""
 
-#: inc/Config.php:65
-#: inc/Config.php:81
+#: php/Config.php:60
+#: php/Config.php:76
 msgid "Add to Cart"
 msgstr ""
 
-#: inc/Config.php:66
+#: php/Config.php:61
 msgid "Select Options"
 msgstr ""
 
-#: inc/Config.php:67
+#: php/Config.php:62
 msgid "View Options"
 msgstr ""
 
-#: inc/Config.php:68
+#: php/Config.php:63
 msgid "Out of Stock"
 msgstr ""
 
-#: inc/Config.php:69
+#: php/Config.php:64
 msgid "Read More"
 msgstr ""
 
-#: inc/Config.php:70
-#: inc/Config.php:84
+#: php/Config.php:65
+#: php/Config.php:79
 msgid "Sale!"
 msgstr ""
 
-#: inc/Config.php:76
-#: inc/Config.php:77
+#: php/Config.php:71
+#: php/Config.php:72
 msgid "Description"
 msgstr ""
 
-#: inc/Config.php:78
+#: php/Config.php:73
 msgid "Reviews"
 msgstr ""
 
-#: inc/Config.php:79
-#: inc/Config.php:80
+#: php/Config.php:74
+#: php/Config.php:75
 msgid "Additional Information"
 msgstr ""
 
-#: inc/Config.php:82
+#: php/Config.php:77
 msgid "Out of stock"
 msgstr ""
 
-#: inc/Config.php:83
+#: php/Config.php:78
 msgid "Available on backorder"
 msgstr ""
 
-#: inc/Config.php:87
+#: php/Config.php:82
 msgid "There are no shipping options available. Please ensure that your address has been entered correctly, or contact us if you need any help."
 msgstr ""
 
-#: inc/Config.php:88
+#: php/Config.php:83
 msgid "Shipping options will be updated during checkout."
 msgstr ""
 
-#: inc/Config.php:91
+#: php/Config.php:86
 msgid "You must be logged in to checkout."
 msgstr ""
 
-#: inc/Config.php:92
+#: php/Config.php:87
 msgid "Returning customer?"
 msgstr ""
 
-#: inc/Config.php:94
+#: php/Config.php:89
 msgid "Place order"
 msgstr ""
 
-#: inc/Config.php:100
+#: php/Config.php:95
 msgid "Lost your password? Please enter your username or email address. You will receive a link to create a new password via email."
 msgstr ""
 
-#: inc/Config.php:101
+#: php/Config.php:96
 msgid "Enter a new password below."
 msgstr ""
 
-#: inc/Config.php:104
+#: php/Config.php:99
 msgid "Tax for USA, VAT for European countries"
 msgstr ""
 
-#: inc/Config.php:105
+#: php/Config.php:100
 msgid "Inc. tax for USA, Inc. VAT for European countries"
 msgstr ""
 
-#: inc/Config.php:106
+#: php/Config.php:101
 msgid "Exc. tax for USA, Exc. VAT for European countries"
 msgstr ""
 
-#: inc/Config.php:107
+#: php/Config.php:102
 msgid "Thank you. Your order has been received."
 msgstr ""
 
 #. translators: Placeholder: %s - sale percentage
-#: inc/Front.php:228
+#: php/Front.php:226
 msgid "up to %s"
 msgstr ""
 
 #. translators: %1$s - plugin name, %2$s - link to plugins page, %3$s - closing anchor tag, %4$s - plugin version
-#: inc/WooCheck.php:57
+#: php/WooCheck.php:55
 msgid "%1$s won't work properly as it requires WooCommerce. Please %2$sactivate%3$s WooCommerce version %4$s or newer."
 msgstr ""
