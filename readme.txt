@@ -3,9 +3,9 @@ Contributors: akshitsethi
 Donate link: https://akshitsethi.com/
 Tags: woocommerce, customizer, customize woo, woocommerce filters, wc customize
 Requires at least: 3.5.1
-Tested up to: 5.4
-Requires PHP: 5.6
-Stable tag: 1.1.0
+Tested up to: 5.9.1
+Requires PHP: 7.3
+Stable tag: 1.2.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -48,6 +48,10 @@ Getting help is just a click away now. Report your issues using the support form
 
 
 == Changelog ==
+
+= 1.2.3 =
+* Updated compatibility
+* Fixed nitpicks
 
 = 1.2.0 =
 * Major code-refactoring
