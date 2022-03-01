@@ -1,4 +1,4 @@
-VERSION := 1.2.0
+VERSION := 1.2.1
 PLUGINSLUG := customize-woo
 PLUGINPATH := $(shell pwd)
 
@@ -10,12 +10,12 @@ clover.xml: install test
 
 update_version:
 	sed -i "s/@##VERSION##@/${VERSION}/" $(PLUGINSLUG).php
-	sed -i "s/@##VERSION##@/${VERSION}/" inc/Config.php
+	sed -i "s/@##VERSION##@/${VERSION}/" php/Config.php
 	sed -i "s/@##VERSION##@/${VERSION}/" i18n/$(PLUGINSLUG).pot
 
 remove_version:
 	sed -i "s/${VERSION}/@##VERSION##@/" $(PLUGINSLUG).php
-	sed -i "s/${VERSION}/@##VERSION##@/" inc/Config.php
+	sed -i "s/${VERSION}/@##VERSION##@/" php/Config.php
 	sed -i "s/${VERSION}/@##VERSION##@/" i18n/$(PLUGINSLUG).pot
 
 test:
@@ -34,7 +34,7 @@ build: install update_version
 
 copy:
 	mkdir $(PLUGINSLUG)
-	cp -ar assets inc i18n vendor $(PLUGINSLUG)/
+	cp -ar assets php i18n vendor $(PLUGINSLUG)/
 	cp $(PLUGINSLUG).php uninstall.php readme.txt license.txt $(PLUGINSLUG)/
 
 dist: install update_version
