@@ -64,7 +64,7 @@ class Admin {
 	public function admin_scripts() {
 		wp_enqueue_style( Config::SLUG . '-admin', Config::$plugin_url . 'assets/admin/css/admin.css', false, Config::VERSION );
 
-		// Localize and enqueue script
+		// Localize and enqueue script.
 		wp_enqueue_script( Config::SLUG . '-admin', Config::$plugin_url . 'assets/admin/js/admin.js', array( 'jquery' ), Config::VERSION, true );
 
 		$localize = array(
@@ -88,8 +88,8 @@ class Admin {
 	/**
 	 * Adds custom links to the meta on the plugins page.
 	 *
-	 * @param array  $links Array of links for the plugins
-	 * @param string $file  Name of the main plugin file
+	 * @param array  $links Array of links for the plugins.
+	 * @param string $file  Name of the main plugin file.
 	 *
 	 * @return array
 	 */
@@ -116,19 +116,23 @@ class Admin {
 			return;
 		}
 
-		if ( ! wp_verify_nonce( $_POST['_nonce'], 'customizewoo_nonce' ) ) {
+		if ( empty( $_POST['action'] ) ) {
+			return;
+		}
+
+		if ( ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['_nonce'] ) ), 'customizewoo_nonce' ) ) {
 			return;
 		}
 
 		// Check for action to determine the options to be updated.
-		$section = str_replace( 'customizewoo_', '', sanitize_text_field( $_POST['action'] ) );
+		$section = str_replace( 'customizewoo_', '', sanitize_text_field( wp_unslash( $_POST['action'] ) ) );
 
 		// Ensure $section is not empty.
 		if ( empty( $section ) ) {
 			return;
 		}
 
-		if ( ! in_array( $section, array( 'shop', 'product', 'cart', 'checkout', 'authentication', 'misc' ) ) ) {
+		if ( ! in_array( $section, array( 'shop', 'product', 'cart', 'checkout', 'authentication', 'misc' ), true ) ) {
 			return;
 		}
 
@@ -149,64 +153,64 @@ class Admin {
 		// Filter & sanitize options.
 		if ( 'shop' === $section ) {
 			$section_options = array(
-				'add_to_cart_text'                       => sanitize_text_field( $_POST['customizewoo_add_to_cart_text'] ),
-				'variable_add_to_cart_text'              => sanitize_text_field( $_POST['customizewoo_variable_add_to_cart_text'] ),
-				'grouped_add_to_cart_text'               => sanitize_text_field( $_POST['customizewoo_grouped_add_to_cart_text'] ),
-				'out_of_stock_add_to_cart_text'          => sanitize_text_field( $_POST['customizewoo_out_of_stock_add_to_cart_text'] ),
-				'external_add_to_cart_text'              => sanitize_text_field( $_POST['customizewoo_external_add_to_cart_text'] ),
-				'loop_sale_flash_text'                   => sanitize_text_field( $_POST['customizewoo_loop_sale_flash_text'] ),
-				'loop_shop_per_page'                     => absint( $_POST['customizewoo_loop_shop_per_page'] ),
-				'loop_shop_columns'                      => absint( $_POST['customizewoo_loop_shop_columns'] ),
-				'woocommerce_product_thumbnails_columns' => absint( $_POST['customizewoo_product_thumbnails_columns'] ),
+				'add_to_cart_text'              => Config::sanitize_option( 'add_to_cart_text' ),
+				'variable_add_to_cart_text'     => Config::sanitize_option( 'variable_add_to_cart_text' ),
+				'grouped_add_to_cart_text'      => Config::sanitize_option( 'grouped_add_to_cart_text' ),
+				'out_of_stock_add_to_cart_text' => Config::sanitize_option( 'out_of_stock_add_to_cart_text' ),
+				'external_add_to_cart_text'     => Config::sanitize_option( 'external_add_to_cart_text' ),
+				'loop_sale_flash_text'          => Config::sanitize_option( 'loop_sale_flash_text' ),
+				'loop_shop_per_page'            => Config::sanitize_option( 'loop_shop_per_page', 'int' ),
+				'loop_shop_columns'             => Config::sanitize_option( 'loop_shop_columns', 'int' ),
+				'product_thumbnails_columns'    => Config::sanitize_option( 'product_thumbnails_columns', 'int' ),
 			);
 		}
 
 		if ( 'product' === $section ) {
 			$section_options = array(
-				'woocommerce_product_description_tab_title' => sanitize_text_field( $_POST['customizewoo_description_tab_title'] ),
-				'woocommerce_product_description_heading' => sanitize_text_field( $_POST['customizewoo_description_heading'] ),
-				'woocommerce_product_reviews_tab_title'   => sanitize_text_field( $_POST['customizewoo_reviews_tab_title'] ),
-				'woocommerce_product_additional_information_tab_title' => sanitize_text_field( $_POST['customizewoo_additional_information_tab_title'] ),
-				'woocommerce_product_additional_information_heading' => sanitize_text_field( $_POST['customizewoo_additional_information_heading'] ),
-				'single_add_to_cart_text'                 => sanitize_text_field( $_POST['customizewoo_single_add_to_cart_text'] ),
-				'single_out_of_stock_text'                => sanitize_text_field( $_POST['customizewoo_single_out_of_stock_text'] ),
-				'single_backorder_text'                   => sanitize_text_field( $_POST['customizewoo_single_backorder_text'] ),
-				'single_sale_flash_text'                  => sanitize_text_field( $_POST['customizewoo_single_sale_flash_text'] ),
+				'product_description_tab_title'            => Config::sanitize_option( 'product_description_tab_title' ),
+				'product_description_heading'              => Config::sanitize_option( 'product_description_heading' ),
+				'product_reviews_tab_title'                => Config::sanitize_option( 'product_reviews_tab_title' ),
+				'product_additional_information_tab_title' => Config::sanitize_option( 'product_additional_information_tab_title' ),
+				'product_additional_information_heading'   => Config::sanitize_option( 'product_additional_information_heading' ),
+				'single_add_to_cart_text'                  => Config::sanitize_option( 'single_add_to_cart_text' ),
+				'single_out_of_stock_text'                 => Config::sanitize_option( 'single_out_of_stock_text' ),
+				'single_backorder_text'                    => Config::sanitize_option( 'single_backorder_text' ),
+				'single_sale_flash_text'                   => Config::sanitize_option( 'single_sale_flash_text' ),
 			);
 		}
 
 		if ( 'cart' === $section ) {
 			$section_options = array(
-				'woocommerce_no_shipping_available_html' => sanitize_text_field( $_POST['customizewoo_no_shipping_available_html'] ),
-				'woocommerce_shipping_estimate_html'     => sanitize_text_field( $_POST['customizewoo_shipping_estimate_html'] ),
+				'no_shipping_available_html' => Config::sanitize_option( 'no_shipping_available_html' ),
+				'shipping_estimate_html'     => Config::sanitize_option( 'shipping_estimate_html' ),
 			);
 		}
 
 		if ( 'checkout' === $section ) {
 			$section_options = array(
-				'woocommerce_checkout_must_be_logged_in_message' => sanitize_text_field( $_POST['customizewoo_must_be_logged_in_message'] ),
-				'woocommerce_checkout_login_message'   => sanitize_text_field( $_POST['customizewoo_login_message'] ),
-				'woocommerce_create_account_default_checked' => sanitize_text_field( $_POST['customizewoo_create_account_default_checked'] ),
-				'woocommerce_order_button_text'        => sanitize_text_field( $_POST['customizewoo_order_button_text'] ),
-				'woocommerce_checkout_show_terms'      => isset( $_POST['customizewoo_show_terms'] ) ? true : false,
-				'woocommerce_enable_order_notes_field' => isset( $_POST['customizewoo_order_notes_field'] ) ? true : false,
+				'checkout_must_be_logged_in_message' => Config::sanitize_option( 'checkout_must_be_logged_in_message' ),
+				'checkout_login_message'             => Config::sanitize_option( 'checkout_login_message' ),
+				'create_account_default_checked'     => Config::sanitize_option( 'create_account_default_checked' ),
+				'order_button_text'                  => Config::sanitize_option( 'order_button_text' ),
+				'show_terms'                         => Config::sanitize_option( 'show_terms', 'bool' ),
+				'order_notes_field'                  => Config::sanitize_option( 'order_notes_field', 'bool' ),
 			);
 		}
 
 		if ( 'authentication' === $section ) {
 			$section_options = array(
-				'woocommerce_lost_password_confirmation_message' => sanitize_text_field( $_POST['customizewoo_lost_password_confirmation_message'] ),
-				'woocommerce_lost_password_message'  => sanitize_text_field( $_POST['customizewoo_lost_password_message'] ),
-				'woocommerce_reset_password_message' => sanitize_text_field( $_POST['customizewoo_reset_password_message'] ),
+				'lost_password_confirmation_message' => Config::sanitize_option( 'lost_password_confirmation_message' ),
+				'lost_password_message'              => Config::sanitize_option( 'lost_password_message' ),
+				'reset_password_message'             => Config::sanitize_option( 'reset_password_message' ),
 			);
 		}
 
 		if ( 'misc' === $section ) {
 			$section_options = array(
-				'woocommerce_countries_tax_or_vat'         => sanitize_text_field( $_POST['customizewoo_countries_tax_or_vat'] ),
-				'woocommerce_countries_inc_tax_or_vat'     => sanitize_text_field( $_POST['customizewoo_countries_inc_tax_or_vat'] ),
-				'woocommerce_countries_ex_tax_or_vat'      => sanitize_text_field( $_POST['customizewoo_countries_ex_tax_or_vat'] ),
-				'woocommerce_thankyou_order_received_text' => sanitize_text_field( $_POST['customizewoo_order_received_text'] ),
+				'countries_tax_or_vat'     => Config::sanitize_option( 'countries_tax_or_vat' ),
+				'countries_inc_tax_or_vat' => Config::sanitize_option( 'countries_inc_tax_or_vat' ),
+				'countries_ex_tax_or_vat'  => Config::sanitize_option( 'countries_ex_tax_or_vat' ),
+				'order_received_text'      => Config::sanitize_option( 'order_received_text' ),
 			);
 		}
 
@@ -220,7 +224,7 @@ class Admin {
 		$response['code']     = 'success';
 		$response['response'] = esc_html__( 'Options have been updated successfully.', 'customize-woo' );
 
-        // Send response.
+		// Send response.
 		wp_send_json( $response );
 	}
 
