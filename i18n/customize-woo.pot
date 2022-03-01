@@ -9,13 +9,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-03-01T21:22:24+05:30\n"
+"POT-Creation-Date: 2022-03-02T00:55:53+05:30\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: customize-woo\n"
 
 #. Plugin Name of the plugin
-#: php/Config.php:113
+#: php/Config.php:127
 msgid "Customize Woo"
 msgstr ""
 
@@ -61,11 +61,11 @@ msgstr ""
 msgid "Twitter"
 msgstr ""
 
-#: php/Admin.php:138
+#: php/Admin.php:142
 msgid "There was an error processing the request. Please try again later."
 msgstr ""
 
-#: php/Admin.php:221
+#: php/Admin.php:225
 msgid "Options have been updated successfully."
 msgstr ""
 
@@ -538,100 +538,104 @@ msgstr ""
 msgid "Misc"
 msgstr ""
 
-#: php/Config.php:60
-#: php/Config.php:76
+#: php/Config.php:74
+#: php/Config.php:90
 msgid "Add to Cart"
 msgstr ""
 
-#: php/Config.php:61
+#: php/Config.php:75
 msgid "Select Options"
 msgstr ""
 
-#: php/Config.php:62
+#: php/Config.php:76
 msgid "View Options"
 msgstr ""
 
-#: php/Config.php:63
+#: php/Config.php:77
 msgid "Out of Stock"
 msgstr ""
 
-#: php/Config.php:64
+#: php/Config.php:78
 msgid "Read More"
 msgstr ""
 
-#: php/Config.php:65
 #: php/Config.php:79
+#: php/Config.php:93
 msgid "Sale!"
 msgstr ""
 
-#: php/Config.php:71
-#: php/Config.php:72
+#: php/Config.php:85
+#: php/Config.php:86
 msgid "Description"
 msgstr ""
 
-#: php/Config.php:73
+#: php/Config.php:87
 msgid "Reviews"
 msgstr ""
 
-#: php/Config.php:74
-#: php/Config.php:75
+#: php/Config.php:88
+#: php/Config.php:89
 msgid "Additional Information"
 msgstr ""
 
-#: php/Config.php:77
+#: php/Config.php:91
 msgid "Out of stock"
 msgstr ""
 
-#: php/Config.php:78
+#: php/Config.php:92
 msgid "Available on backorder"
 msgstr ""
 
-#: php/Config.php:82
+#: php/Config.php:96
 msgid "There are no shipping options available. Please ensure that your address has been entered correctly, or contact us if you need any help."
 msgstr ""
 
-#: php/Config.php:83
+#: php/Config.php:97
 msgid "Shipping options will be updated during checkout."
 msgstr ""
 
-#: php/Config.php:86
+#: php/Config.php:100
 msgid "You must be logged in to checkout."
 msgstr ""
 
-#: php/Config.php:87
+#: php/Config.php:101
 msgid "Returning customer?"
 msgstr ""
 
-#: php/Config.php:89
+#: php/Config.php:103
 msgid "Place order"
 msgstr ""
 
-#: php/Config.php:95
+#: php/Config.php:108
+msgid "A password reset email has been sent to the email address on file for your account, but may take several minutes to show up in your inbox. Please wait at least 10 minutes before attempting another reset."
+msgstr ""
+
+#: php/Config.php:109
 msgid "Lost your password? Please enter your username or email address. You will receive a link to create a new password via email."
 msgstr ""
 
-#: php/Config.php:96
+#: php/Config.php:110
 msgid "Enter a new password below."
 msgstr ""
 
-#: php/Config.php:99
+#: php/Config.php:113
 msgid "Tax for USA, VAT for European countries"
 msgstr ""
 
-#: php/Config.php:100
+#: php/Config.php:114
 msgid "Inc. tax for USA, Inc. VAT for European countries"
 msgstr ""
 
-#: php/Config.php:101
+#: php/Config.php:115
 msgid "Exc. tax for USA, Exc. VAT for European countries"
 msgstr ""
 
-#: php/Config.php:102
+#: php/Config.php:116
 msgid "Thank you. Your order has been received."
 msgstr ""
 
 #. translators: Placeholder: %s - sale percentage
-#: php/Front.php:226
+#: php/Front.php:228
 msgid "up to %s"
 msgstr ""
 

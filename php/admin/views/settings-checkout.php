@@ -16,15 +16,15 @@
 			<div class="as-section-content">
 				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
-						<label for="customizewoo_must_be_logged_in_message" class="as-strong"><?php esc_html_e( 'Must be Logged-in Text', 'customize-woo' ); ?></label>
-						<input type="text" name="customizewoo_must_be_logged_in_message" id="customizewoo_must_be_logged_in_message" value="<?php echo esc_attr( stripslashes( $options['checkout_must_be_logged_in_message'] ) ); ?>" placeholder="<?php esc_attr_e( 'Must be logged-in message on checkout page', 'customize-woo' ); ?>" class="as-form-control">
+						<label for="customizewoo_checkout_must_be_logged_in_message" class="as-strong"><?php esc_html_e( 'Must be Logged-in Text', 'customize-woo' ); ?></label>
+						<input type="text" name="customizewoo_checkout_must_be_logged_in_message" id="customizewoo_checkout_must_be_logged_in_message" value="<?php echo esc_attr( stripslashes( $options['checkout_must_be_logged_in_message'] ) ); ?>" placeholder="<?php esc_attr_e( 'Must be logged-in message on checkout page', 'customize-woo' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the message displayed when a customer must be logged in to checkout.', 'customize-woo' ); ?></p>
 					</div>
 
 					<div class="as-form-group">
-						<label for="customizewoo_login_message" class="as-strong"><?php esc_html_e( 'Login Text', 'customize-woo' ); ?></label>
-						<input type="text" name="customizewoo_login_message" id="customizewoo_login_message" value="<?php echo esc_attr( stripslashes( $options['checkout_login_message'] ) ); ?>" placeholder="<?php esc_attr_e( 'Login message text on product page', 'customize-woo' ); ?>" class="as-form-control">
+						<label for="customizewoo_checkout_login_message" class="as-strong"><?php esc_html_e( 'Login Text', 'customize-woo' ); ?></label>
+						<input type="text" name="customizewoo_checkout_login_message" id="customizewoo_checkout_login_message" value="<?php echo esc_attr( stripslashes( $options['checkout_login_message'] ) ); ?>" placeholder="<?php esc_attr_e( 'Login message text on product page', 'customize-woo' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the message displayed if customers can login at checkout.', 'customize-woo' ); ?></p>
 					</div>
