@@ -17,14 +17,14 @@
 				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="customizewoo_description_tab_title" class="as-strong"><?php esc_html_e( 'Product Description Tab Title', 'customize-woo' ); ?></label>
-						<input type="text" name="customizewoo_description_tab_title" id="customizewoo_description_tab_title" value="<?php echo esc_attr( stripslashes( $options['woocommerce_product_description_tab_title'] ) ); ?>" placeholder="<?php esc_attr_e( 'Product description tab title', 'customize-woo' ); ?>" class="as-form-control">
+						<input type="text" name="customizewoo_description_tab_title" id="customizewoo_description_tab_title" value="<?php echo esc_attr( stripslashes( $options['product_description_tab_title'] ) ); ?>" placeholder="<?php esc_attr_e( 'Product description tab title', 'customize-woo' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the product description tab title.', 'customize-woo' ); ?></p>
 					</div>
 
 					<div class="as-form-group">
 						<label for="customizewoo_description_heading" class="as-strong"><?php esc_html_e( 'Product Description Tab Heading', 'customize-woo' ); ?></label>
-						<input type="text" name="customizewoo_description_heading" id="customizewoo_description_heading" value="<?php echo esc_attr( stripslashes( $options['woocommerce_product_description_heading'] ) ); ?>" placeholder="<?php esc_attr_e( 'Product description tab heading', 'customize-woo' ); ?>" class="as-form-control">
+						<input type="text" name="customizewoo_description_heading" id="customizewoo_description_heading" value="<?php echo esc_attr( stripslashes( $options['product_description_heading'] ) ); ?>" placeholder="<?php esc_attr_e( 'Product description tab heading', 'customize-woo' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the product description tab heading.', 'customize-woo' ); ?></p>
 					</div>
@@ -33,7 +33,7 @@
 				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="customizewoo_reviews_tab_title" class="as-strong"><?php esc_html_e( 'Reviews Tab Title', 'customize-woo' ); ?></label>
-						<input type="text" name="customizewoo_reviews_tab_title" id="customizewoo_reviews_tab_title" value="<?php echo esc_attr( stripslashes( $options['woocommerce_product_reviews_tab_title'] ) ); ?>" placeholder="<?php esc_attr_e( 'Reviews tab title', 'customize-woo' ); ?>" class="as-form-control">
+						<input type="text" name="customizewoo_reviews_tab_title" id="customizewoo_reviews_tab_title" value="<?php echo esc_attr( stripslashes( $options['product_reviews_tab_title'] ) ); ?>" placeholder="<?php esc_attr_e( 'Reviews tab title', 'customize-woo' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the reviews tab title.', 'customize-woo' ); ?></p>
 					</div>
@@ -47,14 +47,14 @@
 				<div class="as-double-group as-clearfix">
 					<div class="as-form-group">
 						<label for="customizewoo_additional_information_tab_title" class="as-strong"><?php esc_html_e( 'Additional Information Tab Title', 'customize-woo' ); ?></label>
-						<input type="text" name="customizewoo_additional_information_tab_title" id="customizewoo_additional_information_tab_title" value="<?php echo esc_attr( stripslashes( $options['woocommerce_product_additional_information_tab_title'] ) ); ?>" placeholder="<?php esc_attr_e( 'Additional information tab title', 'customize-woo' ); ?>" class="as-form-control">
+						<input type="text" name="customizewoo_additional_information_tab_title" id="customizewoo_additional_information_tab_title" value="<?php echo esc_attr( stripslashes( $options['product_additional_information_tab_title'] ) ); ?>" placeholder="<?php esc_attr_e( 'Additional information tab title', 'customize-woo' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the additional information tab title.', 'customize-woo' ); ?></p>
 					</div>
 
 					<div class="as-form-group">
 						<label for="customizewoo_additional_information_heading" class="as-strong"><?php esc_html_e( 'Additional Information Tab Heading', 'customize-woo' ); ?></label>
-						<input type="text" name="customizewoo_additional_information_heading" id="customizewoo_additional_information_heading" value="<?php echo esc_attr( stripslashes( $options['woocommerce_product_additional_information_heading'] ) ); ?>" placeholder="<?php esc_attr_e( 'Additional information tab heading', 'customize-woo' ); ?>" class="as-form-control">
+						<input type="text" name="customizewoo_additional_information_heading" id="customizewoo_additional_information_heading" value="<?php echo esc_attr( stripslashes( $options['product_additional_information_heading'] ) ); ?>" placeholder="<?php esc_attr_e( 'Additional information tab heading', 'customize-woo' ); ?>" class="as-form-control">
 
 						<p class="as-form-help-block"><?php esc_html_e( 'Changes the additional information tab heading.', 'customize-woo' ); ?></p>
 					</div>

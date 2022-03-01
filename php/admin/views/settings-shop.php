@@ -104,7 +104,7 @@
 
 								// Loading font sizes with the help of a loop.
 							for ( $i = 1; $i < 100; $i++ ) {
-								echo '<option value="' . esc_attr( $i ) . '"' . selected( esc_attr( $options['woocommerce_product_thumbnails_columns'] ), esc_attr( $i ) ) . '>' . esc_html( $i ) . '</option>';
+								echo '<option value="' . esc_attr( $i ) . '"' . selected( esc_attr( $options['product_thumbnails_columns'] ), esc_attr( $i ) ) . '>' . esc_html( $i ) . '</option>';
 							}
 
 							?>

@@ -14,7 +14,7 @@ require_once 'header.php';
 	<div class="as-float-left">
 		<div class="as-mobile-menu">
 			<a href="javascript:void;">
-				<img src="<?php echo Config::$plugin_url; ?>assets/admin/images/toggle.png" alt="<?php esc_attr_e( 'Menu', 'customize-woo' ); ?>" />
+				<img src="<?php echo esc_url( Config::$plugin_url ); ?>assets/admin/images/toggle.png" alt="<?php esc_attr_e( 'Menu', 'customize-woo' ); ?>" />
 			</a>
 		</div><!-- .as-mobile-menu -->
 
@@ -31,7 +31,7 @@ require_once 'header.php';
 	<div class="as-float-right">
 		<?php
 
-			// Tabs
+			// Tabs.
 			require_once Config::$plugin_path . 'php/admin/views/settings-shop.php';
 			require_once Config::$plugin_path . 'php/admin/views/settings-product.php';
 			require_once Config::$plugin_path . 'php/admin/views/settings-cart.php';
