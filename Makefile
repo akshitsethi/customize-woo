@@ -1,4 +1,4 @@
-VERSION := 1.2.1
+VERSION := 1.2.2
 PLUGINSLUG := customize-woo
 PLUGINPATH := $(shell pwd)
 
@@ -37,12 +37,14 @@ copy:
 	cp -ar assets php i18n vendor $(PLUGINSLUG)/
 	cp $(PLUGINSLUG).php uninstall.php readme.txt license.txt $(PLUGINSLUG)/
 
-dist: install update_version
+dist:
+	make update_version
 	mkdir -p dist
 	rm -rf vendor
 	composer install --no-dev
 	composer dump-autoload -o
-	cp -r $(PLUGINPATH)/. dist/
+	cp -ar assets php i18n vendor dist/
+	cp $(PLUGINSLUG).php uninstall.php readme.txt license.txt dist/
 	make remove_version
 
 release:
