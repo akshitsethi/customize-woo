@@ -16,7 +16,7 @@ class WooCheck {
 	/**
 	 * Helper function to determine whether a plugin is active.
 	 *
-	 * @param string $plugin_name Plugin file name (plugin-filename.php)
+	 * @param string $plugin_name Plugin file name (plugin-filename.php).
 	 * @return bool
 	 */
 	public function is_plugin_active( string $plugin_name ) : bool {
@@ -41,7 +41,7 @@ class WooCheck {
 			$plugin_filenames[] = $filename;
 		}
 
-		return in_array( $plugin_name, $plugin_filenames );
+		return in_array( $plugin_name, $plugin_filenames, true );
 	}
 
 	/**
@@ -61,7 +61,7 @@ class WooCheck {
 		?>
 
 		<div class="error">
-			<p><?php echo $message; ?></p>
+			<p><?php echo $message; // phpcs:ignore ?></p>
 		</div><!-- .error -->
 
 		<?php
